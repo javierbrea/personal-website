@@ -24,7 +24,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        includePaths: [`${__dirname}/node_modules/bootstrap`]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

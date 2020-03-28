@@ -2,6 +2,8 @@ import React from "react";
 
 import bannerHome from "images/banner/home-left-1.png";
 
+import "./homeBanner.scss";
+
 const HomeBanner = () => {
   return (
     <section className="home_banner_area">

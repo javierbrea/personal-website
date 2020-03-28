@@ -2,6 +2,8 @@ import React from "react";
 import clsx from "clsx";
 import { useScrollYPosition } from "react-use-scroll-position";
 
+import "./header.scss";
+
 const Header = () => {
   const scrollY = useScrollYPosition();
   return null;

@@ -1,4 +1,8 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -24,17 +28,18 @@ const Footer = () => {
               <ul className="list">
                 <li>
                   <a href="https://www.linkedin.com/in/javierbrea/">
-                    <i className="fa fa-linkedin"></i>
+                    <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </li>
                 <li>
                   <a href="https://twitter.com/javierbrea">
                     <i className="fa fa-twitter"></i>
+                    <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/javierbrea">
-                    <i className="fa fa-github"></i>
+                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </li>
               </ul>
