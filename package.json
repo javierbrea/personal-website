@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-brands-svg-icons": "5.13.0",
     "@fortawesome/free-solid-svg-icons": "5.12.1",
     "@fortawesome/react-fontawesome": "0.1.9",
     "bootstrap": "4.4.1",
@@ -40,7 +40,7 @@
     "react-use-scroll-position": "2.0.0"
   },
   "devDependencies": {
-    "@hot-loader/react-dom": "^16.13.0",
+    "@hot-loader/react-dom": "16.13.0",
     "eslint-config-prettier": "6.10.1",
     "eslint-plugin-filenames": "1.3.2",
     "eslint-plugin-prettier": "3.1.2",
@@ -48,7 +48,7 @@
     "eslint-plugin-react-hooks": "2.5.1",
     "husky": "4.2.3",
     "lint-staged": "10.0.9",
-    "node-sass": "^4.13.1",
+    "node-sass": "4.13.1",
     "prettier": "1.19.1",
     "stylelint": "13.2.1",
     "stylelint-config-recommended": "3.0.0",
