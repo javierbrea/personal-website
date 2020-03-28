@@ -9,6 +9,13 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import React from "react";
 
-const Index = () => <div></div>;
+import Layout from "components/layout";
+import HomeBanner from "components/home-banner";
+
+const Index = () => (
+  <Layout>
+    <HomeBanner />
+  </Layout>
+);
 
 export default Index;
