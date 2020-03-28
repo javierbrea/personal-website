@@ -49,7 +49,7 @@
     "stylelint-scss": "3.16.0"
   },
   "scripts": {
-    "lint": "eslint src *.js",
+    "lint": "eslint *.js",
     "lint:staged": "lint-staged",
     "build": "gatsby build",
     "develop": "gatsby develop",
