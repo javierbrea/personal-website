@@ -77,9 +77,20 @@ module.exports = {
         // Puts tracking script in the head instead of the body
         head: true
       }
+    },
+    {
+      resolve: "gatsby-plugin-module-resolver",
+      options: {
+        root: "./src", // <- will be used as a root dir
+        aliases: {
+          images: "./images",
+          components: "./components",
+          modules: "./modules",
+          styles: "./styles",
+          data: "./data",
+          helpers: "./helpers"
+        }
+      }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ]
 };
