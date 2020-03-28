@@ -1,5 +1,8 @@
 {
   "extends": [
     "github>javierbrea/nodejs-ci-cd-shared-config"
-  ]
+  ],
+  "node": {
+    "supportPolicy": ["lts_latest"]
+  }
 }
