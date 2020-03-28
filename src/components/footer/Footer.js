@@ -1,4 +1,15 @@
+/*
+Copyright 2020 Javier Brea
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+*/
+
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -24,17 +35,18 @@ const Footer = () => {
               <ul className="list">
                 <li>
                   <a href="https://www.linkedin.com/in/javierbrea/">
-                    <i className="fa fa-linkedin"></i>
+                    <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </li>
                 <li>
                   <a href="https://twitter.com/javierbrea">
                     <i className="fa fa-twitter"></i>
+                    <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/javierbrea">
-                    <i className="fa fa-github"></i>
+                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </li>
               </ul>

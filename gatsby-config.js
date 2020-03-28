@@ -4,6 +4,7 @@ Copyright 2020 Javier Brea
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
+
 const SITE_URL = "https://www.javierbrea.com";
 
 const {
@@ -20,11 +21,29 @@ module.exports = {
     siteUrl,
     title: `Javier Brea`,
     description: `Javier Brea personal website`,
-    author: `@javierbrea`
+    author: `@javierbrea`,
+    keywords: [
+      "domapic",
+      "iot",
+      "domotic",
+      "home automation",
+      "framework",
+      "api",
+      "rest",
+      "node.js",
+      "open source",
+      "microservices"
+    ],
+    socialImage: "business-card"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        includePaths: [`${__dirname}/node_modules/bootstrap`]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
