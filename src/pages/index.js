@@ -9,7 +9,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import React from "react";
 
-import Layout from "components/Layout";
+import Layout from "components/layout";
 import HomeBanner from "components/home-banner";
 
 const Index = () => (
