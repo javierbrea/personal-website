@@ -26,6 +26,7 @@
     "gatsby-plugin-manifest": "2.2.48",
     "gatsby-plugin-module-resolver": "1.0.3",
     "gatsby-plugin-offline": "3.0.41",
+    "gatsby-plugin-preconnect": "1.0.5",
     "gatsby-plugin-react-helmet": "3.1.24",
     "gatsby-plugin-robots-txt": "1.5.0",
     "gatsby-plugin-sass": "2.2.1",
@@ -37,7 +38,9 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
-    "react-use-scroll-position": "2.0.0"
+    "react-use-scroll-position": "2.0.0",
+    "typeface-heebo": "0.0.72",
+    "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "16.13.0",

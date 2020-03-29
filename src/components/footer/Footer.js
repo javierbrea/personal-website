@@ -36,18 +36,18 @@ const Footer = ({ className }) => {
               <p>Let us be social</p>
               <ul className="list">
                 <li>
-                  <a href="https://www.linkedin.com/in/javierbrea/">
+                  <a aria-label="Linkedin profile" href="https://www.linkedin.com/in/javierbrea/">
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/javierbrea">
+                  <a aria-label="Twitter profile" href="https://twitter.com/javierbrea">
                     <i className="fa fa-twitter"></i>
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/javierbrea">
+                  <a aria-label="Github profile" href="https://github.com/javierbrea">
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </li>
