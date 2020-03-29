@@ -6,16 +6,17 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import React from "react";
+import PropTypes from "prop-types";
 import clsx from "clsx";
 import { useScrollYPosition } from "react-use-scroll-position";
 
 import "./header.scss";
 
-const Header = () => {
+const Header = ({ className }) => {
   const scrollY = useScrollYPosition();
   return null;
   return (
-    <header className={clsx("header_area", scrollY > 90 && "navbar_fixed")}>
+    <header className={clsx("header_area", scrollY > 90 && "navbar_fixed", className)}>
       <div className="main_menu" id="mainNav">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container box_1620">
@@ -50,6 +51,10 @@ const Header = () => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  className: PropTypes.string
 };
 
 export default Header;

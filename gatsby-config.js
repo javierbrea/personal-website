@@ -98,6 +98,12 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-preconnect",
+      options: {
+        domains: ["https://www.google-analytics.com"]
+      }
+    },
+    {
       resolve: "gatsby-plugin-module-resolver",
       options: {
         root: "./src", // <- will be used as a root dir

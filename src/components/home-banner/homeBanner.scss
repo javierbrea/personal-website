@@ -48,13 +48,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 /* Responsive */
 
-@media (max-width:1199px){
-  .home_banner_area .banner_inner {
-    padding: 100px 0px;
-  }
-}
-
 @media (max-width:991px){
+  .home_banner_area .banner_inner {
+    padding: 60px 0 0 0;
+  }
   .home_banner_area .banner_inner .banner_content .banner_map_img {
     display: none;
   }
@@ -66,11 +63,17 @@ Unless required by applicable law or agreed to in writing, software distributed 
     max-width: 350px;
     margin: auto;
   }
+  .home_banner_area .banner_inner .home_banner_row {
+    display: flex;
+    flex-direction: column-reverse;
+    img {
+      width: 288px;
+      height: 440px;
+    }
+  }
   .home_banner_area .banner_inner .home_left_img {
     padding-top: 0px;
-  }
-  .home_banner_area .banner_inner .banner_content {
-    padding-top: 50px;
+    text-align: center;
   }
 }
 @media (max-width:767px){
@@ -99,6 +102,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
   
 }
 @media (max-width:575px){
+  .home_banner_area .banner_inner {
+    padding: 60px 0 0 0;
+  }
   .home_banner_area .banner_inner .banner_content h2 {
     font-size: 28px;
     line-height: 38px;
@@ -115,8 +121,13 @@ Unless required by applicable law or agreed to in writing, software distributed 
   .home_banner_area .banner_inner .banner_content h5 {
     margin-top: 0px;
   }
-  .home_banner_area .banner_inner .home_left_img {
-    display: none;
+  .home_banner_area .banner_inner .home_banner_row {
+    display: flex;
+    flex-direction: column-reverse;
+    img {
+      width: 180px;
+      height: 275px;
+    }
   }
   .home_banner_area .banner_inner .banner_content {
     padding-top: 0px;

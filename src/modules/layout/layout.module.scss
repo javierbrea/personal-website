@@ -1,0 +1,16 @@
+.root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mainBlocks {
+  flex-shrink: 0;
+}
