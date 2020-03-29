@@ -6,33 +6,37 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import React from "react";
+import clsx from "clsx";
 
-import bannerHome from "images/banner/home-left-1.png";
+import bannerHome from "images/banner/home-avatar.png";
 
+import classes from "./homeBanner.module.scss";
 import "./homeBanner.scss";
 
 const HomeBanner = () => {
   return (
-    <section className="home_banner_area">
-      <div className="banner_inner">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="home_left_img">
-                <img alt="" height={550} src={bannerHome} width={360} />
+    <div className={classes.wrapper}>
+      <section className={clsx("home_banner_area", classes.section)}>
+        <div className="banner_inner">
+          <div className="container">
+            <div className="row home_banner_row">
+              <div className="col-lg-6 home_left_img_container">
+                <div className="home_left_img">
+                  <img alt="" height={550} src={bannerHome} width={360} />
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="banner_content">
-                <h5>This is me</h5>
-                <h2>Javier Brea</h2>
-                <p>Full stack JS developer. Front end arquitect.</p>
+              <div className="col-lg-6">
+                <div className="banner_content">
+                  <h5>This is me</h5>
+                  <h2>Javier Brea</h2>
+                  <p>Full stack JS developer. Front end arquitect.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

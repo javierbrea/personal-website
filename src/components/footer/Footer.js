@@ -6,14 +6,16 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import React from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import "./footer.scss";
 
-const Footer = () => {
+const Footer = ({ className }) => {
   return (
-    <footer className="footer_area p_120">
+    <footer className={clsx("footer_area p_120", className)}>
       <div className="container">
         <div className="row footer_inner">
           <div className="col-lg-5 col-sm-6">
@@ -21,7 +23,7 @@ const Footer = () => {
               <div className="f_title">
                 <h3>About Me</h3>
               </div>
-              <p>Working on designing and developing software from 2004</p>
+              <p>Designing and developing software from 2004</p>
               <p>Copyright &copy; Javier Brea</p>
             </aside>
           </div>
@@ -56,6 +58,10 @@ const Footer = () => {
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  className: PropTypes.string
 };
 
 export default Footer;
