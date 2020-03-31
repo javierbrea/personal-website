@@ -8,6 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import React from "react";
 import clsx from "clsx";
 import PropTypes from "prop-types";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import "styles/base";
 
@@ -17,20 +18,28 @@ import Footer from "components/footer";
 
 import classes from "./layout.module.scss";
 
-const Layout = ({ children, title, keywords, socialImage, description }) => {
+const Layout = ({ children, title, keywords, socialImage, description, invertedHeader }) => {
   return (
-    <div className={classes.root}>
-      <Seo description={description} keywords={keywords} socialImage={socialImage} title={title} />
-      <Header className={classes.mainBlock} />
-      <main className={clsx(classes.mainBlock, classes.content)}>{children}</main>
-      <Footer className={classes.mainBlock} />
-    </div>
+    <ParallaxProvider>
+      <div className={classes.root}>
+        <Seo
+          description={description}
+          keywords={keywords}
+          socialImage={socialImage}
+          title={title}
+        />
+        <Header className={classes.mainBlock} inverted={invertedHeader} />
+        <main className={clsx(classes.mainBlock, classes.content)}>{children}</main>
+        <Footer className={classes.mainBlock} />
+      </div>
+    </ParallaxProvider>
   );
 };
 
 Layout.propTypes = {
   children: PropTypes.node,
   description: PropTypes.string,
+  invertedHeader: PropTypes.bool,
   keywords: PropTypes.array,
   socialImage: PropTypes.string,
   title: PropTypes.string

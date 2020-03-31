@@ -7,3 +7,18 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 $text-color: #777777;
 $text-color-dark: #222222;
+
+$background-dark: #000410;
+$background-light: #FAF9FF;
+
+@mixin roboto-font {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin heebo-font {
+  font-family: "Heebo", sans-serif;
+}
+
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+  transition: $property $duration $animate $delay; 
+}

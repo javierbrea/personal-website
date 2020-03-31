@@ -113,7 +113,8 @@ module.exports = {
           modules: "./modules",
           styles: "./styles",
           data: "./data",
-          helpers: "./helpers"
+          helpers: "./helpers",
+          vendors: "./vendors"
         }
       }
     }
