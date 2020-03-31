@@ -10,20 +10,33 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 import { useScrollYPosition } from "react-use-scroll-position";
 
+import Link from "components/link";
+import logo from "images/logo.png";
+import logoWhite from "images/logo_white.png";
+
 import "./header.scss";
 
-const Header = ({ className }) => {
+const Header = ({ className, inverted }) => {
   const scrollY = useScrollYPosition();
-  return null;
+  const isFixed = scrollY > 90;
+
   return (
-    <header className={clsx("header_area", scrollY > 90 && "navbar_fixed", className)}>
+    <header
+      className={clsx(
+        "header_area",
+        isFixed && "navbar_fixed",
+        inverted && "white_menu",
+        className
+      )}
+    >
       <div className="main_menu" id="mainNav">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container box_1620">
             {/* <!-- Brand and toggle get grouped for better mobile display --> */}
-            <a className="navbar-brand logo_h" href="index.html">
-              <img alt="" src="img/logo.png" />
-            </a>
+            <Link className="navbar-brand logo_h" to="/">
+              <img alt="JBREA" src={logo} />
+              {inverted && <img alt="JBREA" src={logoWhite} />}
+            </Link>
             <button
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
@@ -40,9 +53,14 @@ const Header = ({ className }) => {
             <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul className="nav navbar-nav menu_nav ml-auto">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/">
                     Home
-                  </a>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/about">
+                    About
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -54,7 +72,8 @@ const Header = ({ className }) => {
 };
 
 Header.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  inverted: PropTypes.bool
 };
 
 export default Header;

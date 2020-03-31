@@ -5,22 +5,28 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-.root {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  @media (max-width:991px){
-    padding-top: 70px;
-  }
-}
+import React from "react";
+import PropTypes from "prop-types";
 
-.content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
+const LinkExternal = ({ to, children, self, ...rest }) => {
+  const newWindow = self
+    ? {}
+    : {
+        target: "_blank",
+        rel: "noopener noreferrer"
+      };
 
-.mainBlocks {
-  flex-shrink: 0;
-}
+  return (
+    <a href={to} {...newWindow} {...rest}>
+      {children}
+    </a>
+  );
+};
+
+LinkExternal.propTypes = {
+  children: PropTypes.node,
+  self: PropTypes.bool,
+  to: PropTypes.string
+};
+
+export default LinkExternal;

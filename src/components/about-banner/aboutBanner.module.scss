@@ -1,0 +1,92 @@
+/*
+Copyright 2020 Javier Brea
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+*/
+
+@import "styles/base/variables.scss";
+
+$banner_height: 750px;
+$banner_height_2: 680px;
+$banner_height_3: 500px;
+
+.root {
+  min-height: $banner_height;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 0px;
+  background-color: $background-dark;
+  @media (max-width:991px){
+    min-height: $banner_height_2;
+  }
+  @media (max-width:575px){
+    min-height: $banner_height_3;
+  }
+}
+
+.inner {
+  display: flex;
+  position: relative; 
+  overflow: hidden;
+  min-height: $banner_height;
+  z-index: 1;
+  :global .container {
+    vertical-align: middle;
+    align-self: center;
+  }
+  @media (max-width:991px){
+    min-height: $banner_height_2;
+  }
+  @media (max-width:575px){
+    min-height: $banner_height_3;
+  }
+}
+
+.overlay {
+  background: url(../../images/banner/about-banner.jpg) no-repeat scroll center center;
+  opacity: 0.7;
+  min-height: $banner_height;
+  z-index: -1;
+  @media (max-width:991px){
+    min-height: $banner_height_2;
+  }
+  @media (max-width:575px){
+    min-height: $banner_height_3;
+  }
+}
+
+.text {
+  position:absolute;
+  width:100%;
+  margin: auto;
+  color: #fff;
+  margin-top: -70px;
+  :global h2 {
+    @include roboto-font;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 66px;
+    margin-bottom: 15px;
+  }
+
+  :global p {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width:767px){
+    :global h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    :global h2 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+}

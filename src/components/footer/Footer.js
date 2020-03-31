@@ -11,6 +11,8 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import Link from "components/link";
+
 import "./footer.scss";
 
 const Footer = ({ className }) => {
@@ -36,20 +38,20 @@ const Footer = ({ className }) => {
               <p>Let us be social</p>
               <ul className="list">
                 <li>
-                  <a aria-label="Linkedin profile" href="https://www.linkedin.com/in/javierbrea/">
+                  <Link aria-label="Linkedin profile" to="https://www.linkedin.com/in/javierbrea/">
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a aria-label="Twitter profile" href="https://twitter.com/javierbrea">
+                  <Link aria-label="Twitter profile" to="https://twitter.com/javierbrea">
                     <i className="fa fa-twitter"></i>
                     <FontAwesomeIcon icon={faTwitter} />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a aria-label="Github profile" href="https://github.com/javierbrea">
+                  <Link aria-label="Github profile" to="https://github.com/javierbrea">
                     <FontAwesomeIcon icon={faGithub} />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </aside>
