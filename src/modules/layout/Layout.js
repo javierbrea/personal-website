@@ -9,7 +9,6 @@ import React from "react";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { ParallaxProvider } from "react-scroll-parallax";
-import "bootstrap";
 
 import "styles/base";
 
