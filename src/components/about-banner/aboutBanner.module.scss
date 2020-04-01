@@ -18,10 +18,10 @@ $banner_height_3: 500px;
   overflow: hidden;
   margin-bottom: 0px;
   background-color: $background-dark;
-  @media (max-width:991px){
+  @include media("m"){
     min-height: $banner_height_2;
   }
-  @media (max-width:575px){
+  @include media("xs"){
     min-height: $banner_height_3;
   }
 }
@@ -36,10 +36,10 @@ $banner_height_3: 500px;
     vertical-align: middle;
     align-self: center;
   }
-  @media (max-width:991px){
+  @include media("m"){
     min-height: $banner_height_2;
   }
-  @media (max-width:575px){
+  @include media("xs"){
     min-height: $banner_height_3;
   }
 }
@@ -49,10 +49,10 @@ $banner_height_3: 500px;
   opacity: 0.7;
   min-height: $banner_height;
   z-index: -1;
-  @media (max-width:991px){
+  @include media("m"){
     min-height: $banner_height_2;
   }
-  @media (max-width:575px){
+  @include media("xs"){
     min-height: $banner_height_3;
   }
 }
@@ -76,14 +76,14 @@ $banner_height_3: 500px;
     margin-bottom: 35px;
   }
 
-  @media (max-width:767px){
+  @include media("s"){
     :global h2 {
       font-size: 40px;
       line-height: 50px;
     }
   }
 
-  @media (max-width: 575px) {
+  @include media("xs"){
     :global h2 {
       font-size: 28px;
       line-height: 38px;

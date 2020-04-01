@@ -34,8 +34,8 @@ const Header = ({ className, inverted }) => {
           <div className="container box_1620">
             {/* <!-- Brand and toggle get grouped for better mobile display --> */}
             <Link className="navbar-brand logo_h" to="/">
-              <img alt="JBREA" src={logo} />
-              {inverted && <img alt="JBREA" src={logoWhite} />}
+              <img alt="JBREA" className="logo" src={logo} />
+              <img alt="JBREA" className="logo_white" src={logoWhite} />
             </Link>
             <button
               aria-controls="navbarSupportedContent"

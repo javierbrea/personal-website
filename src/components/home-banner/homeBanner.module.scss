@@ -9,11 +9,12 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 .root {
   background: url(../../images/banner/home-banner.jpg) no-repeat scroll center center;
+  background-size: cover;
 }
 
 .img_container {
   padding-top: 195px;
-  @media (max-width:991px){
+  @include media("m"){
     padding-top: 0px;
     position: relative;
     min-height: 370px;
@@ -23,7 +24,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
       position: absolute;
     }
   }
-  @media (max-width:575px){
+  @include media("xs"){
     min-height: auto;
     img {
       top:-50px;
@@ -34,7 +35,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 }
 
 .container {
-  @media (max-width:991px){
+  @include media("m"){
     padding-top: 60px;
   }
 }
@@ -74,7 +75,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
     margin: 0px auto 45px;
   }
 
-  @media (max-width:575px){
+  @include media("xs"){
     padding-top: 0px;
     :global h2 {
       font-size: 28px;
@@ -87,7 +88,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 }
 
 .row {
-  @media (max-width:991px){
+  @include media("m"){
     display: flex;
     flex-direction: column-reverse;
     img {
@@ -95,7 +96,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
       height: 440px;
     }
   }
-  @media (max-width:575px){
+  @include media("xs"){
     display: flex;
     flex-direction: column-reverse;
     img {

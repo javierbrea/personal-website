@@ -10,21 +10,17 @@ Unless required by applicable law or agreed to in writing, software distributed 
 .root {
   flex-grow: 1;
   background-color: $background-dark;
-  background-size: cover;
 }
 
 .main {
-  z-index: 1;
-  background-color: $background-light;
-  @media (max-width:767px){
+  @include media("s"){
     min-height: 500px;
   }
 }
 
 .inner {
   width: 100%;
-
-  @media (max-width:767px){
+  @include media("s"){
     min-height: 500px;
   }
 }
