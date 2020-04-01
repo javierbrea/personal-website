@@ -18,12 +18,9 @@ const HomeBanner = () => {
   return (
     <MainBanner className={classes.root}>
       <div className={clsx("container", classes.container)}>
+        <img alt="" className={classes.image} height={550} src={bannerHome} width={360} />
         <div className={clsx("row", classes.row)}>
-          <div className="col-lg-6">
-            <div className={clsx(classes.img_container)}>
-              <img alt="" height={550} src={bannerHome} width={360} />
-            </div>
-          </div>
+          <div className={clsx("col-lg-6", classes.empty_col)}></div>
           <div className={clsx("col-lg-6", classes.content_col)}>
             <div className={clsx(classes.content)}>
               <h5>This is me</h5>

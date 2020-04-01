@@ -11,20 +11,13 @@ import PropTypes from "prop-types";
 
 import classes from "./mainBanner.module.scss";
 
-const MainBanner = ({ children, className, innerClassName }) => {
-  return (
-    <div className={classes.root}>
-      <section className={clsx(classes.main, className)}>
-        <div className={clsx(classes.inner, innerClassName)}>{children}</div>
-      </section>
-    </div>
-  );
+const MainBanner = ({ children, className }) => {
+  return <section className={clsx(classes.root, className)}>{children}</section>;
 };
 
 MainBanner.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
-  innerClassName: PropTypes.string
+  className: PropTypes.string
 };
 
 export default MainBanner;

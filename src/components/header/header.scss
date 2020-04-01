@@ -5,9 +5,10 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
+@import "styles/base/variables.scss";
+
 /* Extracted from Colorlib Ronin template
   ============================================================================================ */
-
 .header_area {
   position: absolute;
   width: 100%;
@@ -116,12 +117,12 @@ Unless required by applicable law or agreed to in writing, software distributed 
     box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1); }
     .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
       line-height: 70px; }
-  @media (min-width: 992px) {
+  @include media("l"){
     .header_area.white_menu .navbar .navbar-brand img {
       display: none; }
       .header_area.white_menu .navbar .navbar-brand img + img {
         display: inline-block; } }
-  @media (max-width: 991px) {
+  @include media("m"){
     .header_area.white_menu .navbar .navbar-brand img {
       display: inline-block; }
       .header_area.white_menu .navbar .navbar-brand img + img {
@@ -135,6 +136,26 @@ Unless required by applicable law or agreed to in writing, software distributed 
   .header_area.white_menu.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
     line-height: 70px;
     color: #222222; }
+
+.header_area .logo_white {
+  display:none;
+}
+
+.header_area.white_menu .logo_white {
+  display:block;
+}
+
+.header_area.white_menu .logo {
+  display:none;
+}
+
+.header_area.white_menu.navbar_fixed .logo {
+  display:block;
+}
+
+.header_area.white_menu.navbar_fixed .logo_white {
+  display:none;
+}
 
 .top_menu {
   background: #ec9d5f; }
@@ -163,12 +184,12 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 /* Responsive */
 
-@media (max-width:1619px){
+@include media("xxl"){
    .header_area .navbar .search {
     margin-left: 40px;
   }
 }
-@media (max-width:1199px){
+@include media("l"){
   .header_area .navbar .nav .nav-item {
     margin-right: 28px;
   }
@@ -181,7 +202,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
   }
 }
 
-@media (max-width:991px){
+@include media("m"){
   /* Main Menu Area css
   ============================================================================================ */
     .navbar-toggler {
@@ -267,7 +288,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
     color: #222;
   }
 }
-@media (max-width:575px){
+@include media("xs"){
   .top_menu {
     display: none;
   }
@@ -276,7 +297,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
   }
 }
 
-@media (max-width:480px){
+@include media("xxs"){
   .header_area .navbar-collapse{
     max-height: 250px;
   }

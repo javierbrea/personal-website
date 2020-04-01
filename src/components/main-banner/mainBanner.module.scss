@@ -7,24 +7,20 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import "styles/base/variables.scss";
 
+$banner_height: 750px;
+$banner_height_2: 680px;
+$banner_height_3: 500px;
+
 .root {
+  min-height: $banner_height;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   background-color: $background-dark;
-  background-size: cover;
-}
-
-.main {
-  z-index: 1;
-  background-color: $background-light;
-  @media (max-width:767px){
-    min-height: 500px;
+  @include media("m"){
+    min-height: $banner_height_2;
   }
-}
-
-.inner {
-  width: 100%;
-
-  @media (max-width:767px){
-    min-height: 500px;
+  @include media("xs"){
+    min-height: $banner_height_3;
   }
 }

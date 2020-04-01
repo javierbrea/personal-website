@@ -8,4 +8,4 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import "typeface-heebo";
 import "typeface-roboto";
 import "bootstrap/scss/bootstrap.scss";
-import "./global.css";
+import "./global.scss";

@@ -7,6 +7,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import "styles/base/variables.scss";
 
+.root {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .text {
   margin-top: 45px;
   :global h4{

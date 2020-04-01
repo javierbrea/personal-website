@@ -17,7 +17,7 @@ import "./footer.scss";
 
 const Footer = ({ className }) => {
   return (
-    <footer className={clsx("footer_area p_120", className)}>
+    <footer className={clsx("footer_area", className)}>
       <div className="container">
         <div className="row footer_inner">
           <div className="col-lg-5 col-sm-6">
