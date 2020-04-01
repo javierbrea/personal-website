@@ -12,35 +12,20 @@ $banner_height_2: 680px;
 $banner_height_3: 500px;
 
 .root {
-  min-height: $banner_height;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  margin-bottom: 0px;
   background-color: $background-dark;
-  @include media("m"){
-    min-height: $banner_height_2;
-  }
-  @include media("xs"){
-    min-height: $banner_height_3;
-  }
 }
 
 .inner {
   display: flex;
   position: relative; 
   overflow: hidden;
-  min-height: $banner_height;
   z-index: 1;
   :global .container {
     vertical-align: middle;
     align-self: center;
-  }
-  @include media("m"){
-    min-height: $banner_height_2;
-  }
-  @include media("xs"){
-    min-height: $banner_height_3;
   }
 }
 

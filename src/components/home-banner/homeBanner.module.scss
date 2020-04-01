@@ -10,39 +10,51 @@ Unless required by applicable law or agreed to in writing, software distributed 
 .root {
   background: url(../../images/banner/home-banner.jpg) no-repeat scroll center center;
   background-size: cover;
+  position: relative;
 }
 
-.img_container {
-  padding-top: 195px;
+.image {
+  position: absolute;
+  bottom: 0;
   @include media("m"){
-    padding-top: 0px;
-    position: relative;
-    min-height: 370px;
-    img {
-      top:-70px;
-      right:0px;
-      position: absolute;
-    }
+    width: 288px;
+    height: 440px;
+    right: 0;
   }
   @include media("xs"){
-    min-height: auto;
-    img {
-      top:-50px;
-      right:0px;
-      position: absolute;
-    }
+    width: 180px;
+    height: 275px;
   }
 }
 
 .container {
-  @include media("m"){
-    padding-top: 60px;
-  }
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.row {
+  flex-grow: 1;
 }
 
 .content_col {
   vertical-align: middle;
   align-self: center;
+  @include media("m"){
+    min-width: 100%;
+    margin-top: -200px;
+  }
+  @include media("xs"){
+    margin-top: -100px;
+    width: 180px;
+    height: 275px;
+  }
+}
+
+.empty_col {
+  @include media("m"){
+    display:none;
+  }
 }
 
 .content {
@@ -83,25 +95,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
     }
     :global h5 {
       margin-top: 0px;
-    }
-  }
-}
-
-.row {
-  @include media("m"){
-    display: flex;
-    flex-direction: column-reverse;
-    img {
-      width: 288px;
-      height: 440px;
-    }
-  }
-  @include media("xs"){
-    display: flex;
-    flex-direction: column-reverse;
-    img {
-      width: 180px;
-      height: 275px;
     }
   }
 }

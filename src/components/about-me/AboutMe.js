@@ -11,7 +11,7 @@ import classes from "./aboutMe.module.scss";
 
 const AboutMe = () => {
   return (
-    <section className="p_120">
+    <section className={classes.root}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

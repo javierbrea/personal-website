@@ -17,26 +17,27 @@ import classes from "./aboutBanner.module.scss";
 
 const AboutBanner = () => {
   return (
-    <MainBanner
-      className={classes.root}
-      innerClassName={clsx("align-items-center", classes.inner)}
-    >
-      <ParallaxBanner
-        className={classes.overlay}
-        layers={[
-          {
-            image: bannerAbout,
-            amount: 0.3
-          }
-        ]}
-      />
-      <div className={clsx("text-center", classes.text)}>
-        <h2>About me</h2>
-        <p>
-          Designing and developing software from 2004...
-          <br />
-          and still loving it.
-        </p>
+    <MainBanner>
+      <div className={classes.root}>
+        <div className={clsx("align-items-center", classes.inner)}>
+          <ParallaxBanner
+            className={classes.overlay}
+            layers={[
+              {
+                image: bannerAbout,
+                amount: 0.3
+              }
+            ]}
+          />
+          <div className={clsx("text-center", classes.text)}>
+            <h2>About me</h2>
+            <p>
+              Designing and developing software from 2004...
+              <br />
+              and still loving it.
+            </p>
+          </div>
+        </div>
       </div>
     </MainBanner>
   );
