@@ -5,25 +5,25 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-@import "styles/base/variables.scss";
+@import 'styles/base/variables';
 
 .root {
-  background: url(../../images/banner/home-banner.jpg) no-repeat scroll center center;
+  background: url('../../images/banner/home-banner.jpg') no-repeat scroll center center;
   background-size: cover;
   position: relative;
 }
 
 .image {
-  position: absolute;
   bottom: 0;
-  @include media("m"){
-    width: 288px;
+  position: absolute;
+  @include media('m') {
     height: 440px;
     right: 0;
+    width: 288px;
   }
-  @include media("xs"){
-    width: 180px;
+  @include media('xs') {
     height: 275px;
+    width: 180px;
   }
 }
 
@@ -37,65 +37,66 @@ Unless required by applicable law or agreed to in writing, software distributed 
   flex-grow: 1;
 }
 
-.content_col {
-  vertical-align: middle;
+.contentCol {
   align-self: center;
-  @include media("m"){
-    min-width: 100%;
+  vertical-align: middle;
+  @include media('m') {
     margin-top: -200px;
+    min-width: 100%;
   }
-  @include media("xs"){
+  @include media('xs') {
+    height: 275px;
     margin-top: -100px;
     width: 180px;
-    height: 275px;
   }
 }
 
-.empty_col {
-  @include media("m"){
-    display:none;
+.emptyCol {
+  @include media('m') {
+    display: none;
   }
 }
 
 .content {
+  color: $textColorDark;
   text-align: left;
-  color: $text-color-dark;
-  :global h5 {
-    @include roboto-font;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2.1px;
-    margin-bottom: 20px;
+
+  @include media('xs') {
+    padding-top: 0;
   }
 
-  :global h2 {
+  h5 {
+    @include roboto-font;
+    font-size: 14px;
+    letter-spacing: 2.1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @include media('xs') {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
     @include heebo-font;
-    margin-top: 0px;
     font-size: 48px;
     font-weight: bold;
     line-height: 54px;
-    text-transform: uppercase;
     margin-bottom: 20px;
-  }
-
-  :global p {
-    @include roboto-font;
-    color: $text-color;
-    max-width: 680px;
-    font-size: 16px;
-    line-height: 26px;
-    margin: 0px auto 45px;
-  }
-
-  @include media("xs"){
-    padding-top: 0px;
-    :global h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    @include media('xs') {
       font-size: 28px;
       line-height: 38px;
     }
-    :global h5 {
-      margin-top: 0px;
-    }
+  }
+
+  p {
+    @include roboto-font;
+    color: $textColor;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0 auto 45px;
+    max-width: 680px;
   }
 }
 
