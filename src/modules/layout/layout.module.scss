@@ -6,11 +6,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 .root {
-  min-height: 100%;
+  align-items: stretch;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  @media (max-width:991px){
+  min-height: 100%;
+  @media (max-width:991px) {
     padding-top: 70px;
   }
 }
@@ -21,6 +21,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
   flex-grow: 1;
 }
 
-.mainBlocks {
+.mainBlock {
   flex-shrink: 0;
 }

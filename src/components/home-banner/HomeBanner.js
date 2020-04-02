@@ -20,8 +20,8 @@ const HomeBanner = () => {
       <div className={clsx("container", classes.container)}>
         <img alt="" className={classes.image} height={550} src={bannerHome} width={360} />
         <div className={clsx("row", classes.row)}>
-          <div className={clsx("col-lg-6", classes.empty_col)}></div>
-          <div className={clsx("col-lg-6", classes.content_col)}>
+          <div className={clsx("col-lg-6", classes.emptyCol)}></div>
+          <div className={clsx("col-lg-6", classes.contentCol)}>
             <div className={clsx(classes.content)}>
               <h5>This is me</h5>
               <h2>Javier Brea</h2>
