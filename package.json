@@ -42,7 +42,7 @@
     "react-helmet": "5.2.1",
     "react-scroll-parallax": "2.3.2",
     "react-use-scroll-position": "2.0.0",
-    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-sass-guidelines": "7.0.0",
     "typeface-heebo": "0.0.72",
     "typeface-roboto": "0.0.75"
   },
