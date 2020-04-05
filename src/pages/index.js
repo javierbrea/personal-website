@@ -11,10 +11,12 @@ import React from "react";
 
 import Layout from "modules/layout";
 import HomeBanner from "components/home-banner";
+import LastProjects from "components/last-projects";
 
 const Page = () => (
   <Layout title="Home">
     <HomeBanner />
+    <LastProjects />
   </Layout>
 );
 

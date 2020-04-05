@@ -7,12 +7,16 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-.text {
-  h4 {
+.mainTitle {
+  margin-bottom: 75px;
+  text-align: center;
+
+  h2 {
     @include heebo-font;
     color: $textColorDark;
     font-size: 36px;
-    margin-bottom: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
     text-transform: uppercase;
     @include media('xs') {
       font-size: 28px;
@@ -21,10 +25,21 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
   p {
     @include roboto-font;
-    color: $textColorDark;
     font-size: 16px;
-    //max-width: 495px;
-    line-height: 24px;
-    margin-bottom: 40px;
+    line-height: 26px;
+    margin: auto;
+    margin-bottom: 0;
+    max-width: 570px;
+  }
+}
+
+.inverted {
+  h2 {
+    color: $white;
+  }
+
+  p {
+    color: $white;
+    opacity: 0.6;
   }
 }

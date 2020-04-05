@@ -5,26 +5,4 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-@import 'styles/base/variables';
-
-.text {
-  h4 {
-    @include heebo-font;
-    color: $textColorDark;
-    font-size: 36px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    @include media('xs') {
-      font-size: 28px;
-    }
-  }
-
-  p {
-    @include roboto-font;
-    color: $textColorDark;
-    font-size: 16px;
-    //max-width: 495px;
-    line-height: 24px;
-    margin-bottom: 40px;
-  }
-}
+export { default } from "./LastProjects";

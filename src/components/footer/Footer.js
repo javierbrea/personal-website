@@ -26,7 +26,7 @@ const Footer = ({ className }) => {
                 <h3>About Me</h3>
               </div>
               <p>Designing and developing software from 2004</p>
-              <p>Copyright &copy; Javier Brea</p>
+              <p>Copyright &copy;2020 Javier Brea</p>
             </aside>
           </div>
           <div className="col-lg-5 col-sm-6"></div>
