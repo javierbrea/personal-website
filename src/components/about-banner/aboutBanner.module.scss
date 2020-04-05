@@ -56,11 +56,8 @@ $bannerHeightXs: 500px;
     font-weight: 500;
     line-height: 66px;
     margin-bottom: 15px;
-    @include media('s') {
-      font-size: 42px;
-      line-height: 50px;
-    }
     @include media('xs') {
+      font-size: 42px;
       line-height: 38px;
     }
   }

@@ -15,6 +15,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
   background: #000410;
   padding-bottom: 120px;
   padding-top: 120px;
+
+  @include media('s') {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
 }
 
 .f_title {

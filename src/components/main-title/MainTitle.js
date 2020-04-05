@@ -6,30 +6,25 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import React from "react";
-import { Link as GLink } from "gatsby";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
-import LinkExternal from "components/link-external";
+import classes from "./mainTitle.module.scss";
 
-const Link = ({ to, children, ...rest }) => {
-  const isInternal = to && to.indexOf("/") === 0;
-  const LinkComponent = isInternal ? GLink : LinkExternal;
-
-  if (!to) {
-    return children;
-  }
-
+const MainTitle = ({ title, subtitle, inverted, className }) => {
   return (
-    <LinkComponent to={to} {...rest}>
-      {children}
-    </LinkComponent>
+    <div className={clsx(classes.mainTitle, inverted && classes.inverted, className)}>
+      <h2>{title}</h2>
+      <p>{subtitle}</p>
+    </div>
   );
 };
 
-Link.propTypes = {
-  children: PropTypes.node,
-  href: PropTypes.string,
-  to: PropTypes.string
+MainTitle.propTypes = {
+  className: PropTypes.string,
+  inverted: PropTypes.bool,
+  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
-export default Link;
+export default MainTitle;

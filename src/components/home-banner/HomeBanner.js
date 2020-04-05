@@ -25,7 +25,7 @@ const HomeBanner = () => {
             <div className={clsx(classes.content)}>
               <h5>This is me</h5>
               <h2>Javier Brea</h2>
-              <p>Full stack JS developer. Front end arquitect.</p>
+              <p>Software developer. Front-end arquitect</p>
               <BannerButton to="/about">About me</BannerButton>
             </div>
           </div>

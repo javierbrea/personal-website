@@ -23,16 +23,16 @@ module.exports = {
     description: `Javier Brea personal website`,
     author: `@javierbrea`,
     keywords: [
-      "domapic",
-      "iot",
-      "domotic",
-      "home automation",
-      "framework",
-      "api",
-      "rest",
-      "node.js",
-      "open source",
-      "microservices"
+      "Javier Brea",
+      "front-end",
+      "architect",
+      "software",
+      "developer",
+      "javascript",
+      "curriculum",
+      "about",
+      "projects",
+      "career"
     ],
     socialImage: "business-card"
   },
