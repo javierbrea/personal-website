@@ -5,21 +5,19 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-/* eslint-disable filenames/match-exported */
+@import 'styles/base/variables';
 
-import React from "react";
+.root {
+  box-shadow: 0 8px 30px 0 rgba(153, 153, 153, 0.1);
+  padding: 50px 35px;
 
-import Layout from "modules/layout";
-import HomeBanner from "components/home-banner";
-import LastProjects from "components/last-projects";
-import HomeWelcome from "components/home-welcome";
+  @include media('m') {
+    margin-top: 50px;
+  }
 
-const Page = () => (
-  <Layout title="Home">
-    <HomeBanner />
-    <HomeWelcome />
-    <LastProjects />
-  </Layout>
-);
-
-export default Page;
+  h3 {
+    color: $textColorDark;
+    font-size: 21px;
+    text-transform: uppercase;
+  }
+}

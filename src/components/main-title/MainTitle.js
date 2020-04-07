@@ -9,12 +9,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
+import Title from "components/title";
+
 import classes from "./mainTitle.module.scss";
 
 const MainTitle = ({ title, subtitle, inverted, className }) => {
   return (
     <div className={clsx(classes.mainTitle, inverted && classes.inverted, className)}>
-      <h2>{title}</h2>
+      <Title inverted={inverted}>{title}</Title>
       <p>{subtitle}</p>
     </div>
   );

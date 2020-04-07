@@ -11,18 +11,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
   margin-bottom: 75px;
   text-align: center;
 
-  h2 {
-    @include heebo-font;
-    color: $textColorDark;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    @include media('xs') {
-      font-size: 28px;
-    }
-  }
-
   p {
     @include roboto-font;
     font-size: 16px;
@@ -34,10 +22,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 }
 
 .inverted {
-  h2 {
-    color: $white;
-  }
-
   p {
     color: $white;
     opacity: 0.6;
