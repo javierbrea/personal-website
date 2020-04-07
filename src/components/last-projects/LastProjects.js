@@ -20,7 +20,7 @@ import ingImage from "images/projects/ing.jpg";
 
 const LastProjects = () => {
   return (
-    <Section className={classes.root}>
+    <Section className={classes.root} odd>
       <MainTitle
         subtitle="Companies in which I have been working on my last projects"
         title="Last Projects"

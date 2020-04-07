@@ -11,13 +11,18 @@ import clsx from "clsx";
 
 import classes from "./section.module.scss";
 
-const Section = ({ children, className }) => {
-  return <div className={clsx("container", classes.section, className)}>{children}</div>;
+const Section = ({ children, className, odd }) => {
+  return (
+    <div className={clsx(odd && classes.odd)}>
+      <div className={clsx("container", classes.section, className)}>{children}</div>
+    </div>
+  );
 };
 
 Section.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  odd: PropTypes.bool
 };
 
 export default Section;
