@@ -12,18 +12,18 @@ import Section from "components/section";
 import MainTitle from "components/main-title";
 import ProjectItem from "components/project-item";
 
-import classes from "./lastProjects.module.scss";
+import classes from "./latestProjects.module.scss";
 
 import telefonicaImage from "images/projects/telefonica.jpg";
 import orangeImage from "images/projects/orange.jpg";
 import ingImage from "images/projects/ing.jpg";
 
-const LastProjects = () => {
+const LatestProjects = () => {
   return (
     <Section className={classes.root} odd>
       <MainTitle
-        subtitle="Companies in which I have been working on my last projects"
-        title="Last Projects"
+        subtitle="Companies in which I have been working on my latest projects"
+        title="Latest Projects"
       />
       <div className="row">
         <div className="col-lg-4 col-sm-6">
@@ -58,4 +58,4 @@ const LastProjects = () => {
   );
 };
 
-export default LastProjects;
+export default LatestProjects;
