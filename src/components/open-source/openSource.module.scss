@@ -7,32 +7,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-.item {
-  @include border;
-  border-radius: 5px;
-  padding: 30px 25px;
-
-  @include media('s') {
-    margin-bottom: 30px;
-  }
-
-  svg {
-    color: $textColorTheme;
-    font-size: 24px;
-  }
-
-  h4 {
-    @include heebo-font;
-    color: $textColorDark;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-
-  p {
-    @include roboto-font;
-    font-size: 12px;
-    margin-bottom: 0;
+.root {
+  @include media('xs') {
+    margin: 0 auto -30px;
   }
 }

@@ -6,6 +6,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 $white: #fff;
+$grey: #eee;
 
 $textColor: #777;
 $textColorDark: #222;
@@ -21,6 +22,11 @@ $backgroundLight: #faf9ff;
 
 @mixin heebo-font {
   font-family: 'Heebo', sans-serif;
+}
+
+@mixin border {
+  border: 1px solid $grey;
+  border-radius: 10px;
 }
 
 @mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s) {

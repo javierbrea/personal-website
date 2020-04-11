@@ -28,7 +28,7 @@ const LastProjects = () => {
       <div className="row">
         <div className="col-lg-4 col-sm-6">
           <ProjectItem
-            description="Front-end arquitect"
+            description="Front-end architect"
             image={telefonicaImage}
             imageAlt="Telefónica"
             title="Telefónica I+D"
@@ -37,7 +37,7 @@ const LastProjects = () => {
         </div>
         <div className="col-lg-4 col-sm-6">
           <ProjectItem
-            description="Front-end arquitect"
+            description="Front-end architect"
             image={orangeImage}
             imageAlt="Orange"
             title="XByOrange"
@@ -46,7 +46,7 @@ const LastProjects = () => {
         </div>
         <div className="col-lg-4 col-sm-6">
           <ProjectItem
-            description="Front-end arquitect"
+            description="Front-end architect"
             image={ingImage}
             imageAlt="ING"
             title="ING"

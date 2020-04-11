@@ -24,9 +24,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
 }
 
 .progress {
+  @include border;
   background: transparent;
-  border: 1px solid #eee;
-  border-radius: 10px;
   box-shadow: 0 5px 8px 0 rgba(132, 144, 255, 0.2);
   display: flex;
   height: 20px;
