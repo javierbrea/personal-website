@@ -29,6 +29,7 @@ const OpenSource = () => {
             github="data-provider/core"
             name="Data Provider"
             npm="@data-provider/core"
+            website="https://www.data-provider.org"
           />
         </div>
         <div className="col-lg-4 col-sm-12">
@@ -37,6 +38,7 @@ const OpenSource = () => {
             github="mocks-server/main"
             name="Mocks Server"
             npm="@mocks-server/main"
+            website="https://www.mocks-server.org"
           />
         </div>
         <div className="col-lg-4 col-sm-12">
