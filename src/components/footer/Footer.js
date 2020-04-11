@@ -44,7 +44,6 @@ const Footer = ({ className }) => {
                 </li>
                 <li>
                   <Link aria-label="Twitter profile" to="https://twitter.com/javierbrea">
-                    <i className="fa fa-twitter"></i>
                     <FontAwesomeIcon icon={faTwitter} />
                   </Link>
                 </li>

@@ -8,12 +8,14 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import React from "react";
 import PropTypes from "prop-types";
 import GitHubButton from "react-github-btn";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 import Link from "components/link";
 
 import classes from "./openSourceProject.module.scss";
 
-const OpenSourceProject = ({ name, description, github, npm }) => {
+const OpenSourceProject = ({ name, description, github, npm, website }) => {
   return (
     <div className={classes.openSourceProject}>
       <h4>{name}</h4>
@@ -30,6 +32,13 @@ const OpenSourceProject = ({ name, description, github, npm }) => {
         >
           Star
         </GitHubButton>
+        {!!website && (
+          <Link to={website}>
+            <span className={classes.website}>
+              <FontAwesomeIcon icon={faGlobe} /> Website
+            </span>
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -39,7 +48,8 @@ OpenSourceProject.propTypes = {
   description: PropTypes.string,
   github: PropTypes.string,
   name: PropTypes.string,
-  npm: PropTypes.string
+  npm: PropTypes.string,
+  website: PropTypes.string
 };
 
 export default OpenSourceProject;

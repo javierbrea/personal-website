@@ -11,7 +11,7 @@ import React from "react";
 
 import Layout from "modules/layout";
 import HomeBanner from "components/home-banner";
-import LastProjects from "components/last-projects";
+import LatestProjects from "components/latest-projects";
 import HomeWelcome from "components/home-welcome";
 import OpenSource from "components/open-source";
 
@@ -19,7 +19,7 @@ const Page = () => (
   <Layout title="Home">
     <HomeBanner />
     <HomeWelcome />
-    <LastProjects />
+    <LatestProjects />
     <OpenSource />
   </Layout>
 );
