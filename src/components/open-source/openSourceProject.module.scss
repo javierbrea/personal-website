@@ -7,32 +7,26 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-.item {
+.openSourceProject {
   @include border;
-  border-radius: 5px;
-  padding: 30px 25px;
-
-  @include media('s') {
-    margin-bottom: 30px;
-  }
-
-  svg {
-    color: $textColorTheme;
-    font-size: 24px;
-  }
+  background: $white;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 40px 28px;
 
   h4 {
-    @include heebo-font;
     color: $textColorDark;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
   }
+}
 
-  p {
-    @include roboto-font;
-    font-size: 12px;
-    margin-bottom: 0;
+.links {
+  align-items: center;
+  display: flex;
+
+  a {
+    margin-right: 10px;
+    margin-top: -2px;
   }
 }
