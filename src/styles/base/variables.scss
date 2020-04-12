@@ -33,14 +33,14 @@ $backgroundLight: #faf9ff;
   transition: $property $duration $animate $delay; 
 }
 
-@function translate-media-condition($alias) {
-  $sizeXL: 1619px;
-  $sizeL: 1199px;
-  $sizeM: 991px;
-  $sizeS: 767px;
-  $sizeXS: 575px;
-  $sizeXXS: 480px;
+$sizeXL: 1619px;
+$sizeL: 1199px;
+$sizeM: 991px;
+$sizeS: 767px;
+$sizeXS: 575px;
+$sizeXXS: 480px;
 
+@function translate-media-condition($alias) {
   $mediaMap: (
     'xxl': '(min-width: #{$sizeXL + 1})',
     'xl': '(max-width: #{$sizeXL})',

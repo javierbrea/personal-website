@@ -5,27 +5,25 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-/* eslint-disable filenames/match-exported */
-
 import React from "react";
+import PropTypes from "prop-types";
+import clsx from "clsx";
 
-import Layout from "modules/layout";
-import HomeBanner from "components/home-banner";
-import LatestProjects from "components/latest-projects";
-import HomeWelcome from "components/home-welcome";
-import OpenSource from "components/open-source";
-import OpenCollective from "components/open-collective";
+import classes from "./column.module.scss";
 
-const Page = () => {
+const Column = ({ children, odd }) => {
   return (
-    <Layout title="Home">
-      <HomeBanner />
-      <HomeWelcome />
-      <LatestProjects />
-      <OpenSource />
-      <OpenCollective />
-    </Layout>
+    <div className={clsx("col-lg-4 col-sm-6", odd && classes.odd)}>
+      <div className={clsx(classes.wrapper)}>
+        <div className={clsx(odd && classes.oddContainer)}>{children}</div>
+      </div>
+    </div>
   );
 };
 
-export default Page;
+Column.propTypes = {
+  children: PropTypes.node,
+  odd: PropTypes.bool
+};
+
+export default Column;

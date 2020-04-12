@@ -12,6 +12,8 @@ import Section from "components/section";
 import MainTitle from "components/main-title";
 import ProjectItem from "components/project-item";
 
+import Column from "./Column";
+
 import classes from "./latestProjects.module.scss";
 
 import telefonicaImage from "images/projects/telefonica.jpg";
@@ -26,7 +28,7 @@ const LatestProjects = () => {
         title="Latest Projects"
       />
       <div className="row">
-        <div className="col-lg-4 col-sm-6">
+        <Column>
           <ProjectItem
             description="Front-end architect"
             image={telefonicaImage}
@@ -34,8 +36,8 @@ const LatestProjects = () => {
             title="Telefónica I+D"
             // to="/"
           />
-        </div>
-        <div className="col-lg-4 col-sm-6">
+        </Column>
+        <Column>
           <ProjectItem
             description="Front-end architect"
             image={orangeImage}
@@ -43,8 +45,8 @@ const LatestProjects = () => {
             title="XByOrange"
             // to="/"
           />
-        </div>
-        <div className="col-lg-4 col-sm-6">
+        </Column>
+        <Column odd>
           <ProjectItem
             description="Front-end architect"
             image={ingImage}
@@ -52,7 +54,7 @@ const LatestProjects = () => {
             title="ING"
             // to="/"
           />
-        </div>
+        </Column>
       </div>
     </Section>
   );
