@@ -7,33 +7,26 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-.item {
-  @include border;
-  border-radius: 5px;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
-  padding: 30px 25px;
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-  @include media('s') {
-    margin-bottom: 30px;
+.odd {
+  @media (min-width: #{$sizeXS}) and (max-width: #{$sizeM}) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.oddContainer {
+  @media (min-width: #{$sizeXS}) and (max-width: #{$sizeS}) {
+    max-width: 240px;
   }
 
-  svg {
-    color: $textColorTheme;
-    font-size: 24px;
-  }
-
-  h4 {
-    @include heebo-font;
-    color: $textColorDark;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-
-  p {
-    @include roboto-font;
-    font-size: 12px;
-    margin-bottom: 0;
+  @media (min-width: #{$sizeS}) and (max-width: #{$sizeM}) {
+    max-width: 330px;
   }
 }

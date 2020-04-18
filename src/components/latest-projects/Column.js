@@ -5,35 +5,25 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-@import 'styles/base/variables';
+import React from "react";
+import PropTypes from "prop-types";
+import clsx from "clsx";
 
-.item {
-  @include border;
-  border-radius: 5px;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
-  padding: 30px 25px;
+import classes from "./column.module.scss";
 
-  @include media('s') {
-    margin-bottom: 30px;
-  }
+const Column = ({ children, odd }) => {
+  return (
+    <div className={clsx("col-lg-4 col-sm-6", odd && classes.odd)}>
+      <div className={clsx(classes.wrapper)}>
+        <div className={clsx(odd && classes.oddContainer)}>{children}</div>
+      </div>
+    </div>
+  );
+};
 
-  svg {
-    color: $textColorTheme;
-    font-size: 24px;
-  }
+Column.propTypes = {
+  children: PropTypes.node,
+  odd: PropTypes.bool
+};
 
-  h4 {
-    @include heebo-font;
-    color: $textColorDark;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-
-  p {
-    @include roboto-font;
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-}
+export default Column;

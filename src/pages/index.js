@@ -14,14 +14,18 @@ import HomeBanner from "components/home-banner";
 import LatestProjects from "components/latest-projects";
 import HomeWelcome from "components/home-welcome";
 import OpenSource from "components/open-source";
+import OpenCollective from "components/open-collective";
 
-const Page = () => (
-  <Layout title="Home">
-    <HomeBanner />
-    <HomeWelcome />
-    <LatestProjects />
-    <OpenSource />
-  </Layout>
-);
+const Page = () => {
+  return (
+    <Layout title="Home">
+      <HomeBanner />
+      <HomeWelcome />
+      <LatestProjects />
+      <OpenSource />
+      <OpenCollective />
+    </Layout>
+  );
+};
 
 export default Page;

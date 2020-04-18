@@ -20,7 +20,7 @@ const OpenSource = () => {
     <Section className={classes.root}>
       <MainTitle
         subtitle="Main open source projects I'm currently maintaining"
-        title="Open Source"
+        title="Featured Open Source projects"
       />
       <div className="row">
         <div className="col-lg-4 col-sm-12">
