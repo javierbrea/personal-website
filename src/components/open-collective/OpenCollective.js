@@ -29,62 +29,50 @@ const OpenCollective = () => {
       <div className="row">
         <Column>
           <MemberShip
-            description="The web has evolved.  Finally, testing has too."
             link="https://opencollective.com/cypressio"
             logo="https://images.opencollective.com/cypressio/b6f8a1e/logo.png"
             name="Cypress.io"
-            role="backer"
-            since="since April 2020"
+            role="contributor"
           />
         </Column>
         <Column>
           <MemberShip
-            description="JS async data provider empowering modular architectures"
-            link="https://opencollective.com/data-provider"
-            logo="https://images.opencollective.com/data-provider/2839c3b/logo.png"
-            name="Data Provider"
-            role="collective admin"
-            since="since April 2020"
+            link="https://opencollective.com/sinon"
+            logo="https://images.opencollective.com/sinon/1565a5d/logo/128.png"
+            name="Sinon"
+            role="contributor"
           />
         </Column>
         <Column>
           <MemberShip
-            description="The web has evolved.  Finally, testing has too."
-            link="https://opencollective.com/cypressio"
-            logo="https://images.opencollective.com/cypressio/b6f8a1e/logo.png"
-            name="Cypress.io"
-            role="backer"
-            since="since April 2020"
+            link="https://opencollective.com/docusaurus"
+            logo="https://images.opencollective.com/docusaurus/48a7e37/logo.png"
+            name="Docusaurus"
+            role="contributor"
           />
         </Column>
         <Column>
           <MemberShip
-            description="JS async data provider empowering modular architectures"
-            link="https://opencollective.com/data-provider"
-            logo="https://images.opencollective.com/data-provider/2839c3b/logo.png"
-            name="Data Provider"
-            role="collective admin"
-            since="since April 2020"
+            link="https://opencollective.com/eslint"
+            logo="https://images.opencollective.com/eslint/96b09dc/logo.png"
+            name="ESLint"
+            role="contributor"
           />
         </Column>
         <Column odd oddRight>
           <MemberShip
-            description="The web has evolved.  Finally, testing has too."
-            link="https://opencollective.com/cypressio"
-            logo="https://images.opencollective.com/cypressio/b6f8a1e/logo.png"
-            name="Cypress.io"
-            role="backer"
-            since="since April 2020"
+            link="https://opencollective.com/webpack"
+            logo="https://images.opencollective.com/webpack/c517443/logo/128.png"
+            name="Webpack"
+            role="contributor"
           />
         </Column>
         <Column odd oddLeft>
           <MemberShip
-            description="JS async data provider empowering modular architectures"
-            link="https://opencollective.com/data-provider"
-            logo="https://images.opencollective.com/data-provider/2839c3b/logo.png"
-            name="Data Provider"
-            role="collective admin"
-            since="since April 2020"
+            link="https://opencollective.com/create-react-app"
+            logo="https://images.opencollective.com/create-react-app/logo/128.png"
+            name="Create React App"
+            role="contributor"
           />
         </Column>
       </div>

@@ -28,15 +28,14 @@ Unless required by applicable law or agreed to in writing, software distributed 
 }
 
 .head {
-  border-bottom: 5px solid #46b0ed;
-  height: 140px;
+  height: 100px;
   overflow: hidden;
   position: relative;
   width: 100%;
 }
 
 .imageBackground {
-  background-image: url('../../images/defaultBackgroundImageCollective.jpg');
+  background-color: #dce8f0;
   background-position: center center;
   background-size: cover;
   height: 100%;
@@ -69,7 +68,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 }
 
 .body {
-  min-height: 140px;
   padding: 1rem;
 }
 

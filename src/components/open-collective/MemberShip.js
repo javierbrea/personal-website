@@ -11,7 +11,7 @@ import Link from "components/link";
 
 import classes from "./memberShip.module.scss";
 
-const MemberShip = ({ link, logo, name, description, role, since }) => {
+const MemberShip = ({ link, logo, name, role }) => {
   return (
     <div className={classes.container}>
       <Link to={link}>
@@ -26,9 +26,6 @@ const MemberShip = ({ link, logo, name, description, role, since }) => {
           </div>
           <div className={classes.body}>
             <div className={classes.name}>{name}</div>
-            <div className={classes.description} title={description}>
-              {description}
-            </div>
           </div>
           <div className={classes.footer}>
             <div className={classes.membership}>
@@ -37,7 +34,6 @@ const MemberShip = ({ link, logo, name, description, role, since }) => {
                   <li>{role}</li>
                 </ul>
               </div>
-              <div className={classes.since}>{since}</div>
             </div>
           </div>
         </div>
@@ -47,12 +43,10 @@ const MemberShip = ({ link, logo, name, description, role, since }) => {
 };
 
 MemberShip.propTypes = {
-  description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  since: PropTypes.string.isRequired
+  role: PropTypes.string.isRequired
 };
 
 export default MemberShip;

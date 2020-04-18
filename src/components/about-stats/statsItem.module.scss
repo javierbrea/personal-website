@@ -10,6 +10,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 .item {
   @include border;
   border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
   padding: 30px 25px;
 
   @include media('s') {
