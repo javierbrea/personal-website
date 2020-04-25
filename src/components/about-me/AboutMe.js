@@ -86,7 +86,7 @@ const AboutMe = () => {
               novels, comics and travel books. And, that&apos;s my other passion: travelling. This
               avocation made me get another hobby: the photography, and honestly, this is something
               in which I&apos;d like to improve, because I usually only practice it during my
-              travels, but, unfortunaltely, the time is a limited resource... 😉
+              travels, but, unfortunately, the time is a limited resource... 😉
             </p>
           </div>
         </div>
