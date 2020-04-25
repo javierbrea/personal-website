@@ -17,7 +17,7 @@ const AboutMe = () => {
       <div className="row">
         <div className="col-lg-12">
           <div className={classes.text}>
-            <h4>About Myself</h4>
+            <h4>As a professional</h4>
             <p>
               Always passionate about technology, I guided my professional career by a motto:{" "}
               <b>
@@ -37,9 +37,9 @@ const AboutMe = () => {
               methodic, meticulous and even perfectionist, but this does not make distract me about
               &quot;getting things done&quot;. I consider that my job is to solve problems in which
               many variables come into play: Scalability, modularity, performance, readability,
-              maintainability... and so on. For me this is really exciting, I love to find the
-              correct balance between all these concepts for the problem, and then solve it in the
-              most optimal way possible.
+              maintainability, delivery times... and so on. For me this is really exciting, I love
+              to find the correct balance between all these concepts for the problem, and then
+              solve it in the most optimal way possible.
             </p>
             <p>
               Leaving aside the technical part, the front end development allows me to be in touch
@@ -50,8 +50,43 @@ const AboutMe = () => {
             </p>
             <p>
               The evolution of the front-end development has brought to me again the server-side
-              technologies, (which I used during my initial career for a long time) making me to
-              achieve great skills in Node.js, end to end testing and continuous integration tools.
+              technologies (which I used during my initial career for a long time) making me to
+              achieve great skills in Node.js, end-to-end testing and continuous integration tools.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-lg-12">
+          <div className={classes.text}>
+            <h4>In my personal life</h4>
+            <p>
+              Despite the fact I was born in a big city, I spent most time of my childhood and
+              adolescence in a little village in the countryside, being in contact with the nature,
+              taking care of the vegetable garden and farm animals with my grandfather, going
+              fishing, etc. A lot of time has passed since those days, things change, and nowadays
+              I spend the most part of my time in front of a computer screen, but I still love
+              animals, adventures and nature. That&apos;s why I love to travel, specially to
+              countries and places where it is still possible to enjoy the nature or learning about
+              different cultures.
+            </p>
+            <p>
+              I recently reached an old dream, and moved to a village at the border of the city,
+              bigger than the village of my childhood, but quiet enough. This has allowed me to
+              have animals and take care of a garden again, and these are things that give me a lot
+              of peace after a hard working day. In general lines, I like a lot to work with my
+              hands, and I always have a lot of opened &quot;side projects&quot;, usually woodworks
+              projects, but also brickworks projects, etc. The worst part about this is that I am
+              just as meticulous and perfectionist in these projects as on my professional ones, so
+              I&apos;m always very busy, but, again, I don&apos;t mind because I love it.
+            </p>
+            <p>
+              I also love to read. Apart of reading a lot of technical books I read about many
+              different themes and genres, and but I specially like books about history, historical
+              novels, comics and travel books. And, that&apos;s my other passion: travelling. This
+              avocation made me get another hobby: the photography, and honestly, this is something
+              in which I&apos;d like to improve, because I usually only practice it during my
+              travels, but, unfortunaltely, the time is a limited resource... 😉
             </p>
           </div>
         </div>

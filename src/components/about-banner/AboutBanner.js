@@ -32,7 +32,7 @@ const AboutBanner = () => {
           <div className={clsx("text-center", classes.text)}>
             <h2>About me</h2>
             <p>
-              Designing and developing software from 2004...
+              Designing and developing software from 2003...
               <br />
               and still loving it.
             </p>

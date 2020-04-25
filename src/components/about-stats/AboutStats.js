@@ -19,15 +19,16 @@ import classes from "./aboutStats.module.scss";
 const AboutStats = () => {
   return (
     <div className={classes.root}>
-      <Title className={classes.title}>About Myself</Title>
+      <Title className={classes.title}>Some numbers</Title>
       <p className={classes.text}>
-        Always passionate about technology, I guided my professional career by a motto:{" "}
-        &quot;Choose a job you love, and you will never have to work a day in your life&quot;. I
-        think I got it. But this doesn&apos;t mean that I like the immobility nor that I think I
-        have earned all, quite the opposite.
-        <br /> <Link to="/about">Read more...</Link>
+        As programmers, we usually tend to try to measure all. I think that knowledge is something
+        difficult to measure, but during my long career I have participated in a lot of projects,
+        which, obviously, made me acquire a lot of skills. This is only a fast approach to my
+        person through the numbers, a mere curiosity. If you really want to know more about me,{" "}
+        <Link to="/about">you should read this introduction.</Link>
       </p>
       <div className="row">
+        <StatsItem amount={16} icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" />
         <StatsItem
           amount={168}
           icon={<FontAwesomeIcon icon={faDesktop} />}
@@ -38,7 +39,6 @@ const AboutStats = () => {
           icon={<FontAwesomeIcon icon={faServer} />}
           text="Back-end projects"
         />
-        <StatsItem amount={16} icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" />
       </div>
     </div>
   );

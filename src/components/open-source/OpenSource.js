@@ -47,6 +47,7 @@ const OpenSource = () => {
             github="javierbrea/cypress-localstorage-commands"
             name="cypress-localstorage-commands"
             npm="cypress-localstorage-commands"
+            website="https://github.com/javierbrea/cypress-localstorage-commands"
           />
         </div>
       </div>
