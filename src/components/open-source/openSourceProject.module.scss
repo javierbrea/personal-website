@@ -16,8 +16,24 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
   h4 {
     color: $textColorDark;
-    font-size: 20px;
+    font-size: 16px;
+    min-height: 50px;
+    padding-bottom: 10px;
     text-transform: uppercase;
+    @include media('m') {
+      min-height: auto;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    min-height: 110px;
+    @include media('l') {
+      min-height: 140px;
+    }
+    @include media('m') {
+      min-height: auto;
+    }
   }
 }
 
