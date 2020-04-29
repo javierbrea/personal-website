@@ -5,34 +5,4 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-@import 'styles/base/variables';
-
-.section {
-  padding-bottom: 120px;
-  padding-top: 120px;
-  @include media('xs') {
-    padding-bottom: 70px;
-    padding-top: 70px;
-  }
-}
-
-.odd {
-  background-color: $backgroundLight;
-}
-
-.compactTop {
-  padding-top: 60px;
-}
-
-.compactBottom {
-  padding-bottom: 60px;
-}
-
-.compact {
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-
-.separator {
-  border-top: 1px dotted #eee;
-}
+export { default } from "./ImagesGallery";

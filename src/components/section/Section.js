@@ -11,10 +11,22 @@ import clsx from "clsx";
 
 import classes from "./section.module.scss";
 
-const Section = ({ children, className, odd }) => {
+const Section = ({ children, className, odd, separator, compact, compactBottom, compactTop }) => {
   return (
     <div className={clsx(odd && classes.odd)}>
-      <div className={clsx("container", classes.section, className)}>{children}</div>
+      <div
+        className={clsx(
+          "container",
+          classes.section,
+          compact && classes.compact,
+          compactTop && classes.compactTop,
+          compactBottom && classes.compactBottom,
+          separator && classes.separator,
+          className
+        )}
+      >
+        {children}
+      </div>
     </div>
   );
 };
@@ -22,7 +34,11 @@ const Section = ({ children, className, odd }) => {
 Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  odd: PropTypes.bool
+  compact: PropTypes.bool,
+  compactBottom: PropTypes.bool,
+  compactTop: PropTypes.bool,
+  odd: PropTypes.bool,
+  separator: PropTypes.bool
 };
 
 export default Section;
