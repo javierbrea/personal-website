@@ -47,7 +47,12 @@ const images = [
     caption: "Spain. Summit of the Peñalara pike",
     width: 4
   },
-  { thumbnail: thumb4, src: img4, caption: "Rwanda. Gorillas sightseeing trekking", width: 6 },
+  {
+    thumbnail: thumb4,
+    src: img4,
+    caption: "Rwanda. Gorillas sightseeing trekking in the Mountains of the Moon",
+    width: 6
+  },
   {
     thumbnail: thumb5,
     src: img5,
@@ -57,7 +62,7 @@ const images = [
   {
     thumbnail: thumb6,
     src: img6,
-    caption: "Nepal. Paragliding at Pokhara with the Himalayan Annapurna in background",
+    caption: "Nepal. Paragliding in Pokhara with the Himalayan Annapurna in background",
     width: 4
   },
   {
