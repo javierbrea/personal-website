@@ -6,6 +6,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import React, { Fragment } from "react";
+import clsx from "clsx";
 
 import Section from "components/section";
 import ImagesGallery from "components/images-gallery";
@@ -31,6 +32,12 @@ import img9 from "images/gallery/09.jpg";
 import thumb10 from "images/gallery/10_thumb.jpg";
 import img10 from "images/gallery/10.jpg";
 
+import jobImage1 from "images/gallery/job-01.jpg";
+import jobImage2 from "images/gallery/job-02.jpg";
+import jobImage3 from "images/gallery/job-03.jpg";
+
+import ImageGallery from "components/image-gallery";
+
 import classes from "./aboutMe.module.scss";
 
 const images = [
@@ -50,7 +57,7 @@ const images = [
   {
     thumbnail: thumb4,
     src: img4,
-    caption: "Rwanda. Gorillas sightseeing trekking in the Mountains of the Moon",
+    caption: "Rwanda. Gorillas trekking in the Mountains of the Moon",
     width: 6
   },
   {
@@ -68,7 +75,7 @@ const images = [
   {
     thumbnail: thumb7,
     src: img7,
-    caption: "Nepal. Arriving to Machu Picchu after trekking the Inca trail for four days",
+    caption: "Peru. Arriving to Machu Picchu after trekking the Inca trail for four days",
     width: 4
   },
   {
@@ -132,6 +139,11 @@ const AboutMe = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className={clsx("row", classes.images)}>
+          <ImageGallery alignLeft alt="Working" src={jobImage2} width={4} />
+          <ImageGallery alt="Coding" src={jobImage3} width={4} />
+          <ImageGallery alt="Architecture design" src={jobImage1} width={4} />
         </div>
       </Section>
       <Section compactTop separator>

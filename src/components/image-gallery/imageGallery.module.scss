@@ -12,12 +12,16 @@ Unless required by applicable law or agreed to in writing, software distributed 
   height: 200px;
   margin-top: 30px;
   transition: all 0.3s ease 0s;
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
+.alignLeft {
+  background-position: center left !important;
 }
 
 .clickable {
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
