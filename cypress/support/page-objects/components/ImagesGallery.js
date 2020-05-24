@@ -25,10 +25,12 @@ export default class ImagesGallery {
   }
 
   get closeButton() {
-    return new Element(cy
+    return new Element(
+      cy
         .get(this.SELECTORS.HEADER)
         .find("button")
-        .eq(1));
+        .eq(1)
+    );
   }
 
   getPaginationButton(index) {

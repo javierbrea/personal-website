@@ -69,7 +69,7 @@
     "stylelint-scss": "3.16.1"
   },
   "scripts": {
-    "lint": "eslint *.js src",
+    "lint": "eslint *.js src cypress",
     "lint:staged": "lint-staged",
     "build": "gatsby build",
     "build-and-serve": "npm run build && npm run serve",
@@ -87,6 +87,7 @@
   },
   "lint-staged": {
     "src/**/*.js": "eslint",
+    "cypress/**/*.js": "eslint",
     "/*.js": "eslint",
     "src/**/*.scss": "stylelint"
   },
