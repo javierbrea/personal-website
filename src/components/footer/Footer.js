@@ -17,7 +17,7 @@ import "./footer.scss";
 
 const Footer = ({ className }) => {
   return (
-    <footer className={clsx("footer_area", className)}>
+    <footer className={clsx("footer_area", className)} data-testid="footer">
       <div className="container">
         <div className="row footer_inner">
           <div className="col-lg-5 col-sm-6">
@@ -38,17 +38,29 @@ const Footer = ({ className }) => {
               <p>Let us be social</p>
               <ul className="list">
                 <li>
-                  <Link aria-label="Linkedin profile" to="https://www.linkedin.com/in/javierbrea/">
+                  <Link
+                    aria-label="Linkedin profile"
+                    data-testid="social-link-linkedin"
+                    to="https://www.linkedin.com/in/javierbrea/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </Link>
                 </li>
                 <li>
-                  <Link aria-label="Twitter profile" to="https://twitter.com/javierbrea">
+                  <Link
+                    aria-label="Twitter profile"
+                    data-testid="social-link-twitter"
+                    to="https://twitter.com/javierbrea"
+                  >
                     <FontAwesomeIcon icon={faTwitter} />
                   </Link>
                 </li>
                 <li>
-                  <Link aria-label="Github profile" to="https://github.com/javierbrea">
+                  <Link
+                    aria-label="Github profile"
+                    data-testid="social-link-github"
+                    to="https://github.com/javierbrea"
+                  >
                     <FontAwesomeIcon icon={faGithub} />
                   </Link>
                 </li>

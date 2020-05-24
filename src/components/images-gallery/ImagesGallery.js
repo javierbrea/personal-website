@@ -12,7 +12,7 @@ import clsx from "clsx";
 
 import ImageGallery from "components/image-gallery";
 
-const ImagesGallery = ({ className, images }) => {
+const ImagesGallery = ({ className, images, "data-testid": dataTestid }) => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(null);
 
@@ -33,11 +33,12 @@ const ImagesGallery = ({ className, images }) => {
           </Modal>
         ) : null}
       </ModalGateway>
-      <div className={clsx("row", className)}>
+      <div className={clsx("row", className)} data-testid={dataTestid}>
         {images.map((image, index) => {
           return (
             <ImageGallery
               alt={image.caption}
+              data-testid={`${dataTestid}-${index}`}
               id={index}
               key={image.thumbnail}
               onClick={toggleModal}
@@ -54,6 +55,7 @@ const ImagesGallery = ({ className, images }) => {
 ImagesGallery.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  "data-testid": PropTypes.string,
   images: PropTypes.arrayOf(
     PropTypes.shape({
       thumbnail: PropTypes.string.isRequired,

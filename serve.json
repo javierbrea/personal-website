@@ -1,0 +1,6 @@
+{
+  "public": "public",
+  "trailingSlash": false,
+  "directoryListing": false,
+  "cleanUrls": true
+}

@@ -18,7 +18,7 @@ import OpenCollective from "components/open-collective";
 
 const Page = () => {
   return (
-    <Layout title="Home">
+    <Layout data-testid="home-page" title="Home">
       <HomeBanner />
       <HomeWelcome />
       <LatestProjects />

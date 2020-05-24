@@ -30,12 +30,17 @@ const Header = ({ className, inverted }) => {
       )}
     >
       <div className="main_menu" id="mainNav">
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light" data-testid="navbar">
           <div className="container box_1620">
             {/* <!-- Brand and toggle get grouped for better mobile display --> */}
-            <Link className="navbar-brand logo_h" to="/">
-              <img alt="JBREA" className="logo" src={logo} />
-              <img alt="JBREA" className="logo_white" src={logoWhite} />
+            <Link className="navbar-brand logo_h" data-testid="main-logo-link" to="/">
+              <img alt="JBREA" className="logo" data-testid="main-logo" src={logo} />
+              <img
+                alt="JBREA"
+                className="logo_white"
+                data-testid="main-logo-white"
+                src={logoWhite}
+              />
             </Link>
             <button
               aria-controls="navbarSupportedContent"
@@ -43,6 +48,7 @@ const Header = ({ className, inverted }) => {
               aria-label="Toggle navigation"
               className="navbar-toggler"
               data-target="#navbarSupportedContent"
+              data-testid="navbar-collapse-button"
               data-toggle="collapse"
               type="button"
             >
@@ -53,12 +59,12 @@ const Header = ({ className, inverted }) => {
             <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul className="nav navbar-nav menu_nav ml-auto">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" data-testid="navigate-to-home" to="/">
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
+                  <Link className="nav-link" data-testid="navigate-to-about" to="/about">
                     About
                   </Link>
                 </li>
