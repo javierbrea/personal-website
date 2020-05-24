@@ -73,7 +73,7 @@
     "lint:staged": "lint-staged",
     "build": "gatsby build",
     "build-and-serve": "npm run build && npm run serve",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 3000",
     "start": "npm run develop",
     "serve": "serve -l 3000",
     "stylelint": "stylelint src",

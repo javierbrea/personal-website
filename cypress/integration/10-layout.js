@@ -1,5 +1,5 @@
-import Home from "../support/page-objects/pages/Home";
 import Browser from "../support/page-objects/common/Browser";
+import Home from "../support/page-objects/pages/Home";
 
 describe("Layout", () => {
   let page;
@@ -13,7 +13,7 @@ describe("Layout", () => {
 
   describe("When viewport is l", () => {
     beforeEach(() => {
-      page.visit();
+      browser.setViewPort("l");
     });
 
     it("should display navigation bar", () => {
@@ -52,6 +52,27 @@ describe("Layout", () => {
       page.layout.navBar.collapseButton.click();
       page.layout.navBar.homeLink.shouldBeVisible();
       page.layout.navBar.aboutLink.shouldBeVisible();
+    });
+  });
+
+  describe("When scrolling to bottom", () => {
+    before(() => {
+      cy.scrollTo("bottom");
+    });
+
+    it("should display footer", () => {
+      page.layout.footer.container.shouldBeVisible();
+    });
+
+    // TODO, change by visual test
+    it("should display navigation bar", () => {
+      page.layout.navBar.container.shouldBeVisible();
+    });
+
+    it("should display social links", () => {
+      page.layout.footer.linkedinLink.shouldBeVisible();
+      page.layout.footer.twitterLink.shouldBeVisible();
+      page.layout.footer.githubLink.shouldBeVisible();
     });
   });
 });

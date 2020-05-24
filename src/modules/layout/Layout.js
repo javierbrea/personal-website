@@ -18,10 +18,18 @@ import Footer from "components/footer";
 
 import classes from "./layout.module.scss";
 
-const Layout = ({ children, title, keywords, socialImage, description, invertedHeader }) => {
+const Layout = ({
+  children,
+  title,
+  keywords,
+  socialImage,
+  description,
+  invertedHeader,
+  "data-testid": dataTestid
+}) => {
   return (
     <ParallaxProvider>
-      <div className={classes.root}>
+      <div className={classes.root} data-testid={dataTestid}>
         <Seo
           description={description}
           keywords={keywords}
@@ -38,6 +46,7 @@ const Layout = ({ children, title, keywords, socialImage, description, invertedH
 
 Layout.propTypes = {
   children: PropTypes.node,
+  "data-testid": PropTypes.string,
   description: PropTypes.string,
   invertedHeader: PropTypes.bool,
   keywords: PropTypes.array,

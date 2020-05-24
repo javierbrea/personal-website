@@ -14,7 +14,7 @@ import AboutBanner from "components/about-banner";
 import AboutMe from "components/about-me";
 
 const Page = () => (
-  <Layout description="About Javier Brea" invertedHeader title="About">
+  <Layout data-testid="about-page" description="About Javier Brea" invertedHeader title="About">
     <AboutBanner />
     <AboutMe />
   </Layout>

@@ -26,4 +26,8 @@ export default class NavBar extends Element {
   get aboutLink() {
     return new Element(cy.findByTestId(this.SELECTORS.ABOUT_LINK));
   }
+
+  clickHomeLink() {
+    return cy.findByTestId(this.SELECTORS.HOME_LINK).click();
+  }
 }

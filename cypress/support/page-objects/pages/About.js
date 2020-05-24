@@ -1,11 +1,11 @@
 import Page from "../common/Page";
 
-export default class Home extends Page {
+export default class About extends Page {
   constructor() {
     super();
-    this._url = `/`;
+    this._url = `/about`;
     this.SELECTORS = {
-      CONTAINER: "home-page"
+      CONTAINER: "about-page"
     };
   }
 }

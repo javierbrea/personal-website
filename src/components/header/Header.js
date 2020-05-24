@@ -28,10 +28,9 @@ const Header = ({ className, inverted }) => {
         inverted && "white_menu",
         className
       )}
-      data-testid="navbar"
     >
       <div className="main_menu" id="mainNav">
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light" data-testid="navbar">
           <div className="container box_1620">
             {/* <!-- Brand and toggle get grouped for better mobile display --> */}
             <Link className="navbar-brand logo_h" data-testid="main-logo-link" to="/">
