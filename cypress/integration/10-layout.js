@@ -1,19 +1,16 @@
-import Browser from "../support/page-objects/common/Browser";
 import Home from "../support/page-objects/pages/Home";
 
 describe("Layout", () => {
   let page;
-  let browser;
 
   before(() => {
     page = new Home();
-    browser = new Browser();
     page.visit();
   });
 
   describe("When viewport is l", () => {
     beforeEach(() => {
-      browser.setViewPort("l");
+      cy.setWindowWidth("l");
     });
 
     it("should display navigation bar", () => {
@@ -32,7 +29,7 @@ describe("Layout", () => {
 
   describe("When viewport is s", () => {
     beforeEach(() => {
-      browser.setViewPort("s");
+      cy.setWindowWidth("s");
     });
 
     it("should display navigation bar", () => {

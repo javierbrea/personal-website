@@ -1,5 +1,7 @@
 import Page from "../common/Page";
 
+import AboutMe from "../components/AboutMe";
+
 export default class About extends Page {
   constructor() {
     super();
@@ -7,5 +9,10 @@ export default class About extends Page {
     this.SELECTORS = {
       CONTAINER: "about-page"
     };
+    this._aboutMe = new AboutMe();
+  }
+
+  get aboutMe() {
+    return this._aboutMe;
   }
 }

@@ -11,9 +11,18 @@ import clsx from "clsx";
 
 import classes from "./section.module.scss";
 
-const Section = ({ children, className, odd, separator, compact, compactBottom, compactTop }) => {
+const Section = ({
+  children,
+  className,
+  odd,
+  separator,
+  compact,
+  compactBottom,
+  compactTop,
+  "data-testid": dataTestid
+}) => {
   return (
-    <div className={clsx(odd && classes.odd)}>
+    <div className={clsx(odd && classes.odd)} data-testid={dataTestid}>
       <div
         className={clsx(
           "container",
@@ -37,6 +46,7 @@ Section.propTypes = {
   compact: PropTypes.bool,
   compactBottom: PropTypes.bool,
   compactTop: PropTypes.bool,
+  "data-testid": PropTypes.string,
   odd: PropTypes.bool,
   separator: PropTypes.bool
 };

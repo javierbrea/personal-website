@@ -96,7 +96,7 @@ const images = [
 const AboutMe = () => {
   return (
     <Fragment>
-      <Section compactBottom>
+      <Section compactBottom data-testid="as-a-professional">
         <div className="row">
           <div className="col-lg-12">
             <div className={classes.text}>
@@ -146,7 +146,7 @@ const AboutMe = () => {
           <ImageGallery alt="Architecture design" src={jobImage1} width={4} />
         </div>
       </Section>
-      <Section compactTop separator>
+      <Section compactTop data-testid="personal-life" separator>
         <div className="row">
           <div className="col-lg-12">
             <div className={classes.text}>
@@ -184,7 +184,11 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <ImagesGallery className={classes.images} images={images} />
+        <ImagesGallery
+          className={classes.images}
+          data-testid="personal-life-gallery"
+          images={images}
+        />
       </Section>
     </Fragment>
   );

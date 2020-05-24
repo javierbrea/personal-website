@@ -1,8 +1,7 @@
 import Element from "../common/Element";
 
-export default class Footer extends Element {
+export default class Footer {
   constructor() {
-    super();
     this.SELECTORS = {
       CONTAINER: "footer",
       LINKEDIN_LINK: "social-link-linkedin",

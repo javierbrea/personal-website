@@ -1,5 +1,7 @@
 import Page from "../common/Page";
 
+import HomeBanner from "../components/HomeBanner";
+
 export default class Home extends Page {
   constructor() {
     super();
@@ -7,5 +9,10 @@ export default class Home extends Page {
     this.SELECTORS = {
       CONTAINER: "home-page"
     };
+    this._banner = new HomeBanner();
+  }
+
+  get banner() {
+    return this._banner;
   }
 }

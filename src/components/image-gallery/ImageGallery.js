@@ -11,7 +11,7 @@ import clsx from "clsx";
 
 import classes from "./imageGallery.module.scss";
 
-const ImageGallery = ({ width, src, onClick, id, alignLeft }) => {
+const ImageGallery = ({ width, src, onClick, id, alignLeft, "data-testid": dataTestid }) => {
   const style = useMemo(() => {
     return {
       background: `url(${src})`
@@ -24,7 +24,7 @@ const ImageGallery = ({ width, src, onClick, id, alignLeft }) => {
   }, [onClick, id]);
 
   return (
-    <div className={clsx(`col-md-${width}`)} onClick={handleClick}>
+    <div className={clsx(`col-md-${width}`)} data-testid={dataTestid} onClick={handleClick}>
       <a className={classes.link}>
         <div
           className={clsx(
@@ -41,6 +41,7 @@ const ImageGallery = ({ width, src, onClick, id, alignLeft }) => {
 
 ImageGallery.propTypes = {
   alignLeft: PropTypes.bool,
+  "data-testid": PropTypes.string,
   id: PropTypes.string,
   onClick: PropTypes.func,
   src: PropTypes.string,

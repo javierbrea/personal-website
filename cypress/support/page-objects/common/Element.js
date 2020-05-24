@@ -11,8 +11,8 @@ export default class Element {
     this._element.should("not.be.visible");
   }
 
-  click() {
-    this._element.click();
+  click(options) {
+    this._element.click(options);
   }
 
   shouldExist() {
@@ -25,5 +25,9 @@ export default class Element {
 
   shouldHaveText(text) {
     this._element.should("have.text", text);
+  }
+
+  scrollIntoView() {
+    this._element.scrollIntoView();
   }
 }

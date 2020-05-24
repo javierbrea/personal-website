@@ -1,16 +1,13 @@
-import Browser from "../support/page-objects/common/Browser";
 import Home from "../support/page-objects/pages/Home";
 import About from "../support/page-objects/pages/About";
 
 describe("Navigation", () => {
   let home;
-  let browser;
   let about;
 
   before(() => {
     home = new Home();
     about = new About();
-    browser = new Browser();
     home.visit();
   });
 
@@ -32,7 +29,7 @@ describe("Navigation", () => {
     });
 
     beforeEach(() => {
-      browser.setViewPort("s");
+      cy.setWindowWidth("s");
     });
 
     it("should navigate to about when about link is clicked", () => {

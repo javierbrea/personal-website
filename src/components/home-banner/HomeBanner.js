@@ -16,7 +16,7 @@ import classes from "./homeBanner.module.scss";
 
 const HomeBanner = () => {
   return (
-    <MainBanner className={classes.root}>
+    <MainBanner className={classes.root} data-testid="home-banner">
       <div className={clsx("container", classes.container)}>
         <img alt="" className={classes.image} height={550} src={bannerHome} width={360} />
         <div className={clsx("row", classes.row)}>
@@ -26,7 +26,9 @@ const HomeBanner = () => {
               <h5>This is me</h5>
               <h2>Javier Brea</h2>
               <p>Software developer. Front-end architect</p>
-              <BannerButton to="/about">About me</BannerButton>
+              <BannerButton data-testid="about-me-button" to="/about">
+                About me
+              </BannerButton>
             </div>
           </div>
         </div>

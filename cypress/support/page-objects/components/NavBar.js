@@ -1,8 +1,7 @@
 import Element from "../common/Element";
 
-export default class NavBar extends Element {
+export default class NavBar {
   constructor() {
-    super();
     this.SELECTORS = {
       CONTAINER: "navbar",
       COLLAPSE: "navbar-collapse-button",
@@ -25,9 +24,5 @@ export default class NavBar extends Element {
 
   get aboutLink() {
     return new Element(cy.findByTestId(this.SELECTORS.ABOUT_LINK));
-  }
-
-  clickHomeLink() {
-    return cy.findByTestId(this.SELECTORS.HOME_LINK).click();
   }
 }
