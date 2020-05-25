@@ -25,7 +25,7 @@ const Layout = ({
   socialImage,
   description,
   invertedHeader,
-  "data-testid": dataTestid
+  "data-testid": dataTestid,
 }) => {
   return (
     <ParallaxProvider>
@@ -51,7 +51,7 @@ Layout.propTypes = {
   invertedHeader: PropTypes.bool,
   keywords: PropTypes.array,
   socialImage: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default Layout;

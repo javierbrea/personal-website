@@ -6,7 +6,7 @@ export default class NavBar {
       CONTAINER: "navbar",
       COLLAPSE: "navbar-collapse-button",
       HOME_LINK: "navigate-to-home",
-      ABOUT_LINK: "navigate-to-about"
+      ABOUT_LINK: "navigate-to-about",
     };
   }
 

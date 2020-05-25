@@ -20,7 +20,7 @@ const Title = ({ children, inverted, className }) => {
 Title.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
 };
 
 export default Title;

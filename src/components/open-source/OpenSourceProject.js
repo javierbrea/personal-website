@@ -51,7 +51,7 @@ OpenSourceProject.propTypes = {
   github: PropTypes.string,
   name: PropTypes.string,
   npm: PropTypes.string,
-  website: PropTypes.string
+  website: PropTypes.string,
 };
 
 export default OpenSourceProject;

@@ -22,7 +22,7 @@ const MainBanner = ({ children, className, "data-testid": dataTestid }) => {
 MainBanner.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  "data-testid": PropTypes.string
+  "data-testid": PropTypes.string,
 };
 
 export default MainBanner;

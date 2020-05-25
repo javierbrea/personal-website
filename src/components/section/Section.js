@@ -19,7 +19,7 @@ const Section = ({
   compact,
   compactBottom,
   compactTop,
-  "data-testid": dataTestid
+  "data-testid": dataTestid,
 }) => {
   return (
     <div className={clsx(odd && classes.odd)} data-testid={dataTestid}>
@@ -48,7 +48,7 @@ Section.propTypes = {
   compactTop: PropTypes.bool,
   "data-testid": PropTypes.string,
   odd: PropTypes.bool,
-  separator: PropTypes.bool
+  separator: PropTypes.bool,
 };
 
 export default Section;

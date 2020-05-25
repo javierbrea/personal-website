@@ -26,7 +26,7 @@ const StatsItem = ({ amount, text, icon }) => {
 StatsItem.propTypes = {
   amount: PropTypes.number.isRequired,
   icon: PropTypes.node.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export default StatsItem;

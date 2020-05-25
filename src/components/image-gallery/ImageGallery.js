@@ -14,7 +14,7 @@ import classes from "./imageGallery.module.scss";
 const ImageGallery = ({ width, src, onClick, id, alignLeft, "data-testid": dataTestid }) => {
   const style = useMemo(() => {
     return {
-      background: `url(${src})`
+      background: `url(${src})`,
     };
   }, [src]);
   const handleClick = useCallback(() => {
@@ -45,7 +45,7 @@ ImageGallery.propTypes = {
   id: PropTypes.string,
   onClick: PropTypes.func,
   src: PropTypes.string,
-  width: PropTypes.oneOf(["4", "6"])
+  width: PropTypes.oneOf(["4", "6"]),
 };
 
 export default ImageGallery;

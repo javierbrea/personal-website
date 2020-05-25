@@ -26,7 +26,7 @@ MainTitle.propTypes = {
   className: PropTypes.string,
   inverted: PropTypes.bool,
   subtitle: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default MainTitle;

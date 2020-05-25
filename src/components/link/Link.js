@@ -29,7 +29,7 @@ const Link = ({ to, children, ...rest }) => {
 Link.propTypes = {
   children: PropTypes.node,
   href: PropTypes.string,
-  to: PropTypes.string
+  to: PropTypes.string,
 };
 
 export default Link;

@@ -7,7 +7,7 @@ export default class About extends Page {
     super();
     this._url = `/about`;
     this.SELECTORS = {
-      CONTAINER: "about-page"
+      CONTAINER: "about-page",
     };
     this._aboutMe = new AboutMe();
   }

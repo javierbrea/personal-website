@@ -4,7 +4,7 @@ export default class HomeBanner {
   constructor() {
     this.SELECTORS = {
       CONTAINER: "home-banner",
-      ABOUT_BUTTON: "about-me-button"
+      ABOUT_BUTTON: "about-me-button",
     };
   }
 

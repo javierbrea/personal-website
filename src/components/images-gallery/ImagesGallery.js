@@ -17,7 +17,7 @@ const ImagesGallery = ({ className, images, "data-testid": dataTestid }) => {
   const [index, setIndex] = useState(null);
 
   const toggleModal = useCallback(
-    id => {
+    (id) => {
       setIndex(id);
       setOpen(!open);
     },
@@ -60,9 +60,9 @@ ImagesGallery.propTypes = {
     PropTypes.shape({
       thumbnail: PropTypes.string.isRequired,
       src: PropTypes.string.isRequired,
-      caption: PropTypes.string.isRequired
+      caption: PropTypes.string.isRequired,
     })
-  )
+  ),
 };
 
 export default ImagesGallery;

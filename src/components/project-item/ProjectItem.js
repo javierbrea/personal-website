@@ -32,7 +32,7 @@ ProjectItem.propTypes = {
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  to: PropTypes.string
+  to: PropTypes.string,
 };
 
 export default ProjectItem;

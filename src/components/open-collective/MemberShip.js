@@ -46,7 +46,7 @@ MemberShip.propTypes = {
   link: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired
+  role: PropTypes.string.isRequired,
 };
 
 export default MemberShip;

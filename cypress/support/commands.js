@@ -5,7 +5,7 @@ import Browser from "./page-objects/common/Browser";
 
 const browser = new Browser();
 
-Cypress.Commands.add("setWindowWidth", width => {
+Cypress.Commands.add("setWindowWidth", (width) => {
   browser.setViewPort(width);
 });
 
@@ -14,5 +14,5 @@ addMatchImageSnapshotCommand({
   failureThresholdType: "percent", // percent of image or number of pixels
   customDiffConfig: { threshold: 0.1 }, // threshold for each pixel,
   customDiffDir: "cypress/screenshots",
-  capture: "viewport" // capture viewport in screenshot
+  capture: "viewport", // capture viewport in screenshot
 });

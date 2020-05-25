@@ -7,7 +7,7 @@ export default class ImagesGallery {
       DIALOG_CONTAINER: ".react-images__container",
       IMAGES_COUNT: ".react-images__footer__count",
       NAVIGATION: ".react-images__navigation",
-      HEADER: ".react-images__header"
+      HEADER: ".react-images__header",
     };
     this._dataTestid = dataTestid;
   }
@@ -25,21 +25,11 @@ export default class ImagesGallery {
   }
 
   get closeButton() {
-    return new Element(
-      cy
-        .get(this.SELECTORS.HEADER)
-        .find("button")
-        .eq(1)
-    );
+    return new Element(cy.get(this.SELECTORS.HEADER).find("button").eq(1));
   }
 
   getPaginationButton(index) {
-    return new Element(
-      cy
-        .get(this.SELECTORS.NAVIGATION)
-        .find("button")
-        .eq(index)
-    );
+    return new Element(cy.get(this.SELECTORS.NAVIGATION).find("button").eq(index));
   }
 
   clickPaginationButton(index) {
