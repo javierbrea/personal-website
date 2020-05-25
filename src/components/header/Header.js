@@ -79,7 +79,7 @@ const Header = ({ className, inverted }) => {
 
 Header.propTypes = {
   className: PropTypes.string,
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
 };
 
 export default Header;

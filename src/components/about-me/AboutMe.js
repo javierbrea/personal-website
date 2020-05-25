@@ -46,51 +46,51 @@ const images = [
     thumbnail: thumb2,
     src: img2,
     caption: "Nepal. Feeding an elephant after riding him during a safari in the jungle.",
-    width: 4
+    width: 4,
   },
   {
     thumbnail: thumb3,
     src: img3,
     caption: "Spain. Summit of the Peñalara pike",
-    width: 4
+    width: 4,
   },
   {
     thumbnail: thumb4,
     src: img4,
     caption: "Rwanda. Gorillas trekking in the Mountains of the Moon",
-    width: 6
+    width: 6,
   },
   {
     thumbnail: thumb5,
     src: img5,
     caption: "India. In the Taj Mahal after a Rajasthan travel by train",
-    width: 6
+    width: 6,
   },
   {
     thumbnail: thumb6,
     src: img6,
     caption: "Nepal. Paragliding in Pokhara with the Himalayan Annapurna in background",
-    width: 4
+    width: 4,
   },
   {
     thumbnail: thumb7,
     src: img7,
     caption: "Peru. Arriving to Machu Picchu after trekking the Inca trail for four days",
-    width: 4
+    width: 4,
   },
   {
     thumbnail: thumb8,
     src: img8,
     caption: "Argentina. Perito Moreno glacier",
-    width: 4
+    width: 4,
   },
   { thumbnail: thumb9, src: img9, caption: "Argentina. The Iguazu falls", width: 6 },
   {
     thumbnail: thumb10,
     src: img10,
     caption: "Jordan. Sunrise after camping in the Wadi Rum desert",
-    width: 6
-  }
+    width: 6,
+  },
 ];
 
 const AboutMe = () => {

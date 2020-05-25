@@ -8,7 +8,7 @@ export default class AboutMe {
       CONTAINER: "about-me",
       PROFESSIONAL: "as-a-professional",
       PERSONAL: "personal-life",
-      PERSONAL_GALLERY: "personal-life-gallery"
+      PERSONAL_GALLERY: "personal-life-gallery",
     };
 
     this._personalGallery = new ImagesGallery(this.SELECTORS.PERSONAL_GALLERY);

@@ -23,7 +23,7 @@ const Column = ({ children, odd }) => {
 
 Column.propTypes = {
   children: PropTypes.node,
-  odd: PropTypes.bool
+  odd: PropTypes.bool,
 };
 
 export default Column;

@@ -31,7 +31,7 @@ Column.propTypes = {
   children: PropTypes.node,
   odd: PropTypes.bool,
   oddLeft: PropTypes.bool,
-  oddRight: PropTypes.bool
+  oddRight: PropTypes.bool,
 };
 
 export default Column;

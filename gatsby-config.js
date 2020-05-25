@@ -11,7 +11,7 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = SITE_URL,
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
 const isNetlifyProduction = NETLIFY_ENV === "production";
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
@@ -32,24 +32,24 @@ module.exports = {
       "curriculum",
       "about",
       "projects",
-      "career"
+      "career",
     ],
-    socialImage: "business-card"
+    socialImage: "business-card",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        includePaths: [`${__dirname}/node_modules/bootstrap`]
-      }
+        includePaths: [`${__dirname}/node_modules/bootstrap`],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -63,8 +63,8 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/javierbrea-icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/images/javierbrea-icon.png`, // This path is relative to the root of the site.
+      },
     },
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -73,20 +73,20 @@ module.exports = {
         env: {
           production: {
             sitemap: `${siteUrl}/sitemap.xml`,
-            policy: [{ userAgent: "*" }]
+            policy: [{ userAgent: "*" }],
           },
           "branch-deploy": {
             policy: [{ userAgent: "*", disallow: ["/"] }],
             sitemap: null,
-            host: null
+            host: null,
           },
           "deploy-preview": {
             policy: [{ userAgent: "*", disallow: ["/"] }],
             sitemap: null,
-            host: null
-          }
-        }
-      }
+            host: null,
+          },
+        },
+      },
     },
     {
       resolve: "gatsby-plugin-gtag",
@@ -94,14 +94,14 @@ module.exports = {
         // your google analytics tracking id
         trackingId: "UA-4223464-6",
         // Puts tracking script in the head instead of the body
-        head: true
-      }
+        head: true,
+      },
     },
     {
       resolve: "gatsby-plugin-preconnect",
       options: {
-        domains: ["https://www.google-analytics.com"]
-      }
+        domains: ["https://www.google-analytics.com"],
+      },
     },
     {
       resolve: "gatsby-plugin-module-resolver",
@@ -113,9 +113,9 @@ module.exports = {
           modules: "./modules",
           styles: "./styles",
           data: "./data",
-          helpers: "./helpers"
-        }
-      }
-    }
-  ]
+          helpers: "./helpers",
+        },
+      },
+    },
+  ],
 };

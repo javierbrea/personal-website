@@ -25,8 +25,8 @@ const AboutBanner = () => {
             layers={[
               {
                 image: bannerAbout,
-                amount: 0.3
-              }
+                amount: 0.3,
+              },
             ]}
           />
           <div className={clsx("text-center", classes.text)}>

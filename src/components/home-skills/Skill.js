@@ -37,7 +37,7 @@ const Skill = ({ title, amount }) => {
 
 Skill.propTypes = {
   amount: PropTypes.number,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default Skill;

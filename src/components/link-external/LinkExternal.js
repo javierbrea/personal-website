@@ -13,7 +13,7 @@ const LinkExternal = ({ to, children, self, ...rest }) => {
     ? {}
     : {
         target: "_blank",
-        rel: "noopener noreferrer"
+        rel: "noopener noreferrer",
       };
 
   return (
@@ -26,7 +26,7 @@ const LinkExternal = ({ to, children, self, ...rest }) => {
 LinkExternal.propTypes = {
   children: PropTypes.node,
   self: PropTypes.bool,
-  to: PropTypes.string
+  to: PropTypes.string,
 };
 
 export default LinkExternal;

@@ -6,7 +6,7 @@ export default class Footer {
       CONTAINER: "footer",
       LINKEDIN_LINK: "social-link-linkedin",
       TWITTER_LINK: "social-link-twitter",
-      GITHUB_LINK: "social-link-github"
+      GITHUB_LINK: "social-link-github",
     };
   }
 

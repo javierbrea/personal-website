@@ -22,7 +22,7 @@ const BannerButton = ({ children, className, ...rest }) => {
 
 BannerButton.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default BannerButton;

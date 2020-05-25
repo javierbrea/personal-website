@@ -7,7 +7,7 @@ export default class Home extends Page {
     super();
     this._url = `/`;
     this.SELECTORS = {
-      CONTAINER: "home-page"
+      CONTAINER: "home-page",
     };
     this._banner = new HomeBanner();
   }

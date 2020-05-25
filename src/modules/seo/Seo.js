@@ -7,7 +7,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 function SEO({ description, lang, meta, keywords, title, socialImage }) {
@@ -39,65 +39,65 @@ function SEO({ description, lang, meta, keywords, title, socialImage }) {
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       meta={[
         {
           name: "description",
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: "og:title",
-          content: fullTitle
+          content: fullTitle,
         },
         {
           property: "og:description",
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: "og:type",
-          content: "website"
+          content: "website",
         },
         {
           property: "og:image",
-          content: socialImageUrl
+          content: socialImageUrl,
         },
         {
           name: "twitter:card",
-          content: "summary"
+          content: "summary",
         },
         {
           name: "twitter:site",
-          content: "@javierbrea"
+          content: "@javierbrea",
         },
         {
           name: "twitter:creator",
-          content: site.siteMetadata.author
+          content: site.siteMetadata.author,
         },
         {
           name: "twitter:title",
-          content: fullTitle
+          content: fullTitle,
         },
         {
           name: "twitter:description",
-          content: metaDescription
+          content: metaDescription,
         },
         {
           name: "twitter:image",
-          content: socialImageUrl
+          content: socialImageUrl,
         },
         {
           name: "twitter:image:alt",
-          content: metaDescription
-        }
+          content: metaDescription,
+        },
       ]
         .concat(
           allKeywords.length > 0
             ? [
                 {
                   name: `keywords`,
-                  content: allKeywords.join(`, `)
-                }
+                  content: allKeywords.join(`, `),
+                },
               ]
             : []
         )
@@ -112,7 +112,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  description: ``
+  description: ``,
 };
 
 SEO.propTypes = {
@@ -121,7 +121,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   socialImage: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default SEO;
