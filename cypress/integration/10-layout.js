@@ -25,6 +25,10 @@ describe("Layout", () => {
     it("should not display collapse button", () => {
       page.layout.navBar.collapseButton.shouldNotBeVisible();
     });
+
+    it("should match snapshot", () => {
+      cy.matchImageSnapshot();
+    });
   });
 
   describe("When viewport is s", () => {
@@ -45,6 +49,10 @@ describe("Layout", () => {
       page.layout.navBar.collapseButton.shouldBeVisible();
     });
 
+    it("should match snapshot", () => {
+      cy.matchImageSnapshot();
+    });
+
     it("should display navigation links when collapse button is clicked", () => {
       page.layout.navBar.collapseButton.click();
       page.layout.navBar.homeLink.shouldBeVisible();
@@ -61,9 +69,8 @@ describe("Layout", () => {
       page.layout.footer.container.shouldBeVisible();
     });
 
-    // TODO, change by visual test
-    it("should display navigation bar", () => {
-      page.layout.navBar.container.shouldBeVisible();
+    it("should match snapshot", () => {
+      cy.matchImageSnapshot();
     });
 
     it("should display social links", () => {

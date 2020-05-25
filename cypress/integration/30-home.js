@@ -20,6 +20,10 @@ describe("Home", () => {
       home.banner.aboutMeButton.shouldBeVisible();
     });
 
+    it("should match snapshot", () => {
+      cy.matchImageSnapshot();
+    });
+
     it("should navigate to about when about me button is clicked", () => {
       home.banner.aboutMeButton.click();
       about.container.shouldBeVisible();
