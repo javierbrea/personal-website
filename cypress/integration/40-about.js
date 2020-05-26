@@ -14,7 +14,7 @@ describe("About", () => {
     });
 
     it("should match snapshot", () => {
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
   });
 
@@ -28,7 +28,7 @@ describe("About", () => {
     it("should match snapshot", () => {
       about.aboutMe.personalGallery.image(0).scrollIntoView();
       cy.wait(1000);
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
 
     it("should display images gallery when clicks on image", () => {
@@ -41,7 +41,7 @@ describe("About", () => {
     });
 
     it("should match snapshot of first gallery image", () => {
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
 
     it("should display second image when clicks on next button", () => {
@@ -51,7 +51,7 @@ describe("About", () => {
     });
 
     it("should match snapshot of second gallery image", () => {
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
 
     it("should display first image again when clicks on prev button", () => {
