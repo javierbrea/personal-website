@@ -16,14 +16,15 @@ Personal website built with Gatsby
 
 ### Running development commands using docker
 
-A docker-compose file is provided in order to allow running npm commands without worrying about your current OS. Run any npm command using `docker-compose run npm-command npm run [command]`. The port 3000 is automatically binded to the host.
+A docker-compose file is provided in order to allow running npm commands without worrying about your current OS. Run any npm command using `docker-compose run command npm run [command]`. The port 3000 is automatically binded to the host.
 
 Example:
 
 ``` bash
 docker-compose build
+docker-compose run command npm i
 # Run "test-ci" npm command inside docker:
-docker-compose run npm-command npm run test:ci
+docker-compose run command npm run test:ci
 ```
 
 > Changes in `src`, `cypress` or `static` folders do not require to rebuild the Docker image, but any other change in any file in the root folder do.
@@ -39,7 +40,7 @@ Using the `npm run test:ci` command the application is built, served and Cypress
 The `npm run test:ci` command should be executed only on same Linux OS than used in the Travis.ci pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use the `docker-compose run npm-command npm run test:ci` command in order to avoid possible conflicts with the CI/CD tool, or disable visual regression tests locally setting the environment variable `CYPRESS_VISUAL_TESTS` to `false`.
 
 ```bash
-docker-compose run npm-command npm run test:ci
+docker-compose run command npm run test:ci
 # Then add to git new snapshots in the cypress/snapshots folder
 ```
 

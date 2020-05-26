@@ -3,3 +3,4 @@ node_modules
 public
 cypress/screenshots
 cypress/fixtures
+cypress.env.json
