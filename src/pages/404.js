@@ -7,8 +7,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 /* eslint-disable filenames/match-exported */
 
-import React from "react";
-
 import Layout from "modules/layout";
 import NotFound from "components/not-found";
 
