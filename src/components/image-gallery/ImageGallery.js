@@ -42,10 +42,10 @@ const ImageGallery = ({ width, src, onClick, id, alignLeft, "data-testid": dataT
 ImageGallery.propTypes = {
   alignLeft: PropTypes.bool,
   "data-testid": PropTypes.string,
-  id: PropTypes.string,
+  id: PropTypes.number,
   onClick: PropTypes.func,
   src: PropTypes.string,
-  width: PropTypes.oneOf(["4", "6"]),
+  width: PropTypes.oneOf([4, 6]),
 };
 
 export default ImageGallery;

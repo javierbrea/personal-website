@@ -25,7 +25,7 @@ const MainTitle = ({ title, subtitle, inverted, className }) => {
 MainTitle.propTypes = {
   className: PropTypes.string,
   inverted: PropTypes.bool,
-  subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   title: PropTypes.string.isRequired,
 };
 
