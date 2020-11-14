@@ -32,12 +32,14 @@ module.exports = {
     "react-hooks/exhaustive-deps": [2],
     "filenames/match-regex": [0],
     "filenames/match-exported": [2, "pascal"],
-    "filenames/no-index": [0]
+    "filenames/no-index": [0],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {
       "pragma": "React",
-      "version": "^16.11.0"
+      "version": "^17.0.0"
     }
   }
 }
