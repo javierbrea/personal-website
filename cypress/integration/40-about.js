@@ -32,6 +32,7 @@ describe("About", () => {
     });
 
     it("should display images gallery when clicks on image", () => {
+      cy.wait(500);
       about.aboutMe.personalGallery.clickImage(0);
       about.aboutMe.personalGallery.dialog.shouldBeVisible();
     });
