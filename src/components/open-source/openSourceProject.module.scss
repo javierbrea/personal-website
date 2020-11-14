@@ -12,12 +12,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
   background: $white;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
-  padding: 40px 28px;
+  padding: 40px 28px 30px;
 
   h4 {
     color: $textColorDark;
     font-size: 16px;
-    min-height: 50px;
     padding-bottom: 10px;
     text-transform: uppercase;
     @include media('m') {
@@ -27,10 +26,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
   p {
     font-size: 14px;
-    min-height: 110px;
-    @include media('l') {
-      min-height: 140px;
-    }
     @include media('m') {
       min-height: auto;
     }

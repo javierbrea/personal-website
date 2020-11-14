@@ -28,14 +28,14 @@ const AboutStats = () => {
         <Link to="/about">you should read this introduction.</Link>
       </p>
       <div className="row">
-        <StatsItem amount={16} icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" />
+        <StatsItem amount={17} icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" />
         <StatsItem
           amount={168}
           icon={<FontAwesomeIcon icon={faDesktop} />}
           text="Front-end projects"
         />
         <StatsItem
-          amount={43}
+          amount={44}
           icon={<FontAwesomeIcon icon={faServer} />}
           text="Back-end projects"
         />

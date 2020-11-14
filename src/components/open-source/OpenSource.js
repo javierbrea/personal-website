@@ -23,16 +23,16 @@ const OpenSource = () => {
         title="Featured Open Source projects"
       />
       <div className="row">
-        <div className="col-lg-4 col-sm-12">
+        <div className="col-lg-6 col-sm-12">
           <OpenSourceProject
-            description="An async data provider built on top of Redux. Agnostic about specific data origins, queryable, with powerful selectors inspired by Reselect, cache and memoization."
+            description="An async data provider built on top of Redux. Agnostic about specific data origins, queryable, with powerful selectors, cache and memoization."
             github="data-provider/core"
             name="Data Provider"
             npm="@data-provider/core"
             website="https://www.data-provider.org"
           />
         </div>
-        <div className="col-lg-4 col-sm-12">
+        <div className="col-lg-6 col-sm-12">
           <OpenSourceProject
             description="Node.js mock server supporting multiple api behaviors. Simple and easy out-of-the-box but very powerful and customizable with plugins."
             github="mocks-server/main"
@@ -41,13 +41,22 @@ const OpenSource = () => {
             website="https://www.mocks-server.org"
           />
         </div>
-        <div className="col-lg-4 col-sm-12">
+        <div className="col-lg-6 col-sm-12">
           <OpenSourceProject
             description="Extends Cypress' cy commands with localStorage methods. Allows preserving localStorage between tests."
             github="javierbrea/cypress-localstorage-commands"
             name="cypress-localstorage-commands"
             npm="cypress-localstorage-commands"
             website="https://github.com/javierbrea/cypress-localstorage-commands"
+          />
+        </div>
+        <div className="col-lg-6 col-sm-12">
+          <OpenSourceProject
+            description="Eslint plugin checking imports to ensure that architecture boundaries are respected by the elements in a project"
+            github="javierbrea/eslint-plugin-boundaries"
+            name="eslint-plugin-boundaries"
+            npm="eslint-plugin-boundaries"
+            website="https://github.com/javierbrea/eslint-plugin-boundaries"
           />
         </div>
       </div>

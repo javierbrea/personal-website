@@ -21,7 +21,7 @@ describe("Home", () => {
     });
 
     it("should match snapshot", () => {
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
 
     it("should navigate to about when about me button is clicked", () => {

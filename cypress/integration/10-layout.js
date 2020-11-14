@@ -27,7 +27,7 @@ describe("Layout", () => {
     });
 
     it("should match snapshot", () => {
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
   });
 
@@ -50,7 +50,7 @@ describe("Layout", () => {
     });
 
     it("should match snapshot", () => {
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
 
     it("should display navigation links when collapse button is clicked", () => {
@@ -70,7 +70,7 @@ describe("Layout", () => {
     });
 
     it("should match snapshot", () => {
-      cy.matchImageSnapshot();
+      cy.shouldMatchSnapshot();
     });
 
     it("should display social links", () => {

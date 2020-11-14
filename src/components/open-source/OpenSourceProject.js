@@ -25,8 +25,6 @@ const OpenSourceProject = ({ name, description, github, npm, website }) => {
           <Link to={`https://www.npmjs.com/package/${npm}`}>
             <img alt="NPM Downloads" src={`https://img.shields.io/npm/dm/${npm}.svg`} />
           </Link>
-        </div>
-        <div className={classes.links}>
           <GitHubButton
             aria-label={`Star ${github} on GitHub`}
             data-icon="octicon-star"
