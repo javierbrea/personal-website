@@ -20,7 +20,7 @@
     "develop": "gatsby develop -p 3000",
     "start": "npm run develop",
     "serve": "serve -l 3000",
-    "stylelint": "stylelint src",
+    "stylelint": "stylelint src/**/*.scss",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0",
     "cypress:install": "cypress install",
