@@ -11,7 +11,7 @@ import ProjectItem from "components/project-item";
 
 import Column from "./Column";
 
-import classes from "./latestProjects.module.scss";
+import * as classes from "./latestProjects.module.scss";
 
 import telefonicaImage from "images/projects/telefonica.jpg";
 import orangeImage from "images/projects/orange.jpg";

@@ -9,7 +9,7 @@ import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
 
-import classes from "./notFound.module.scss";
+import * as classes from "./notFound.module.scss";
 
 const NotFound = () => (
   <div className={clsx("container", classes.notFound)}>

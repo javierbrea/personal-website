@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 import Link from "components/link";
-import classes from "./bannerButton.module.scss";
+import * as classes from "./bannerButton.module.scss";
 
 const BannerButton = ({ children, className, ...rest }) => {
   return (

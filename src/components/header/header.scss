@@ -244,6 +244,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
     padding: 0;
   }
 
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
   .header_area .navbar {
     background: #fff;
   }

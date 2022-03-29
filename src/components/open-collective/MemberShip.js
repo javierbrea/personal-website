@@ -8,7 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import PropTypes from "prop-types";
 import Link from "components/link";
 
-import classes from "./memberShip.module.scss";
+import * as classes from "./memberShip.module.scss";
 
 const MemberShip = ({ link, logo, name, role }) => {
   return (

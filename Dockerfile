@@ -1,4 +1,4 @@
-FROM cypress/base:12.18.4
+FROM cypress/base:16.13.0
 
 WORKDIR /
 
