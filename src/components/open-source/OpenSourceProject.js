@@ -12,14 +12,14 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 import Link from "components/link";
 
-import classes from "./openSourceProject.module.scss";
+import * as classes from "./openSourceProject.module.scss";
 
 const OpenSourceProject = ({ name, description, github, npm, website }) => {
   return (
     <div className={classes.openSourceProject}>
       <h4>{name}</h4>
       <p>{description}</p>
-      <div className={classes.footer}>
+      <div>
         <div className={classes.links}>
           <Link to={`https://www.npmjs.com/package/${npm}`}>
             <img alt="NPM Downloads" src={`https://img.shields.io/npm/dm/${npm}.svg`} />

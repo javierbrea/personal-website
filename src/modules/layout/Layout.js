@@ -15,7 +15,7 @@ import Seo from "modules/seo";
 import Header from "components/header";
 import Footer from "components/footer";
 
-import classes from "./layout.module.scss";
+import * as classes from "./layout.module.scss";
 
 const Layout = ({
   children,

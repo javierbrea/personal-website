@@ -9,7 +9,7 @@ import { useMemo, useCallback } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import classes from "./imageGallery.module.scss";
+import * as classes from "./imageGallery.module.scss";
 
 const ImageGallery = ({ width, src, onClick, id, alignLeft, "data-testid": dataTestid }) => {
   const style = useMemo(() => {
@@ -25,7 +25,7 @@ const ImageGallery = ({ width, src, onClick, id, alignLeft, "data-testid": dataT
 
   return (
     <div className={clsx(`col-md-${width}`)} data-testid={dataTestid} onClick={handleClick}>
-      <a className={classes.link}>
+      <a className={classes.clickable}>
         <div
           className={clsx(
             classes.imageContainer,

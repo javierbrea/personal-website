@@ -7,7 +7,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import Skill from "./Skill";
 
-import classes from "./homeSkills.module.scss";
+import * as classes from "./homeSkills.module.scss";
 
 const HomeSkills = () => {
   return (

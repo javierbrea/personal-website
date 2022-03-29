@@ -8,7 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import classes from "./title.module.scss";
+import * as classes from "./title.module.scss";
 
 const Title = ({ children, inverted, className }) => {
   return (

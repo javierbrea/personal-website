@@ -42,21 +42,24 @@ const Header = ({ className, inverted }) => {
               />
             </Link>
             <button
-              aria-controls="navbarSupportedContent"
+              aria-controls="navbar-supported-content"
               aria-expanded="false"
               aria-label="Toggle navigation"
               className="navbar-toggler"
-              data-target="#navbarSupportedContent"
+              data-bs-target="#navbar-supported-content"
+              data-bs-toggle="collapse"
               data-testid="navbar-collapse-button"
-              data-toggle="collapse"
               type="button"
             >
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span className="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
-              <ul className="nav navbar-nav menu_nav ml-auto">
+            <div
+              className="collapse navbar-collapse offset justify-content-end"
+              id="navbar-supported-content"
+            >
+              <ul className="nav navbar-nav menu_nav">
                 <li className="nav-item active">
                   <Link className="nav-link" data-testid="navigate-to-home" to="/">
                     Home
