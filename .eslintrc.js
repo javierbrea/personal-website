@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   globals: {
     __PATH_PREFIX__: true,
@@ -10,9 +12,8 @@ module.exports = {
   },
   parser: "@babel/eslint-parser",
   parserOptions: {
-    requireConfigFile: false,
     babelOptions: {
-      presets: ["@babel/preset-react"],
+      configFile: path.resolve(__dirname, "babel.eslint.config.js"),
     },
   },
   plugins: ["prettier", "react", "react-hooks", "filenames"],
@@ -44,8 +45,7 @@ module.exports = {
   },
   settings: {
     react: {
-      pragma: "React",
-      version: "^17.0.0",
+      version: "detect", // detect react version
     },
   },
 };
