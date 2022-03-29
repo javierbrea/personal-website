@@ -12,7 +12,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import MainBanner from "components/main-banner";
 import bannerAbout from "images/banner/about-banner.jpg";
 
-import classes from "./aboutBanner.module.scss";
+import * as classes from "./aboutBanner.module.scss";
 
 const AboutBanner = () => {
   return (
@@ -24,7 +24,7 @@ const AboutBanner = () => {
             layers={[
               {
                 image: bannerAbout,
-                amount: 0.3,
+                speed: -25,
               },
             ]}
           />

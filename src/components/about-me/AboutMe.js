@@ -38,7 +38,7 @@ import jobImage3 from "images/gallery/job-03.jpg";
 
 import ImageGallery from "components/image-gallery";
 
-import classes from "./aboutMe.module.scss";
+import * as classes from "./aboutMe.module.scss";
 
 const images = [
   { thumbnail: thumb1, src: img1, caption: "Uganda. Rafting in the Nile River", width: 4 },

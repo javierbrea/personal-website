@@ -8,7 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import Section from "components/section";
 import MainTitle from "components/main-title";
 
-import classes from "./openSource.module.scss";
+import * as classes from "./openSource.module.scss";
 
 import OpenSourceProject from "./OpenSourceProject";
 

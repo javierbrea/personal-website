@@ -10,7 +10,7 @@ import clsx from "clsx";
 
 import Title from "components/title";
 
-import classes from "./mainTitle.module.scss";
+import * as classes from "./mainTitle.module.scss";
 
 const MainTitle = ({ title, subtitle, inverted, className }) => {
   return (

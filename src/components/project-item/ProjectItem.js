@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 
 import Link from "components/link";
 
-import classes from "./projectItem.module.scss";
+import * as classes from "./projectItem.module.scss";
 
 const ProjectItem = ({ image, imageAlt, to, title, description }) => {
   return (

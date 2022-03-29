@@ -13,7 +13,7 @@ import Link from "components/link";
 
 import StatsItem from "./StatsItem";
 
-import classes from "./aboutStats.module.scss";
+import * as classes from "./aboutStats.module.scss";
 
 const AboutStats = () => {
   return (

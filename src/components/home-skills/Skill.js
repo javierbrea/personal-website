@@ -9,7 +9,7 @@ import { useMemo } from "react";
 import PropTypes from "prop-types";
 // import clsx from "clsx";
 
-import classes from "./skill.module.scss";
+import * as classes from "./skill.module.scss";
 
 const Skill = ({ title, amount }) => {
   const style = useMemo(() => {

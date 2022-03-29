@@ -8,7 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
-import classes from "./mainBanner.module.scss";
+import * as classes from "./mainBanner.module.scss";
 
 const MainBanner = ({ children, className, "data-testid": dataTestid }) => {
   return (
