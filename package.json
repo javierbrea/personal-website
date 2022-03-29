@@ -12,6 +12,24 @@
   "bugs": {
     "url": "https://github.com/javierbrea/personal-website/issues"
   },
+  "scripts": {
+    "lint": "eslint *.js src cypress",
+    "lint:staged": "lint-staged",
+    "build": "gatsby build",
+    "build-and-serve": "npm run build && npm run serve",
+    "develop": "gatsby develop -p 3000",
+    "start": "npm run develop",
+    "serve": "serve -l 3000",
+    "stylelint": "stylelint src",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0",
+    "cypress:install": "cypress install",
+    "cypress:verify": "cypress verify",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:ci": "start-server-and-test build-and-serve http-get://localhost:3000 cypress:run",
+    "prepare": "is-ci || husky install"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.1.1",
     "@fortawesome/free-brands-svg-icons": "6.1.1",
@@ -58,6 +76,7 @@
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.3.0",
     "husky": "7.0.4",
+    "is-ci": "3.0.1",
     "lint-staged": "12.3.7",
     "prettier": "2.6.1",
     "sass": "1.49.9",
@@ -67,23 +86,6 @@
     "stylelint-config-recommended": "7.0.0",
     "stylelint-config-sass-guidelines": "9.0.1",
     "stylelint-scss": "4.2.0"
-  },
-  "scripts": {
-    "lint": "eslint *.js src cypress",
-    "lint:staged": "lint-staged",
-    "build": "gatsby build",
-    "build-and-serve": "npm run build && npm run serve",
-    "develop": "gatsby develop -p 3000",
-    "start": "npm run develop",
-    "serve": "serve -l 3000",
-    "stylelint": "stylelint src",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0",
-    "cypress:install": "cypress install",
-    "cypress:verify": "cypress verify",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "test:ci": "start-server-and-test build-and-serve http-get://localhost:3000 cypress:run"
   },
   "lint-staged": {
     "src/**/*.js": "eslint",
