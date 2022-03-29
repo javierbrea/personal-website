@@ -26,7 +26,7 @@
     "cypress:verify": "cypress verify",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test:ci": "start-server-and-test build-and-serve http-get://localhost:3000 cypress:run",
+    "test:e2e": "start-server-and-test build-and-serve http-get://localhost:3000 cypress:run",
     "prepare": "is-ci || husky install"
   },
   "dependencies": {

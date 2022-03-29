@@ -1,0 +1,45 @@
+name: test
+on:
+  push:
+    branches:
+      - master
+      - release
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - name: Cache npm
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-npm
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-test-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-test-${{ env.cache-name }}-
+            ${{ runner.os }}-test-
+            ${{ runner.os }}-
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Stylelint
+        run: npm run stylelint
+      - name: Test E2E
+        run: npm run test:e2e
+        id: test-e2e
+      - name: Upload E2E tests screenshots
+        if: ${{ always() && steps.test-e2e.outcome == 'failure' }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: e2e-screenshots
+          path: cypress/screenshots
+          retention-days: 7
