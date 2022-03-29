@@ -9,6 +9,12 @@ module.exports = {
     es6: true,
   },
   parser: "@babel/eslint-parser",
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ["@babel/preset-react"],
+    },
+  },
   plugins: ["prettier", "react", "react-hooks", "filenames"],
   extends: ["plugin:react/recommended", "prettier"],
   rules: {
