@@ -32,6 +32,15 @@ Unless required by applicable law or agreed to in writing, software distributed 
   }
 }
 
+.odd {
+  margin: auto;
+  width: 50%;
+  @include media('m') {
+    margin: auto;
+    width: auto;
+  }
+}
+
 .links {
   align-items: center;
   display: flex;

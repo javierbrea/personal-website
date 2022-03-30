@@ -11,6 +11,7 @@ import Layout from "modules/layout";
 import HomeBanner from "components/home-banner";
 import LatestProjects from "components/latest-projects";
 import HomeWelcome from "components/home-welcome";
+import HomeLinks from "components/home-links";
 import OpenSource from "components/open-source";
 import OpenCollective from "components/open-collective";
 
@@ -19,8 +20,9 @@ const Page = () => {
     <Layout data-testid="home-page" title="Home">
       <HomeBanner />
       <HomeWelcome />
+      <HomeLinks odd />
       <LatestProjects />
-      <OpenSource />
+      <OpenSource odd />
       <OpenCollective />
     </Layout>
   );

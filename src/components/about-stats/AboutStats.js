@@ -6,10 +6,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faDesktop, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import Title from "components/title";
-import Link from "components/link";
 
 import StatsItem from "./StatsItem";
 
@@ -18,25 +18,29 @@ import * as classes from "./aboutStats.module.scss";
 const AboutStats = () => {
   return (
     <div className={classes.root}>
-      <Title className={classes.title}>Some numbers</Title>
+      <Title className={classes.title}>Who am I</Title>
       <p className={classes.text}>
-        As programmers, we usually tend to try to measure all. I think that knowledge is something
-        difficult to measure, but during my long career I have participated in a lot of projects,
-        which, obviously, made me acquire a lot of skills. This is only a fast approach to my
-        person through the numbers, a mere curiosity. If you really want to know more about me,{" "}
-        <Link to="/about">you should read this introduction.</Link>
+        I&lsquo;m currently working as <b>head of front-end development at Telefónica Tech</b>.
+        Known for:
+        <br />
+        <ul>
+          <li>High quality code advocate</li>
+          <li>Modular solutions oriented</li>
+          <li>Detail oriented</li>
+          <li>Opensource author</li>
+        </ul>
       </p>
       <div className="row">
-        <StatsItem amount={17} icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" />
+        <StatsItem amount={19} icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" />
         <StatsItem
-          amount={168}
-          icon={<FontAwesomeIcon icon={faDesktop} />}
-          text="Front-end projects"
+          amount="Linkedin"
+          icon={<FontAwesomeIcon icon={faLinkedin} />}
+          to="https://www.linkedin.com/in/javierbrea/"
         />
         <StatsItem
-          amount={44}
-          icon={<FontAwesomeIcon icon={faServer} />}
-          text="Back-end projects"
+          amount={"Github"}
+          icon={<FontAwesomeIcon icon={faGithub} />}
+          to="https://github.com/javierbrea"
         />
       </div>
     </div>

@@ -27,13 +27,15 @@ Unless required by applicable law or agreed to in writing, software distributed 
     color: $textColorDark;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-
-  p {
-    @include roboto-font;
-    font-size: 12px;
     margin-bottom: 0;
+    margin-top: 5px;
+
+    span {
+      @include roboto-font;
+      color: $textColor;
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
   }
 }

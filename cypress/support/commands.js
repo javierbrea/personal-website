@@ -19,6 +19,7 @@ Cypress.Commands.add(
       elementToCheck.compareSnapshot(snapshotName, {
         errorThreshold,
         capture: !!element ? "viewport" : capture,
+        blackout: ['[data-testid="github-stats"]', '[data-testid="opensource-project-links"]'],
         ...rest,
       });
     }
