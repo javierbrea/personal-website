@@ -7,7 +7,7 @@
   "env": {
     "failSilently": false,
     "VISUAL_TESTS": true,
-    "type": "base",
+    "type": "actual",
     "SNAPSHOT_BASE_DIRECTORY": "./cypress/integration/snapshots",
     "SNAPSHOT_DIFF_DIRECTORY": "./cypress/screenshots/diff"
   }
