@@ -34,7 +34,7 @@ jobs:
       - name: Stylelint
         run: npm run stylelint
       - name: Test E2E
-        run: npm run test:e2e
+        run: npm run test:e2e:ci
         id: test-e2e
       - name: Upload E2E tests screenshots
         if: ${{ always() && steps.test-e2e.outcome == 'failure' }}

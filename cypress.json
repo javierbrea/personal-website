@@ -1,7 +1,14 @@
 {
   "baseUrl": "http://localhost:3000",
   "video": false,
+  "screenshotsFolder": "./cypress/screenshots/actual",
+  "trashAssetsBeforeRuns": true,
+  "testFiles": "**/*.js",
   "env": {
-    "VISUAL_TESTS": true
+    "failSilently": false,
+    "VISUAL_TESTS": true,
+    "type": "base",
+    "SNAPSHOT_BASE_DIRECTORY": "./cypress/integration/snapshots",
+    "SNAPSHOT_DIFF_DIRECTORY": "./cypress/screenshots/diff"
   }
 }

@@ -9,6 +9,7 @@ describe("Home", () => {
     home = new Home();
     about = new About();
     home.visit();
+    cy.resetScrollBehavior();
   });
 
   describe("Banner section", () => {
@@ -21,7 +22,7 @@ describe("Home", () => {
     });
 
     it("should match snapshot", () => {
-      cy.shouldMatchSnapshot();
+      cy.shouldMatchSnapshot("home");
     });
 
     it("should navigate to about when about me button is clicked", () => {

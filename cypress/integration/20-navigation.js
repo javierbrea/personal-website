@@ -9,6 +9,7 @@ describe("Navigation", () => {
     home = new Home();
     about = new About();
     home.visit();
+    cy.resetScrollBehavior();
   });
 
   describe("When viewport is l", () => {
