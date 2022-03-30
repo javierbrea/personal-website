@@ -6,32 +6,24 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import PropTypes from "prop-types";
-import clsx from "clsx";
 
-import Link from "components/link";
+import Section from "components/section";
+import GithubStats from "components/github-stats";
 
-import * as classes from "./statsItem.module.scss";
-
-const StatsItem = ({ amount, text, icon, to }) => {
+const HomeLinks = ({ odd }) => {
   return (
-    <div className="col-md-4">
-      <Link to={to}>
-        <div className={clsx(classes.item)}>
-          {icon}
-          <h4>
-            {amount} <span>{text}</span>
-          </h4>
+    <Section odd={odd}>
+      <div className="row">
+        <div className="col-lg-12">
+          <GithubStats />
         </div>
-      </Link>
-    </div>
+      </div>
+    </Section>
   );
 };
 
-StatsItem.propTypes = {
-  amount: PropTypes.number.isRequired,
-  icon: PropTypes.node.isRequired,
-  text: PropTypes.string,
-  to: PropTypes.string,
+HomeLinks.propTypes = {
+  odd: PropTypes.bool,
 };
 
-export default StatsItem;
+export default HomeLinks;

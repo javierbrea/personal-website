@@ -8,8 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 @import 'styles/base/variables';
 
 .root {
-  border-radius: 5px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 35px;
 
   @include media('m') {

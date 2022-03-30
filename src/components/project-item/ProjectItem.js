@@ -12,14 +12,16 @@ import Link from "components/link";
 
 import * as classes from "./projectItem.module.scss";
 
-const ProjectItem = ({ image, imageAlt, to, title, description }) => {
+const ProjectItem = ({ dates, image, imageAlt, to, title, description }) => {
   return (
     <Link to={to}>
       <div className={clsx(classes.root, to && classes.link)}>
         {<img alt={imageAlt} className="img-fluid" src={image} />}
         <div className={classes.text}>
           <h4>{title}</h4>
-          <p>{description}</p>
+          <p>
+            {description} - {dates}
+          </p>
         </div>
       </div>
     </Link>
@@ -27,6 +29,7 @@ const ProjectItem = ({ image, imageAlt, to, title, description }) => {
 };
 
 ProjectItem.propTypes = {
+  dates: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
