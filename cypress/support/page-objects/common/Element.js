@@ -27,6 +27,10 @@ export default class Element {
     this._element.should("have.text", text);
   }
 
+  shouldMatchSnapshot(snapshotName, options) {
+    cy.shouldMatchSnapshot(snapshotName, { element: this._element, ...options });
+  }
+
   scrollIntoView() {
     this._element.scrollIntoView();
   }

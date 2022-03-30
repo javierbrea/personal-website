@@ -12,9 +12,13 @@ services:
     command: npm i
     ports:
       - "3000:3000"
+    environment:
+      - CI=true
+      - HUSKY_SKIP_INSTALL=1
     volumes:
       - ./cypress:/cypress
       - ./src:/src
+      - ./public:/public
       - ./static:/static
       - node_modules:/node_modules
       - cache:/root/.cache/

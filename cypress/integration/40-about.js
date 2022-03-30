@@ -6,6 +6,13 @@ describe("About", () => {
   before(() => {
     about = new About();
     about.visit();
+    cy.resetScrollBehavior();
+  });
+
+  describe("Page", () => {
+    it("should match snapshot", () => {
+      cy.shouldMatchSnapshot("about");
+    });
   });
 
   describe("Professional section", () => {
@@ -14,7 +21,8 @@ describe("About", () => {
     });
 
     it("should match snapshot", () => {
-      cy.shouldMatchSnapshot();
+      about.aboutMe.professional.scrollIntoView();
+      about.aboutMe.professional.shouldMatchSnapshot("professional");
     });
   });
 
@@ -27,8 +35,7 @@ describe("About", () => {
   describe("Personal section images gallery", () => {
     it("should match snapshot", () => {
       about.aboutMe.personalGallery.image(0).scrollIntoView();
-      cy.wait(1000);
-      cy.shouldMatchSnapshot();
+      about.aboutMe.personalGallery.container.shouldMatchSnapshot("personal-gallery");
     });
 
     it("should display images gallery when clicks on image", () => {
@@ -42,17 +49,19 @@ describe("About", () => {
     });
 
     it("should match snapshot of first gallery image", () => {
-      cy.shouldMatchSnapshot();
+      cy.wait(1000);
+      cy.shouldMatchSnapshot("personal-gallery-image-0", { capture: "viewport" });
     });
 
     it("should display second image when clicks on next button", () => {
       about.aboutMe.personalGallery.getPaginationButton(0).click();
-      cy.wait(1000);
+      cy.wait(2000);
       about.aboutMe.personalGallery.shouldDisplayCount(2, 10);
     });
 
     it("should match snapshot of second gallery image", () => {
-      cy.shouldMatchSnapshot();
+      cy.wait(2000);
+      cy.shouldMatchSnapshot("personal-gallery-image-1", { capture: "viewport" });
     });
 
     it("should display first image again when clicks on prev button", () => {

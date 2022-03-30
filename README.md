@@ -12,7 +12,8 @@ Personal website built with Gatsby
 * `build-and-serve` - Builds application as in production environment and serve it at port 3000.
 * `lint` - Run javascript linter.
 * `stylelint` - Run Sass linter.
-* `test:ci` - Build application, serve it and run Cypress e2e tests (read E2E tests for further info).
+* `test:e2e` - Serve built application and run Cypress e2e tests (read E2E tests for further info).
+* `test:e2e:ci` - Build application, serve it and run Cypress e2e tests (read E2E tests for further info).
 
 ### Running development commands using docker
 
@@ -31,16 +32,17 @@ docker-compose run command npm run test:e2e
 
 ### E2E tests
 
-Using the `npm run test:e2e` command the application is built, served and Cypress tests are ran.
+Using the `npm run test:e2e:ci` command the application is built, served and Cypress tests are ran.
 
-> Caveat: `test:e2e` command should be executed only on same Linux OS than used in the Travis.ci pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use a docker command as described in previous chapter for running e2e tests or disable visual tests.
+> Caveat: `test:e2e:ci` command should be executed only on same Linux OS than used in the Travis.ci pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use a docker command as described in previous chapter for running e2e tests or disable visual tests.
 
 #### Visual regression tests
 
 The `npm run test:e2e` command should be executed only on same Linux OS than used in the Travis.ci pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use the `docker-compose run npm-command npm run test:e2e` command in order to avoid possible conflicts with the CI/CD tool, or disable visual regression tests locally setting the environment variable `CYPRESS_VISUAL_TESTS` to `false`.
 
 ```bash
-docker-compose run command npm run test:e2e
+docker-compose run command npm install
+docker-compose run command npm run test:e2e:ci
 # Then add to git new snapshots in the cypress/snapshots folder
 ```
 
@@ -49,3 +51,4 @@ CYPRESS_VISUAL_TESTS=false npm run test:ci
 # Visual regression tests are not executed
 ```
 
+> NOTE: Change the `type` env var to `base` in the `cypress.json` file to generate base snapshots. Restore it to `actual` again after generating base snapshots in order to run comparison in tests.

@@ -70,5 +70,4 @@ yarn-error.log
 
 # tests
 /cypress/screenshots
-/cypress/fixtures
-cypress.env.json
+/cypress/screenshots

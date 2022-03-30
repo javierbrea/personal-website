@@ -6,6 +6,7 @@ describe("Layout", () => {
   before(() => {
     page = new Home();
     page.visit();
+    cy.resetScrollBehavior();
   });
 
   describe("When viewport is l", () => {
@@ -27,7 +28,7 @@ describe("Layout", () => {
     });
 
     it("should match snapshot", () => {
-      cy.shouldMatchSnapshot();
+      cy.shouldMatchSnapshot("home-viewport-l");
     });
   });
 
@@ -50,7 +51,7 @@ describe("Layout", () => {
     });
 
     it("should match snapshot", () => {
-      cy.shouldMatchSnapshot();
+      cy.shouldMatchSnapshot("home-viewport-s");
     });
 
     it("should display navigation links when collapse button is clicked", () => {
@@ -62,7 +63,8 @@ describe("Layout", () => {
 
   describe("When scrolling to bottom", () => {
     before(() => {
-      cy.scrollTo("bottom");
+      cy.scrollTo("bottom", { easing: "linear" });
+      cy.wait(2000);
     });
 
     it("should display footer", () => {
@@ -70,7 +72,7 @@ describe("Layout", () => {
     });
 
     it("should match snapshot", () => {
-      cy.shouldMatchSnapshot();
+      page.layout.footer.container.shouldMatchSnapshot("home-footer");
     });
 
     it("should display social links", () => {
