@@ -17,9 +17,25 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 .text {
   @include roboto-font;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 40px;
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 1em;
+    padding-left: 0;
+  }
+  
+  li {
+    padding-left: 1em;
+  }
+  
+  li::before {
+    content: '-';
+    padding-right: 5px;
+  }
 }
 
 .title {
