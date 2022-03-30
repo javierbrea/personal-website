@@ -41,7 +41,8 @@ Using the `npm run test:e2e:ci` command the application is built, served and Cyp
 The `npm run test:e2e` command should be executed only on same Linux OS than used in the Travis.ci pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use the `docker-compose run npm-command npm run test:e2e` command in order to avoid possible conflicts with the CI/CD tool, or disable visual regression tests locally setting the environment variable `CYPRESS_VISUAL_TESTS` to `false`.
 
 ```bash
-docker-compose run command npm run test:e2e
+docker-compose run command npm install
+docker-compose run command npm run test:e2e:ci
 # Then add to git new snapshots in the cypress/snapshots folder
 ```
 
