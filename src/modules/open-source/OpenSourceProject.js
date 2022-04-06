@@ -16,7 +16,6 @@ import Link from "components/link";
 import * as classes from "./openSourceProject.module.scss";
 
 const OpenSourceProject = ({ name, description, github, npm, website, odd }) => {
-  console.log(odd);
   return (
     <div className={clsx(classes.openSourceProject, odd && classes.odd)}>
       <h4>{name}</h4>

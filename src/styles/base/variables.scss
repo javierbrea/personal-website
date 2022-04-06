@@ -33,6 +33,15 @@ $captionFontWeight: 500;
   border-radius: 10px;
 }
 
+@mixin shadowover() {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.33);
+  transform: translate(0, -4px);
+}
+
+@mixin shadowtransition($property: all, $duration: 100ms, $animate: ease-in, $delay:0s) {
+  transition: $property $duration $animate $delay; 
+}
+
 @mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s) {
   transition: $property $duration $animate $delay; 
 }

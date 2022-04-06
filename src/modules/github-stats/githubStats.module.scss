@@ -9,8 +9,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 .badgeContainer {
   text-align: center;
+  
 
   img {
+    @include shadowtransition;
+    border-radius: 4px;
     width: 495px;
 
     @include media('l') {
@@ -23,6 +26,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
     @include media('xs') {
       width: 420px;
+    }
+
+    &:hover {
+      @include shadowover;
     }
   }
 }

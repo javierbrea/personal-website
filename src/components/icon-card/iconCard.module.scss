@@ -8,6 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 @import 'styles/base/variables';
 
 .iconCard {
+  @include shadowtransition;
   @include border;
   background-color: $white;
   border-radius: 5px;
@@ -47,5 +48,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
       font-weight: normal;
       margin-bottom: 0;
     }
+  }
+
+  &:hover {
+    @include shadowover;
   }
 }

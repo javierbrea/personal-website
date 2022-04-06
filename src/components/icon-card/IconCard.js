@@ -14,7 +14,7 @@ import * as classes from "./iconCard.module.scss";
 
 const IconCard = ({ title, text, icon, to }) => {
   return (
-    <div className="col-md-4">
+    <div className={clsx("col-md-4", classes.root)}>
       <Link to={to}>
         <div className={clsx(classes.iconCard)}>
           {icon}
