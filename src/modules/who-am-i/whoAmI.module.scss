@@ -19,7 +19,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
   @include roboto-font;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 40px;
 
   ul {
     list-style: none;
@@ -28,16 +27,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
     padding-left: 0;
   }
   
-  li {
-    padding-left: 1em;
-  }
-  
   li::before {
     content: '-';
     padding-right: 5px;
   }
-}
-
-.title {
-  margin-bottom: 18px;
 }

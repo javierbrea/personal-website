@@ -8,15 +8,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 @import 'styles/base/variables';
 
 .root {
-  padding: 50px 35px;
-
-  @include media('m') {
-    margin-top: 50px;
-  }
-
-  h3 {
-    color: $textColorDark;
-    font-size: 21px;
-    text-transform: uppercase;
-  }
+  padding: 2rem 2rem 0;
 }

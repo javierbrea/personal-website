@@ -7,12 +7,14 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import Skill from "./Skill";
 
+import Title from "components/title";
+
 import * as classes from "./homeSkills.module.scss";
 
 const HomeSkills = () => {
   return (
     <div className={classes.root}>
-      <h3>Key skills</h3>
+      <Title centered>Key skills</Title>
       <div>
         <Skill amount={95} title="Front-end development" />
         <Skill amount={90} title="Modular architectures" />

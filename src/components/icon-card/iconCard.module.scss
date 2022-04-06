@@ -9,9 +9,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 .iconCard {
   @include border;
+  background-color: $white;
   border-radius: 5px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
   padding: 30px 25px;
+  text-align: left;
 
   @include media('s') {
     margin-bottom: 30px;

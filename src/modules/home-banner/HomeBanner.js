@@ -11,6 +11,7 @@ import BannerButton from "components/banner-button";
 import MainBanner from "components/main-banner";
 
 import bannerHome from "images/banner/home-avatar.png";
+
 import * as classes from "./homeBanner.module.scss";
 
 const HomeBanner = () => {

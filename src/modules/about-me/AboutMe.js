@@ -11,6 +11,7 @@ import clsx from "clsx";
 import Section from "components/section";
 import ImagesGallery from "components/images-gallery";
 import ImageGalleryItem from "components/image-gallery-item";
+import Title from "components/title";
 
 import thumb1 from "images/gallery/01_thumb.jpg";
 import img1 from "images/gallery/01.jpg";
@@ -99,7 +100,7 @@ const AboutMe = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className={classes.text}>
-              <h4>As a professional</h4>
+              <Title>Professionally</Title>
               <p>
                 Always passionate about technology, I guided my professional career by a motto:{" "}
                 <b>
@@ -149,7 +150,7 @@ const AboutMe = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className={classes.text}>
-              <h4>In my personal life</h4>
+              <Title>Personally</Title>
               <p>
                 Despite the fact I was born in a big city, I spent most time of my childhood and
                 adolescence in a little village in the countryside, being in contact with the

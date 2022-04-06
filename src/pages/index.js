@@ -13,8 +13,10 @@ import OpenCollective from "modules/open-collective";
 import OpenSource from "modules/open-source";
 import LatestJobs from "modules/latest-jobs";
 import HomeBanner from "modules/home-banner";
-import HomeProfile from "modules/home-profile";
+import WhoAmI from "modules/who-am-i";
+import HomeSkills from "modules/home-skills";
 import GithubStats from "modules/github-stats";
+import SocialLinks from "modules/social-links";
 
 import Section from "components/section";
 
@@ -23,10 +25,24 @@ const Page = () => {
     <Layout data-testid="home-page" title="Home">
       <HomeBanner />
       <Section>
-        <HomeProfile />
+        <div className="row">
+          <div className="col-lg-6">
+            <WhoAmI />
+          </div>
+          <div className="col-lg-6">
+            <HomeSkills />
+          </div>
+        </div>
       </Section>
       <Section odd>
-        <GithubStats />
+        <div className="row">
+          <div className="col-lg-6">
+            <GithubStats />
+          </div>
+          <div className="col-lg-6">
+            <SocialLinks />
+          </div>
+        </div>
       </Section>
       <Section>
         <LatestJobs />

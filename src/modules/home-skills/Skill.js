@@ -7,7 +7,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import { useMemo } from "react";
 import PropTypes from "prop-types";
-// import clsx from "clsx";
 
 import * as classes from "./skill.module.scss";
 
