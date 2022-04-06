@@ -18,9 +18,11 @@ function SEO({ description, lang, meta, keywords, title, socialImage }) {
             siteUrl
             title
             description
-            author
             keywords
-            socialImage
+            social {
+              twitter
+              image
+            }
           }
         }
       }
@@ -30,7 +32,7 @@ function SEO({ description, lang, meta, keywords, title, socialImage }) {
   const metaDescription = description || site.siteMetadata.description;
 
   const allKeywords = site.siteMetadata.keywords.concat(keywords);
-  const socialImageName = socialImage || site.siteMetadata.socialImage;
+  const socialImageName = socialImage || site.siteMetadata.social.image;
 
   const fullTitle = `${title} | ${site.siteMetadata.title}`;
   const socialImageUrl = `${site.siteMetadata.siteUrl}/assets/images/og/${socialImageName}.jpg`;
@@ -67,11 +69,11 @@ function SEO({ description, lang, meta, keywords, title, socialImage }) {
         },
         {
           name: "twitter:site",
-          content: "@javierbrea",
+          content: site.siteMetadata.social.twitter,
         },
         {
           name: "twitter:creator",
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.social.twitter,
         },
         {
           name: "twitter:title",

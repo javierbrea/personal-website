@@ -1,33 +1,8 @@
 /*
-Copyright 2020 Javier Brea
+Copyright 2022 Javier Brea
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
-@import 'styles/base/variables';
-
-.text {
-  h4 {
-    @include heebo-font;
-    color: $textColorDark;
-    font-size: 36px;
-    margin-bottom: 18px;
-    @include media('xs') {
-      font-size: 28px;
-    }
-  }
-
-  p {
-    @include roboto-font;
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.images {
-  margin-top: 40px;
-}
+export { default } from "./BlogLatestPosts";

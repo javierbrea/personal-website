@@ -1,0 +1,56 @@
+@import 'styles/base/variables';
+
+.postsListContainer {
+  list-style-type: none;
+  padding: 0;
+}
+
+.postListItem {
+  height: 350px;
+
+  img {
+    max-height: 150px;
+    object-fit: none;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  small {
+    color: $textColor;
+    font-size: 0.8rem;
+  }
+}
+
+.postListItemLink {
+  @include transition(all, 100);
+  background-color: $white;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  color: $textColorDark;
+  display: block;
+  margin-bottom: 1rem;
+
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.33);
+    color: $textColorDark;
+    transform: translate(0, -5px);
+
+    h2 {
+      color: $textColorThemeDarkActive;
+    }
+  }
+}
+
+.postDescription {
+  margin-bottom: 0;
+}
+
+.postExcerpt {
+  color: $textColor;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  margin-bottom: 0;
+}

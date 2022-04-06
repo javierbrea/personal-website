@@ -66,6 +66,11 @@ const Header = ({ className, inverted }) => {
                   </Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" data-testid="navigate-to-blog" to="/blog">
+                    Blog
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" data-testid="navigate-to-about" to="/about">
                     About
                   </Link>

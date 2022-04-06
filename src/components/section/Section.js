@@ -15,6 +15,7 @@ const Section = ({
   className,
   odd,
   separator,
+  ultraCompact,
   compact,
   compactBottom,
   compactTop,
@@ -30,6 +31,7 @@ const Section = ({
           compactTop && classes.compactTop,
           compactBottom && classes.compactBottom,
           separator && classes.separator,
+          ultraCompact && classes.ultraCompact,
           className
         )}
       >
@@ -48,6 +50,7 @@ Section.propTypes = {
   "data-testid": PropTypes.string,
   odd: PropTypes.bool,
   separator: PropTypes.bool,
+  ultraCompact: PropTypes.bool,
 };
 
 export default Section;

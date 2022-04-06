@@ -10,11 +10,15 @@ $grey: #eee;
 
 $textColor: #777;
 $textColorDark: #222;
-
 $textColorTheme: #8490ff;
+$textColorThemeDark: #4c59ce;
+$textColorThemeDarkActive: #2e3893;
 
 $backgroundDark: #000410;
 $backgroundLight: #faf9ff;
+
+$captionFontSize: 0.8rem;
+$captionFontWeight: 500;
 
 @mixin roboto-font {
   font-family: 'Roboto', sans-serif;

@@ -15,7 +15,7 @@ html {
 
 body {
   @include roboto-font;
-  color: $textColor;
+  color: $textColorDark;
   font-display: swap;
   font-size: 16px;
   font-weight: normal;
@@ -36,11 +36,13 @@ ul {
 }
 
 a {
+  color: $textColorThemeDark;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 
   &:hover,
   &:focus {
+    color: $textColorThemeDarkActive;
     outline: none;
     text-decoration: none;
   }
