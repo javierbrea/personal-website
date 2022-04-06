@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 
 import Layout from "modules/layout";
 import BlogLatestPosts from "modules/blog-latest-posts";
-import BlogBanner from "components/blog-banner";
+import PageTitle from "components/page-title";
 
 const DESCRIPTION = "Latest blog posts";
 
@@ -20,7 +20,7 @@ const Page = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
   return (
     <Layout data-testid="blog-page" description={DESCRIPTION} invertedHeader title="Blog">
-      <BlogBanner title={DESCRIPTION} />
+      <PageTitle title={DESCRIPTION} />
       <BlogLatestPosts posts={posts} />
     </Layout>
   );

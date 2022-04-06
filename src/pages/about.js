@@ -8,12 +8,12 @@ Unless required by applicable law or agreed to in writing, software distributed 
 /* eslint-disable filenames/match-exported */
 
 import Layout from "modules/layout";
-import AboutBanner from "components/about-banner";
+import PageTitle from "components/page-title";
 import AboutMe from "components/about-me";
 
 const Page = () => (
   <Layout data-testid="about-page" description="About Javier Brea" invertedHeader title="About">
-    <AboutBanner />
+    <PageTitle title="About me" />
     <AboutMe />
   </Layout>
 );

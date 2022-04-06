@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 
 import { blogUrl } from "helpers/urls";
 
-import BlogBanner from "components/blog-banner";
+import PageTitle from "components/page-title";
 import Section from "components/section";
 
 import Layout from "modules/layout";
@@ -46,7 +46,7 @@ const BlogPost = ({ data }) => {
       invertedHeader
       title={post.frontmatter.title}
     >
-      <BlogBanner title={post.frontmatter.title} />
+      <PageTitle title={post.frontmatter.title} />
       <Section odd ultraCompact>
         <BlogPostHeader date={post.frontmatter.date} />
       </Section>
