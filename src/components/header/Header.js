@@ -13,7 +13,11 @@ import Link from "components/link";
 import logo from "images/logo.png";
 import logoWhite from "images/logo_white.png";
 
+import { blogUrl } from "helpers/urls";
+
 import "./header.scss";
+
+const blogLink = blogUrl();
 
 const Header = ({ className, inverted }) => {
   const scrollY = useScrollYPosition();
@@ -66,7 +70,7 @@ const Header = ({ className, inverted }) => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" data-testid="navigate-to-blog" to="/blog">
+                  <Link className="nav-link" data-testid="navigate-to-blog" to={blogLink}>
                     Blog
                   </Link>
                 </li>

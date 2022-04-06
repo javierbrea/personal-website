@@ -14,11 +14,13 @@ import Layout from "modules/layout";
 import BlogLatestPosts from "modules/blog-latest-posts";
 import BlogBanner from "components/blog-banner";
 
+const DESCRIPTION = "Latest blog posts";
+
 const Page = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
   return (
-    <Layout data-testid="blog-page" description="Latest blog posts" invertedHeader title="Blog">
-      <BlogBanner title="Latest blog posts" />
+    <Layout data-testid="blog-page" description={DESCRIPTION} invertedHeader title="Blog">
+      <BlogBanner title={DESCRIPTION} />
       <BlogLatestPosts posts={posts} />
     </Layout>
   );

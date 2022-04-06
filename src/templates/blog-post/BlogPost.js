@@ -1,20 +1,44 @@
-import { Link, graphql } from "gatsby";
-import clsx from "clsx";
+/*
+Copyright 2022 Javier Brea
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+*/
+
+import { useMemo } from "react";
+import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
-import Layout from "modules/layout";
+import { blogUrl } from "helpers/urls";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BlogBanner from "components/blog-banner";
 import Section from "components/section";
-import { faCalendar, faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-import avatar from "images/javierbrea-icon.png";
 
-import * as classes from "./blogPost.module.scss";
+import Layout from "modules/layout";
+import BlogPostContent from "modules/blog-post-content";
+import BlogPostHeader from "modules/blog-post-header";
+import BlogPostFooter from "modules/blog-post-footer";
+
+function getPaginationData(data) {
+  if (!data) {
+    return null;
+  }
+  return {
+    url: blogUrl(data.fields.slug),
+    title: data.frontmatter.title,
+  };
+}
 
 const BlogPost = ({ data }) => {
-  const post = data.markdownRemark;
-  const { previous, next } = data;
+  const { markdownRemark: post, previous, next } = data;
+
+  const previousData = useMemo(() => {
+    return getPaginationData(previous);
+  }, [previous]);
+
+  const nextData = useMemo(() => {
+    return getPaginationData(next);
+  }, [next]);
 
   return (
     <Layout
@@ -24,68 +48,13 @@ const BlogPost = ({ data }) => {
     >
       <BlogBanner title={post.frontmatter.title} />
       <Section odd ultraCompact>
-        <p className={classes.date}>
-          <span>
-            <FontAwesomeIcon icon={faCalendar} />
-          </span>
-          <time>{post.frontmatter.date}</time>
-        </p>
+        <BlogPostHeader date={post.frontmatter.date} />
       </Section>
       <Section compact>
-        <article itemScope itemType="http://schema.org/Article">
-          <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
-          <footer></footer>
-        </article>
+        <BlogPostContent html={post.html} />
       </Section>
       <Section compact odd>
-        <div className={clsx("row", classes.blogFooter)}>
-          <div className="col-xl-6">
-            <div className={classes.authorContainer}>
-              <div className={classes.author}>
-                <img height="80" src={avatar} width="80" />
-                <p>
-                  <span className={classes.authorName}>Javier Brea</span>
-                  Web developer. Front-end specialist. <br /> Head of front-end development at
-                  Telefónica Tech
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-6">
-            <div className={classes.pagination}>
-              <nav>
-                <div className={classes.paginationTitle}>
-                  <span>Previous post</span>
-                  <span>Next post</span>
-                </div>
-                <ul
-                  style={{
-                    display: `flex`,
-                    flexWrap: `wrap`,
-                    justifyContent: `space-between`,
-                    listStyle: `none`,
-                    padding: 0,
-                  }}
-                >
-                  <li>
-                    {previous && (
-                      <Link rel="prev" to={`/blog${previous.fields.slug}`}>
-                        <FontAwesomeIcon icon={faCaretLeft} /> {previous.frontmatter.title}
-                      </Link>
-                    )}
-                  </li>
-                  <li>
-                    {next && (
-                      <Link rel="next" to={`/blog${next.fields.slug}`}>
-                        {next.frontmatter.title} <FontAwesomeIcon icon={faCaretRight} />
-                      </Link>
-                    )}
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
+        <BlogPostFooter next={nextData} previous={previousData} />
       </Section>
     </Layout>
   );
@@ -93,7 +62,6 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.object,
-  location: PropTypes.object,
 };
 
 export default BlogPost;

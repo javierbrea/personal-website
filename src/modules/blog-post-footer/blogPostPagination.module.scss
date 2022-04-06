@@ -7,7 +7,31 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-.postsListContainer {
-  list-style-type: none;
-  padding: 0;
+.pagination {
+  @include media('l') {
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.paginationTitle {
+  border-bottom: 2px solid #ccc;
+  color: $textColor;
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: $captionFontSize;
+  font-weight: $captionFontWeight;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
 }

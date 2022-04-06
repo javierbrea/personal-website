@@ -7,7 +7,29 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-.postsListContainer {
-  list-style-type: none;
-  padding: 0;
+.authorContainer {
+  align-items: left;
+  display: flex;
+  @include media('l') {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.author {
+  display: inline-flex;
+
+  img {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+    shape-outside: circle();
+  }
+}
+
+.authorName {
+  display: block;
+  font-weight: bold;
 }
