@@ -15,7 +15,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 .image {
   bottom: 0;
+  height: 440px;
   position: absolute;
+  width: 288px;
+
   @include media('m') {
     height: 440px;
     right: 0;

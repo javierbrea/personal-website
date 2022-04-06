@@ -7,9 +7,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-$bannerHeight: 750px;
-$bannerHeightM: 680px;
-$bannerHeightXS: 500px;
+$bannerHeight: 600px;
+$bannerHeightM: 540px;
+$bannerHeightXS: 350px;
 
 .root {
   background-color: $backgroundDark;
@@ -30,6 +30,6 @@ $bannerHeightXS: 500px;
     min-height: 20px;
   }
   @include media('xs') {
-    min-height: calc($bannerHeightXS / 3);
+    min-height: 20px;
   }
 }

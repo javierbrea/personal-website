@@ -15,7 +15,7 @@ import * as classes from "./blogLatestPosts.module.scss";
 
 const BlogLatestPosts = ({ posts }) => {
   return (
-    <Section compact>
+    <Section>
       <ol className={clsx("row", classes.postsListContainer)}>
         {posts.map((post, index) => {
           return <BlogPostItem key={`${index}-${post.frontmatter.date}`} post={post} />;

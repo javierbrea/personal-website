@@ -22,7 +22,7 @@ const Section = ({
   "data-testid": dataTestid,
 }) => {
   return (
-    <div className={clsx(odd && classes.odd)} data-testid={dataTestid}>
+    <section className={clsx(odd && classes.odd)} data-testid={dataTestid}>
       <div
         className={clsx(
           "container",
@@ -37,7 +37,7 @@ const Section = ({
       >
         {children}
       </div>
-    </div>
+    </section>
   );
 };
 
