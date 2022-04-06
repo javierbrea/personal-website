@@ -12,8 +12,8 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import "styles/base";
 
 import Seo from "modules/seo";
-import Header from "components/header";
-import Footer from "components/footer";
+import Header from "modules/header";
+import Footer from "modules/footer";
 
 import * as classes from "./layout.module.scss";
 

@@ -11,11 +11,11 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import Title from "components/title";
 
-import StatsItem from "./StatsItem";
+import IconCard from "components/icon-card";
 
-import * as classes from "./aboutStats.module.scss";
+import * as classes from "./whoAmI.module.scss";
 
-const AboutStats = () => {
+const WhoAmI = () => {
   return (
     <div className={classes.root}>
       <Title className={classes.title}>Who am I</Title>
@@ -31,15 +31,15 @@ const AboutStats = () => {
         </ul>
       </p>
       <div className="row">
-        <StatsItem amount={19} icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" />
-        <StatsItem
-          amount="Linkedin"
+        <IconCard icon={<FontAwesomeIcon icon={faClock} />} text="Years of career" title={19} />
+        <IconCard
           icon={<FontAwesomeIcon icon={faLinkedin} />}
+          title="Linkedin"
           to="https://www.linkedin.com/in/javierbrea/"
         />
-        <StatsItem
-          amount={"Github"}
+        <IconCard
           icon={<FontAwesomeIcon icon={faGithub} />}
+          title={"Github"}
           to="https://github.com/javierbrea"
         />
       </div>
@@ -47,4 +47,4 @@ const AboutStats = () => {
   );
 };
 
-export default AboutStats;
+export default WhoAmI;

@@ -10,6 +10,7 @@ import clsx from "clsx";
 
 import Section from "components/section";
 import ImagesGallery from "components/images-gallery";
+import ImageGalleryItem from "components/image-gallery-item";
 
 import thumb1 from "images/gallery/01_thumb.jpg";
 import img1 from "images/gallery/01.jpg";
@@ -35,8 +36,6 @@ import img10 from "images/gallery/10.jpg";
 import jobImage1 from "images/gallery/job-01.jpg";
 import jobImage2 from "images/gallery/job-02.jpg";
 import jobImage3 from "images/gallery/job-03.jpg";
-
-import ImageGallery from "components/image-gallery";
 
 import * as classes from "./aboutMe.module.scss";
 
@@ -141,9 +140,9 @@ const AboutMe = () => {
           </div>
         </div>
         <div className={clsx("row", classes.images)}>
-          <ImageGallery alignLeft alt="Working" src={jobImage2} width={4} />
-          <ImageGallery alt="Coding" src={jobImage3} width={4} />
-          <ImageGallery alt="Architecture design" src={jobImage1} width={4} />
+          <ImageGalleryItem alignLeft alt="Working" src={jobImage2} width={4} />
+          <ImageGalleryItem alt="Coding" src={jobImage3} width={4} />
+          <ImageGalleryItem alt="Architecture design" src={jobImage1} width={4} />
         </div>
       </Section>
       <Section compactTop data-testid="personal-life" separator>

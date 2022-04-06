@@ -9,9 +9,9 @@ import { useMemo, useCallback } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import * as classes from "./imageGallery.module.scss";
+import * as classes from "./imageGalleryItem.module.scss";
 
-const ImageGallery = ({ width, src, onClick, id, alignLeft, "data-testid": dataTestid }) => {
+const ImageGalleryItem = ({ width, src, onClick, id, alignLeft, "data-testid": dataTestid }) => {
   const style = useMemo(() => {
     return {
       background: `url(${src})`,
@@ -39,7 +39,7 @@ const ImageGallery = ({ width, src, onClick, id, alignLeft, "data-testid": dataT
   );
 };
 
-ImageGallery.propTypes = {
+ImageGalleryItem.propTypes = {
   alignLeft: PropTypes.bool,
   "data-testid": PropTypes.string,
   id: PropTypes.number,
@@ -48,4 +48,4 @@ ImageGallery.propTypes = {
   width: PropTypes.oneOf([4, 6]),
 };
 
-export default ImageGallery;
+export default ImageGalleryItem;

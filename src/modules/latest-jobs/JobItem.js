@@ -10,9 +10,9 @@ import PropTypes from "prop-types";
 
 import Link from "components/link";
 
-import * as classes from "./projectItem.module.scss";
+import * as classes from "./jobItem.module.scss";
 
-const ProjectItem = ({ dates, image, imageAlt, to, title, description }) => {
+const JobItem = ({ dates, image, imageAlt, to, title, description }) => {
   return (
     <Link to={to}>
       <div className={clsx(classes.root, to && classes.link)}>
@@ -28,7 +28,7 @@ const ProjectItem = ({ dates, image, imageAlt, to, title, description }) => {
   );
 };
 
-ProjectItem.propTypes = {
+JobItem.propTypes = {
   dates: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
@@ -37,4 +37,4 @@ ProjectItem.propTypes = {
   to: PropTypes.string,
 };
 
-export default ProjectItem;
+export default JobItem;

@@ -10,16 +10,16 @@ import clsx from "clsx";
 
 import Link from "components/link";
 
-import * as classes from "./statsItem.module.scss";
+import * as classes from "./iconCard.module.scss";
 
-const StatsItem = ({ amount, text, icon, to }) => {
+const IconCard = ({ title, text, icon, to }) => {
   return (
     <div className="col-md-4">
       <Link to={to}>
-        <div className={clsx(classes.item)}>
+        <div className={clsx(classes.iconCard)}>
           {icon}
           <h4>
-            {amount} <span>{text}</span>
+            {title} <span>{text}</span>
           </h4>
         </div>
       </Link>
@@ -27,11 +27,11 @@ const StatsItem = ({ amount, text, icon, to }) => {
   );
 };
 
-StatsItem.propTypes = {
-  amount: PropTypes.number.isRequired,
+IconCard.propTypes = {
   icon: PropTypes.node.isRequired,
   text: PropTypes.string,
+  title: PropTypes.string.isRequired,
   to: PropTypes.string,
 };
 
-export default StatsItem;
+export default IconCard;
