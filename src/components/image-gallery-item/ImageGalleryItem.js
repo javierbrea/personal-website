@@ -25,7 +25,7 @@ const ImageGalleryItem = ({ width, src, onClick, id, alignLeft, "data-testid": d
 
   return (
     <div className={clsx(`col-md-${width}`)} data-testid={dataTestid} onClick={handleClick}>
-      <a className={classes.clickable}>
+      <a className={clsx(onClick && classes.clickable)}>
         <div
           className={clsx(
             classes.imageContainer,
