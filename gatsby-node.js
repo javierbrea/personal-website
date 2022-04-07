@@ -108,10 +108,19 @@ const createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      featured: FrontMatterFeatured
     }
 
     type Fields {
       slug: String
+    }
+
+    type FrontMatterFeatured {
+      image: FrontMatterFeaturedImage
+    }
+
+    type FrontMatterFeaturedImage {
+      publicURL: String
     }
   `);
 };

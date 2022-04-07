@@ -8,12 +8,29 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
+import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Section from "components/section";
+
 import BlogPostItem from "./BlogPostItem";
 
 import * as classes from "./blogLatestPosts.module.scss";
 
 const BlogLatestPosts = ({ posts }) => {
+  console.log(posts);
+  if (posts.length === 0) {
+    return (
+      <Section>
+        <div className={classes.noPosts}>
+          <p className={classes.noPostsIcon}>
+            <FontAwesomeIcon icon={faPersonDigging} />
+          </p>
+          <p>I&lsquo;m working on my first post</p>
+        </div>
+      </Section>
+    );
+  }
   return (
     <Section>
       <ol className={clsx("row", classes.postsListContainer)}>
