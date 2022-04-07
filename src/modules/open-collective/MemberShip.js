@@ -19,7 +19,13 @@ const MemberShip = ({ link, logo, name, role }) => {
             <div className={classes.imageBackground}></div>
             <div className={classes.logo}>
               <div className={classes.logoContainer}>
-                <img className={classes.logoImage} src={logo} />
+                <img
+                  alt={`${name} logo`}
+                  className={classes.logoImage}
+                  height="65"
+                  src={logo}
+                  width="76"
+                />
               </div>
             </div>
           </div>

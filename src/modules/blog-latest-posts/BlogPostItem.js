@@ -21,7 +21,9 @@ const BlogPostItem = ({ post }) => {
             <img
               alt={title}
               className="card-img-top"
+              height="150"
               src={post.frontmatter.featured.image.publicURL}
+              width="350"
             />
             <div className="card-body">
               <h2>

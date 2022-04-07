@@ -18,8 +18,8 @@ import * as classes from "./openSourceProject.module.scss";
 const OpenSourceProject = ({ name, description, github, npm, website, odd }) => {
   return (
     <div className={clsx(classes.openSourceProject, odd && classes.odd)}>
-      <h4>{name}</h4>
-      <p>{description}</p>
+      <p className={classes.name}>{name}</p>
+      <p className={classes.description}>{description}</p>
       <div>
         <div className={classes.links} data-testid="opensource-project-links">
           <Link to={`https://www.npmjs.com/package/${npm}`}>

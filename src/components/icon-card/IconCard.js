@@ -18,9 +18,9 @@ const IconCard = ({ title, text, icon, to }) => {
       <Link to={to}>
         <div className={clsx(classes.iconCard)}>
           {icon}
-          <h4>
+          <p>
             {title} <span>{text}</span>
-          </h4>
+          </p>
         </div>
       </Link>
     </div>

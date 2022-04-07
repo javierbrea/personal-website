@@ -16,7 +16,12 @@ const GithubStats = () => {
         <Title centered>Github stats</Title>
         <div className={classes.badgeContainer} data-testid="github-stats">
           <a href="https://github.com/javierbrea">
-            <img src="https://github-readme-stats.vercel.app/api?username=javierbrea&count_private=true&show_icons=true&theme=light" />
+            <img
+              alt="Github stats"
+              height="195"
+              src="https://github-readme-stats.vercel.app/api?username=javierbrea&count_private=true&show_icons=true&theme=light"
+              width="495"
+            />
           </a>
         </div>
       </div>

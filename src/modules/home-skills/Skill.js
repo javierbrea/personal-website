@@ -17,16 +17,15 @@ const Skill = ({ title, amount }) => {
 
   return (
     <div className={classes.root}>
-      <h4>
+      <p>
         {title} <span className="counter">{amount}</span>%
-      </h4>
+      </p>
       <div className={classes.progress}>
         <div
           aria-valuemax="100"
           aria-valuemin="0"
           aria-valuenow={amount}
           className={classes.progressBar}
-          role="progressbar"
           style={style}
         ></div>
       </div>

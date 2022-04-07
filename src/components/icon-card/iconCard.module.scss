@@ -25,7 +25,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
     font-size: 24px;
   }
 
-  h4 {
+  p {
     @include heebo-font;
     color: $textColorDark;
     font-size: 1.4rem;

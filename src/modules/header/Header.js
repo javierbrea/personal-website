@@ -37,12 +37,21 @@ const Header = ({ className, inverted }) => {
           <div className="container box_1620">
             {/* <!-- Brand and toggle get grouped for better mobile display --> */}
             <Link className="navbar-brand logo_h" data-testid="main-logo-link" to="/">
-              <img alt="JBREA" className="logo" data-testid="main-logo" src={logo} />
+              <img
+                alt="JBREA"
+                className="logo"
+                data-testid="main-logo"
+                height="19"
+                src={logo}
+                width="72"
+              />
               <img
                 alt="JBREA"
                 className="logo_white"
                 data-testid="main-logo-white"
+                height="19"
                 src={logoWhite}
+                width="72"
               />
             </Link>
             <button
