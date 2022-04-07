@@ -14,6 +14,8 @@ import "styles/base";
 import Seo from "modules/seo";
 import Header from "modules/header";
 import Footer from "modules/footer";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 import * as classes from "./layout.module.scss";
 
