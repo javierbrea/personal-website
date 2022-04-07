@@ -34,9 +34,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
     }
 
     .title {
-      background: linear-gradient(to right, #8490ff 0%, #62bdfc 70%);
-       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: $textColorThemeDark;
+    }
+
+    .textContainer {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.8) 100%);
     }
 
     p {
@@ -50,12 +52,17 @@ Unless required by applicable law or agreed to in writing, software distributed 
   cursor: pointer;
 }
 
-.text {
-  bottom: 30px;
+.textContainer {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.6) 100%);
+  bottom: 0;
   left: 0;
-  padding-left: 30px;
-  padding-right: 30px;
   position: absolute;
+  width: 100%;
+}
+
+.text {
+  padding: 30px;
+  padding-top: 50px;
 }
 
 .description {

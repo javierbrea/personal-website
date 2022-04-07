@@ -17,11 +17,13 @@ const JobItem = ({ dates, image, imageAlt, to, title, description }) => {
     <Link to={to}>
       <div className={clsx(classes.root, to && classes.link)}>
         {<img alt={imageAlt} className="img-fluid" height="340" src={image} width="360" />}
-        <div className={classes.text}>
-          <p className={classes.title}>{title}</p>
-          <p className={classes.description}>
-            {description} - {dates}
-          </p>
+        <div className={classes.textContainer}>
+          <div className={classes.text}>
+            <p className={classes.title}>{title}</p>
+            <p className={classes.description}>
+              {description} - {dates}
+            </p>
+          </div>
         </div>
       </div>
     </Link>
