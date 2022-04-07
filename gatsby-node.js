@@ -6,6 +6,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 const path = require(`path`);
+const fs = require("fs");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const createPages = async ({ graphql, actions, reporter }) => {
@@ -73,6 +74,10 @@ const onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
+const folderHasContents = (folder) => {
+  return fs.readdirSync(folder).length > 1;
+};
+
 const createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
@@ -82,6 +87,24 @@ const createSchemaCustomization = ({ actions }) => {
   // Also explicitly define the Markdown frontmatter
   // This way the "MarkdownRemark" queries will return `null` even when no
   // blog posts are stored inside "content/blog" instead of returning an error
+
+  const thereArePosts = folderHasContents(path.resolve(__dirname, "content", "blog"));
+
+  // Add featured type to Frontmatter only when there are no posts to avoid query failing in that case. If added when there are posts, the publicURL is not being received
+  const featuredProperty = !thereArePosts
+    ? `
+      featured: FrontmatterFeatured
+  `
+    : "";
+  const featuredType = !thereArePosts
+    ? `
+
+    type FrontmatterFeatured {
+      image: File
+    }
+  `
+    : "";
+
   createTypes(`
     type SiteSiteMetadata {
       author: Author
@@ -107,21 +130,12 @@ const createSchemaCustomization = ({ actions }) => {
     type Frontmatter {
       title: String
       description: String
-      date: Date @dateformat
-      featured: FrontMatterFeatured
+      date: Date @dateformat${featuredProperty}
     }
 
     type Fields {
       slug: String
-    }
-
-    type FrontMatterFeatured {
-      image: FrontMatterFeaturedImage
-    }
-
-    type FrontMatterFeaturedImage {
-      publicURL: String
-    }
+    }${featuredType}
   `);
 };
 

@@ -18,7 +18,6 @@ import BlogPostItem from "./BlogPostItem";
 import * as classes from "./blogLatestPosts.module.scss";
 
 const BlogLatestPosts = ({ posts }) => {
-  console.log(posts);
   if (posts.length === 0) {
     return (
       <Section>
