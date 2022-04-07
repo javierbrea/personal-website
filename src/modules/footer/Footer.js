@@ -24,15 +24,16 @@ const Footer = ({ className }) => {
               <div className="f_title">
                 <h3>About Me</h3>
               </div>
+              <p>Web developer. Front-end architect</p>
               <p>Designing and developing software from 2003</p>
-              <p>Copyright &copy;2020 Javier Brea</p>
+              <p>Copyright &copy;2022 Javier Brea</p>
             </aside>
           </div>
           <div className="col-lg-5 col-sm-6"></div>
           <div className="col-lg-2">
-            <aside className="f_widget social_widget">
+            <aside className="social_widget">
               <div className="f_title">
-                <h3>Follow Me</h3>
+                <h3>Contact info</h3>
               </div>
               <p>Let us be social</p>
               <ul className="list">
