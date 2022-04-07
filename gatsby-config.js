@@ -138,7 +138,7 @@ module.exports = {
               }
             `,
             output: "/blog/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Javier Brea Blog RSS Feed",
           },
         ],
       },
