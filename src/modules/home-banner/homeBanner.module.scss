@@ -75,7 +75,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
     margin-bottom: 20px;
     text-transform: uppercase;
     @include media('xs') {
-      margin-top: 0;
+      display: none;
     }
   }
 
@@ -83,13 +83,13 @@ Unless required by applicable law or agreed to in writing, software distributed 
     @include heebo-font;
     font-size: 48px;
     font-weight: bold;
-    line-height: 54px;
-    margin-bottom: 20px;
+    line-height: 40px;
     margin-top: 0;
     text-transform: uppercase;
     @include media('xs') {
       font-size: 42px;
       line-height: 38px;
+      margin-top: 60px;
     }
   }
 
