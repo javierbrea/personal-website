@@ -15,6 +15,12 @@ describe("About", () => {
     });
   });
 
+  describe("Title", () => {
+    it("should have about me text", () => {
+      about.title.title.shouldHaveText("About me");
+    });
+  });
+
   describe("Professional section", () => {
     it("should be visible", () => {
       about.aboutMe.professional.shouldBeVisible();

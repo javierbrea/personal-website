@@ -31,8 +31,8 @@ const PageTitle = ({ title, subtitle }) => {
           />
           <div className={clsx("text-center", classes.text)}>
             <header>
-              <h1>{title}</h1>
-              {subtitle ? <h2>{subtitle}</h2> : null}
+              <h1 data-testid="page-title">{title}</h1>
+              {subtitle ? <h2 data-testid="page-subtitle">{subtitle}</h2> : null}
             </header>
           </div>
         </div>

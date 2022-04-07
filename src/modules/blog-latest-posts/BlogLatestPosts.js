@@ -17,11 +17,13 @@ import BlogPostItem from "./BlogPostItem";
 
 import * as classes from "./blogLatestPosts.module.scss";
 
+const DATA_TEST_ID = "blog-latest-posts";
+
 const BlogLatestPosts = ({ posts }) => {
   if (posts.length === 0) {
     return (
-      <Section>
-        <div className={classes.noPosts}>
+      <Section data-testid={DATA_TEST_ID}>
+        <div className={classes.noPosts} data-testid="no-posts">
           <p className={classes.noPostsIcon}>
             <FontAwesomeIcon icon={faPersonDigging} />
           </p>
@@ -31,7 +33,7 @@ const BlogLatestPosts = ({ posts }) => {
     );
   }
   return (
-    <Section>
+    <Section data-testid={DATA_TEST_ID}>
       <ol className={clsx("row", classes.postsListContainer)}>
         {posts.map((post, index) => {
           return <BlogPostItem key={`${index}-${post.frontmatter.date}`} post={post} />;
