@@ -25,6 +25,7 @@ const Layout = ({
   description,
   invertedHeader,
   "data-testid": dataTestid,
+  onlyCustomKeywords,
 }) => {
   return (
     <ParallaxProvider>
@@ -32,6 +33,7 @@ const Layout = ({
         <Seo
           description={description}
           keywords={keywords}
+          onlyCustomKeywords={onlyCustomKeywords}
           socialImage={socialImage}
           title={title}
         />
@@ -49,6 +51,7 @@ Layout.propTypes = {
   description: PropTypes.string,
   invertedHeader: PropTypes.bool,
   keywords: PropTypes.array,
+  onlyCustomKeywords: PropTypes.bool,
   socialImage: PropTypes.string,
   title: PropTypes.string,
 };

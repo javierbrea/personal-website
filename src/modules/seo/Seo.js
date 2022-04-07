@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title, socialImage }) {
+function SEO({ description, lang, meta, keywords, onlyCustomKeywords, title, socialImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,7 +31,10 @@ function SEO({ description, lang, meta, keywords, title, socialImage }) {
 
   const metaDescription = description || site.siteMetadata.description;
 
-  const allKeywords = site.siteMetadata.keywords.concat(keywords);
+  const customKeywords = keywords || [];
+  const allKeywords = onlyCustomKeywords
+    ? customKeywords
+    : customKeywords.concat(site.siteMetadata.keywords);
   const socialImageName = socialImage || site.siteMetadata.social.image;
 
   const fullTitle = `${title} | ${site.siteMetadata.title}`;
@@ -121,6 +124,7 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
+  onlyCustomKeywords: PropTypes.bool,
   socialImage: PropTypes.string,
   title: PropTypes.string.isRequired,
 };

@@ -16,10 +16,18 @@ import PageTitle from "components/page-title";
 
 const DESCRIPTION = "Latest blog posts";
 
+const keywords = ["blog", "posts", "tech"];
+
 const Page = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
   return (
-    <Layout data-testid="blog-page" description={DESCRIPTION} invertedHeader title="Blog">
+    <Layout
+      data-testid="blog-page"
+      description={DESCRIPTION}
+      invertedHeader
+      keywords={keywords}
+      title="Blog"
+    >
       <PageTitle title={DESCRIPTION} />
       <BlogLatestPosts posts={posts} />
     </Layout>

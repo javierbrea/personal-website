@@ -2,6 +2,10 @@
 title: Hello World 2
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+tags:
+    - hello2
+    - world2
+    - welcome2
 featured: { image: ./salty_egg.jpg }
 ---
 

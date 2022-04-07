@@ -29,6 +29,8 @@ function getPaginationData(data) {
   };
 }
 
+const BLOG_KEYWORDS = ["blog", "post", "article", "tech", "tutorial", "example"];
+
 const BlogPost = ({ data }) => {
   const { markdownRemark: post, previous, next } = data;
 
@@ -40,10 +42,17 @@ const BlogPost = ({ data }) => {
     return getPaginationData(next);
   }, [next]);
 
+  const keywords = useMemo(() => {
+    const postKeyWords = post.frontmatter.tags || [];
+    return postKeyWords.concat(BLOG_KEYWORDS);
+  }, [post]);
+
   return (
     <Layout
       description={post.frontmatter.description || post.excerpt}
       invertedHeader
+      keywords={keywords}
+      onlyCustomKeywords
       title={post.frontmatter.title}
     >
       <PageTitle title={post.frontmatter.title} />
@@ -81,6 +90,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
