@@ -34,7 +34,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
   color: $textColorDark;
   display: block;
   margin-bottom: 1rem;
-
+  max-height: 350px;
+  
   &:hover {
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.33);
     color: $textColorDark;
@@ -46,8 +47,18 @@ Unless required by applicable law or agreed to in writing, software distributed 
   }
 }
 
+.postDescription,
+.postExcerpt {
+  /* stylelint-disable-next-line */
+  display: -webkit-box;
+  /* stylelint-disable-next-line */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
 .postDescription {
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 
 .postExcerpt {

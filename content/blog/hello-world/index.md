@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur diam a turpis sagittis laoreet. Etiam pulvinar dolor a tellus pellentesque, at hendrerit turpis maximus."
 tags:
     - hello
     - world

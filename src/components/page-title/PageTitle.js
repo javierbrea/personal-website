@@ -15,7 +15,7 @@ import bannerAbout from "images/banner/about-banner.jpg";
 
 import * as classes from "./pageTitle.module.scss";
 
-const PageTitle = ({ title }) => {
+const PageTitle = ({ title, subtitle }) => {
   return (
     <MainBanner small>
       <div className={classes.root}>
@@ -32,6 +32,7 @@ const PageTitle = ({ title }) => {
           <div className={clsx("text-center", classes.text)}>
             <header>
               <h1>{title}</h1>
+              {subtitle ? <h2>{subtitle}</h2> : null}
             </header>
           </div>
         </div>
@@ -41,6 +42,7 @@ const PageTitle = ({ title }) => {
 };
 
 PageTitle.propTypes = {
+  subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
 };
 

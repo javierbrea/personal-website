@@ -46,6 +46,8 @@ $bannerHeightXs: 260px;
 .text {
   color: #fff;
   margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   position: absolute;
   width: 100%;
 
@@ -55,7 +57,8 @@ $bannerHeightXs: 260px;
     padding-top: 3rem;
     width: 100%;
 
-    h1 {
+    h1,
+    h2 {
       margin: auto;
       max-width: 1320px;
       @include media('xl') {
@@ -73,6 +76,11 @@ $bannerHeightXs: 260px;
       @include media('s') {
         max-width: 540px;
       }
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      opacity: 0.6;
     }
     
   }
