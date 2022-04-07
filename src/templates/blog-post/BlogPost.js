@@ -53,6 +53,7 @@ const BlogPost = ({ data }) => {
       invertedHeader
       keywords={keywords}
       onlyCustomKeywords
+      socialImage={post.frontmatter.featured.image.publicURL}
       title={post.frontmatter.title}
     >
       <PageTitle title={post.frontmatter.title} />
@@ -91,6 +92,11 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        featured {
+          image {
+            publicURL
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

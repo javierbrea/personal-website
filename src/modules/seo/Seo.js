@@ -35,10 +35,10 @@ function SEO({ description, lang, meta, keywords, onlyCustomKeywords, title, soc
   const allKeywords = onlyCustomKeywords
     ? customKeywords
     : customKeywords.concat(site.siteMetadata.keywords);
-  const socialImageName = socialImage || site.siteMetadata.social.image;
+  const socialImagePath = socialImage || site.siteMetadata.social.image;
 
   const fullTitle = `${title} | ${site.siteMetadata.title}`;
-  const socialImageUrl = `${site.siteMetadata.siteUrl}/assets/images/og/${socialImageName}.jpg`;
+  const socialImageUrl = `${site.siteMetadata.siteUrl}${socialImagePath}`;
 
   return (
     <Helmet

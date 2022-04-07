@@ -5,6 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
+const NAME = "Javier Brea";
 const SITE_URL = "https://www.javierbrea.com";
 
 const {
@@ -19,18 +20,18 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   siteMetadata: {
     siteUrl,
-    title: `Javier Brea`,
-    description: `Javier Brea personal website`,
+    title: NAME,
+    description: `${NAME} personal website`,
     author: {
-      name: `Javier Brea`,
+      name: NAME,
       summary: `Web developer. Front-end specialist`,
     },
     social: {
       twitter: "@javierbrea",
-      image: "business-card",
+      image: "/assets/images/og/business-card.jpg",
     },
     keywords: [
-      "Javier Brea",
+      NAME,
       "front-end",
       "architect",
       "software",
@@ -138,7 +139,7 @@ module.exports = {
               }
             `,
             output: "/blog/rss.xml",
-            title: "Javier Brea Blog RSS Feed",
+            title: `${NAME} Blog RSS Feed`,
           },
         ],
       },
@@ -147,8 +148,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Javier Brea personal website`,
-        short_name: `Javier Brea`,
+        name: `${NAME} personal website`,
+        short_name: NAME,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
