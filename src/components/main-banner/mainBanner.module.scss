@@ -16,6 +16,7 @@ $bannerHeightXS: 350px;
   display: flex;
   flex-direction: column;
   min-height: $bannerHeight;
+  
   @include media('m') {
     min-height: $bannerHeightM;
   }

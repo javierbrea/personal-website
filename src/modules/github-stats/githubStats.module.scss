@@ -28,6 +28,14 @@ Unless required by applicable law or agreed to in writing, software distributed 
       width: 420px;
     }
 
+    @include media('xxs') {
+      width: 380px;
+    }
+
+    @include media('xxxs') {
+      width: 340px;
+    }
+
     &:hover {
       @include shadowover;
     }

@@ -25,6 +25,12 @@ Unless required by applicable law or agreed to in writing, software distributed 
   text-decoration: none !important;
   vertical-align: top;
   width: 215px;
+  @include media('xs') {
+    width: 180px;
+  }
+  @include media('xxs') {
+    width: 160px;
+  }
 }
 
 .head {

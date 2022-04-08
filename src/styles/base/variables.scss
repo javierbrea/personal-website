@@ -52,6 +52,7 @@ $sizeM: 991px;
 $sizeS: 767px;
 $sizeXS: 575px;
 $sizeXXS: 480px;
+$sizeXXXS: 400px;
 
 @function translate-media-condition($alias) {
   $mediaMap: (
@@ -61,7 +62,8 @@ $sizeXXS: 480px;
     'm': '(max-width: #{$sizeM})',
     's': '(max-width: #{$sizeS})',
     'xs': '(max-width: #{$sizeXS})',
-    'xxs': '(max-width: #{$sizeXXS})'
+    'xxs': '(max-width: #{$sizeXXS})',
+    'xxxs': '(max-width: #{$sizeXXXS})',
   );
   @return map-get( $mediaMap, $alias );
 }

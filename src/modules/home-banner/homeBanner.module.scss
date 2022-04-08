@@ -28,6 +28,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
     height: 275px;
     width: 180px;
   }
+  @include media('xxs') {
+    height: 240px;
+    width: 157px;
+  }
 }
 
 .container {
