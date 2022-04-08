@@ -5,6 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
+const NAME = "Javier Brea";
 const SITE_URL = "https://www.javierbrea.com";
 
 const {
@@ -19,22 +20,28 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   siteMetadata: {
     siteUrl,
-    title: `Javier Brea`,
-    description: `Javier Brea personal website`,
-    author: `@javierbrea`,
+    title: NAME,
+    description: `${NAME} personal website`,
+    author: {
+      name: NAME,
+      summary: `Web developer. Front-end specialist`,
+    },
+    social: {
+      twitter: "@javierbrea",
+      image: "/assets/images/og/business-card.jpg",
+    },
     keywords: [
-      "Javier Brea",
+      NAME,
       "front-end",
       "architect",
       "software",
       "developer",
       "javascript",
-      "curriculum",
+      "nodejs",
       "about",
-      "projects",
+      "jobs",
       "career",
     ],
-    socialImage: "business-card",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -49,18 +56,100 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map((node) => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/blog/rss.xml",
+            title: `${NAME} Blog RSS Feed`,
+          },
+        ],
+      },
+    },
     "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Javier Brea personal website`,
-        short_name: `Javier Brea`,
+        name: `${NAME} personal website`,
+        short_name: NAME,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,

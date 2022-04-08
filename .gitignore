@@ -71,3 +71,7 @@ yarn-error.log
 # tests
 /cypress/screenshots
 /cypress/screenshots
+
+# misc
+.vscode
+_content

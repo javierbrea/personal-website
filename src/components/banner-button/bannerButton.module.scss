@@ -9,7 +9,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 .button {
   @include roboto-font;
-  @include transition;
+  @include shadowtransition;
   background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
   background-size: 200% auto;
   border-radius: 5px;
@@ -21,6 +21,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
   padding: 0 42px;
 
   &:hover {
+    @include shadowover;
     background-position: right center;
     color: #fff;
   }

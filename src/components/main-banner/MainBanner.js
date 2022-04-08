@@ -10,9 +10,12 @@ import PropTypes from "prop-types";
 
 import * as classes from "./mainBanner.module.scss";
 
-const MainBanner = ({ children, className, "data-testid": dataTestid }) => {
+const MainBanner = ({ children, small, className, "data-testid": dataTestid }) => {
   return (
-    <section className={clsx(classes.root, className)} data-testid={dataTestid}>
+    <section
+      className={clsx(classes.root, className, small && classes.small)}
+      data-testid={dataTestid}
+    >
       {children}
     </section>
   );
@@ -22,6 +25,7 @@ MainBanner.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   "data-testid": PropTypes.string,
+  small: PropTypes.bool,
 };
 
 export default MainBanner;

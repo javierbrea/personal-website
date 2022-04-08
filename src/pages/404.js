@@ -11,7 +11,7 @@ import Layout from "modules/layout";
 import NotFound from "components/not-found";
 
 const Page = () => (
-  <Layout description="Page not found" pageTitle="Not found">
+  <Layout description="Page not found" title="Not found">
     <NotFound />
   </Layout>
 );
