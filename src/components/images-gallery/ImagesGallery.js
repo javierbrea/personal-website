@@ -10,7 +10,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import ImageGallery from "components/image-gallery";
+import ImageGalleryItem from "components/image-gallery-item";
 
 const ImagesGallery = ({ className, images, "data-testid": dataTestid }) => {
   const [open, setOpen] = useState(false);
@@ -36,7 +36,7 @@ const ImagesGallery = ({ className, images, "data-testid": dataTestid }) => {
       <div className={clsx("row", className)} data-testid={dataTestid}>
         {images.map((image, index) => {
           return (
-            <ImageGallery
+            <ImageGalleryItem
               alt={image.caption}
               data-testid={`${dataTestid}-${index}`}
               id={index}

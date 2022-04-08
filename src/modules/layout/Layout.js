@@ -12,8 +12,10 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import "styles/base";
 
 import Seo from "modules/seo";
-import Header from "components/header";
-import Footer from "components/footer";
+import Header from "modules/header";
+import Footer from "modules/footer";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 import * as classes from "./layout.module.scss";
 
@@ -25,6 +27,7 @@ const Layout = ({
   description,
   invertedHeader,
   "data-testid": dataTestid,
+  onlyCustomKeywords,
 }) => {
   return (
     <ParallaxProvider>
@@ -32,6 +35,7 @@ const Layout = ({
         <Seo
           description={description}
           keywords={keywords}
+          onlyCustomKeywords={onlyCustomKeywords}
           socialImage={socialImage}
           title={title}
         />
@@ -49,6 +53,7 @@ Layout.propTypes = {
   description: PropTypes.string,
   invertedHeader: PropTypes.bool,
   keywords: PropTypes.array,
+  onlyCustomKeywords: PropTypes.bool,
   socialImage: PropTypes.string,
   title: PropTypes.string,
 };

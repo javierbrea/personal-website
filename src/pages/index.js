@@ -8,22 +8,51 @@ Unless required by applicable law or agreed to in writing, software distributed 
 /* eslint-disable filenames/match-exported */
 
 import Layout from "modules/layout";
-import HomeBanner from "components/home-banner";
-import LatestProjects from "components/latest-projects";
-import HomeWelcome from "components/home-welcome";
-import HomeLinks from "components/home-links";
-import OpenSource from "components/open-source";
-import OpenCollective from "components/open-collective";
+
+import OpenCollective from "modules/open-collective";
+import OpenSource from "modules/open-source";
+import LatestJobs from "modules/latest-jobs";
+import HomeBanner from "modules/home-banner";
+import WhoAmI from "modules/who-am-i";
+import HomeSkills from "modules/home-skills";
+import GithubStats from "modules/github-stats";
+import SocialLinks from "modules/social-links";
+
+import Section from "components/section";
 
 const Page = () => {
   return (
     <Layout data-testid="home-page" title="Home">
       <HomeBanner />
-      <HomeWelcome />
-      <HomeLinks odd />
-      <LatestProjects />
-      <OpenSource odd />
-      <OpenCollective />
+      <Section>
+        <div className="row">
+          <div className="col-lg-6">
+            <WhoAmI />
+          </div>
+          <div className="col-lg-6">
+            <HomeSkills />
+          </div>
+        </div>
+      </Section>
+      <Section odd>
+        <div className="row">
+          <div className="col-lg-6">
+            <GithubStats />
+          </div>
+          <div className="col-lg-6">
+            <SocialLinks />
+          </div>
+        </div>
+      </Section>
+      <Section>
+        <LatestJobs />
+      </Section>
+      <Section odd>
+        <OpenSource />
+      </Section>
+      <Section>
+        <OpenCollective />
+      </Section>
     </Layout>
   );
 };

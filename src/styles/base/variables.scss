@@ -10,11 +10,15 @@ $grey: #eee;
 
 $textColor: #777;
 $textColorDark: #222;
-
 $textColorTheme: #8490ff;
+$textColorThemeDark: #4c59ce;
+$textColorThemeDarkActive: #2e3893;
 
 $backgroundDark: #000410;
 $backgroundLight: #faf9ff;
+
+$captionFontSize: 0.8rem;
+$captionFontWeight: 500;
 
 @mixin roboto-font {
   font-family: 'Roboto', sans-serif;
@@ -29,6 +33,15 @@ $backgroundLight: #faf9ff;
   border-radius: 10px;
 }
 
+@mixin shadowover() {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.33);
+  transform: translate(0, -4px);
+}
+
+@mixin shadowtransition($property: all, $duration: 100ms, $animate: ease-in, $delay:0s) {
+  transition: $property $duration $animate $delay; 
+}
+
 @mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s) {
   transition: $property $duration $animate $delay; 
 }
@@ -39,6 +52,7 @@ $sizeM: 991px;
 $sizeS: 767px;
 $sizeXS: 575px;
 $sizeXXS: 480px;
+$sizeXXXS: 400px;
 
 @function translate-media-condition($alias) {
   $mediaMap: (
@@ -48,7 +62,8 @@ $sizeXXS: 480px;
     'm': '(max-width: #{$sizeM})',
     's': '(max-width: #{$sizeS})',
     'xs': '(max-width: #{$sizeXS})',
-    'xxs': '(max-width: #{$sizeXXS})'
+    'xxs': '(max-width: #{$sizeXXS})',
+    'xxxs': '(max-width: #{$sizeXXXS})',
   );
   @return map-get( $mediaMap, $alias );
 }

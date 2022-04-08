@@ -1,0 +1,56 @@
+/*
+Copyright 2020 Javier Brea
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+*/
+
+@import 'styles/base/variables';
+
+.iconCard {
+  @include shadowtransition;
+  @include border;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  text-align: left;
+
+  @include media('s') {
+    margin-bottom: 30px;
+  }
+
+  svg {
+    color: $textColorTheme;
+    font-size: 24px;
+  }
+
+  p {
+    @include heebo-font;
+    color: $textColorDark;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 5px;
+
+    @include media('l') {
+      font-size: 1.2rem;
+    }
+
+    @include media('m') {
+      font-size: 1.4rem;
+    }
+
+    span {
+      @include roboto-font;
+      color: $textColor;
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    @include shadowover;
+  }
+}

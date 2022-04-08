@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Javier Brea
+Copyright 2022 Javier Brea
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
@@ -7,20 +7,30 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
-$bannerHeight: 750px;
-$bannerHeightM: 680px;
-$bannerHeightXS: 500px;
+$bannerHeight: 600px;
+$bannerHeightM: 540px;
+$bannerHeightXS: 350px;
 
 .root {
   background-color: $backgroundDark;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   min-height: $bannerHeight;
+  
   @include media('m') {
     min-height: $bannerHeightM;
   }
   @include media('xs') {
     min-height: $bannerHeightXS;
+  }
+}
+
+.small {
+  min-height: 20px;
+  @include media('m') {
+    min-height: 20px;
+  }
+  @include media('xs') {
+    min-height: 20px;
   }
 }

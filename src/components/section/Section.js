@@ -15,13 +15,14 @@ const Section = ({
   className,
   odd,
   separator,
+  ultraCompact,
   compact,
   compactBottom,
   compactTop,
   "data-testid": dataTestid,
 }) => {
   return (
-    <div className={clsx(odd && classes.odd)} data-testid={dataTestid}>
+    <section className={clsx(odd && classes.odd)} data-testid={dataTestid}>
       <div
         className={clsx(
           "container",
@@ -30,12 +31,13 @@ const Section = ({
           compactTop && classes.compactTop,
           compactBottom && classes.compactBottom,
           separator && classes.separator,
+          ultraCompact && classes.ultraCompact,
           className
         )}
       >
         {children}
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -48,6 +50,7 @@ Section.propTypes = {
   "data-testid": PropTypes.string,
   odd: PropTypes.bool,
   separator: PropTypes.bool,
+  ultraCompact: PropTypes.bool,
 };
 
 export default Section;
