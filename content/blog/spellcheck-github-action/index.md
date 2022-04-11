@@ -87,7 +87,7 @@ jobs:
 
 Now we have to to add a configuration for the spelling checker. It uses [`PySpelling`](https://facelessuser.github.io/pyspelling/) under the hood. It has a lot of configuration options, but here we are going to see only an example with some basics. For further info you can read the docs of the [`UnicornGlobal/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions).
 
-* Create a file named: `.spellcheck.yml` in the root folder of the repository, and paste the contents of the example below.
+* Create a file named: `spellcheck.yaml` in the root folder of the repository, and paste the contents of the example below.
 * Change the `sources` property depending on your repository structure. Provide patterns for every folder containing the files that you want to automatically check.
 
 ```yaml
@@ -156,7 +156,7 @@ This is how our repository will like after adding all the needed configuration f
 ├── .github/
 │   └── workflows/
 │       └── spellcheck.yml
-├── .spellcheck.yml
+├── spellcheck.yaml
 └── .wordlist.txt
 ```
 
