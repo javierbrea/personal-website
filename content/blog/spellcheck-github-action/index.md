@@ -44,7 +44,7 @@ We are going to create a new Github workflow to execute the spell check. Create 
 │       └── spellcheck.yml
 ```
 
-We will name the workflow as `spellcheck`. It will be executed each time a new pull request is opened, and it will contain only one job named `check-spelling`. For the moment we will add to it only a step for checking out the repository.
+We will name the workflow as `spellcheck`. It will be executed each time a new pull request is opened, and it will contain only one job named `check-spelling`. For the moment we will only add a step for checking out the repository.
 
 ```yaml
 name: spellcheck
@@ -60,7 +60,7 @@ jobs:
 
 ## Adding the spell check step
 
-For the spellchecking, we will use the [`UnicornGlobal/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions), which is able to check Python, Markdown, HTML and Text files, and it supports following languages:
+For the spellchecking, we will use the [`rojopolis/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions), which is able to check Python, Markdown, HTML and Text files, and it supports following languages:
 
 * English
 * German
@@ -86,9 +86,9 @@ jobs:
 
 ## Configuration
 
-Now we have to to add a configuration for the spelling checker. It uses [`PySpelling`](https://facelessuser.github.io/pyspelling/) under the hood. When checking Markdown files, it first converts a Markdown text file's buffer using [`Python Markdown`](https://python-markdown.github.io/) and returns a single `SourceText` object containing the text as HTML. Then it captures the HTML content, comments, and even attributes and performs the check. It has a lot of configuration options, but here we are going to see only an example with some basics. For further info you can read the docs of the [`UnicornGlobal/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions).
+Now we have to add a configuration for the spelling checker. It uses [`PySpelling`](https://facelessuser.github.io/pyspelling/) under the hood. When checking Markdown files, it first converts a Markdown text file's buffer using [`Python Markdown`](https://python-markdown.github.io/) and returns a single `SourceText` object containing the text as HTML. Then it captures the HTML content, comments, and even attributes and performs the check. It has a lot of configuration options, but here we are going to see only an example with some basics. For further info you can read the docs of the [`rojopolis/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions).
 
-* Create a file named: `.spellcheck.yml` in the root folder of the repository, and paste the contents of the example below.
+* Create a file named `.spellcheck.yml` in the root folder of the repository, and paste the contents of the example below.
 * Change the `sources` property depending on your repository structure. Provide patterns for every folder containing the files that you want to automatically check.
 
 ```yaml
@@ -146,7 +146,7 @@ Github
 Markdown
 ```
 
-Note also that the configuration includes some filters to ignore some patterns. So, if the word is surrounded by a `code` tag in a HTML file it will be ignored, for example. Then, you could format your text in a more convenient way instead of adding the word to your custom dictionary. It would depend on the case, but sometimes it may be a good practice to give a different format to some kinds of terms.
+Note also that the configuration includes some filters to ignore some patterns. So, if the word is surrounded by a `code` tag in an HTML file it will be ignored, for example. Then, you could format your text in a more convenient way instead of adding the word to your custom dictionary. It would depend on the case, but sometimes it may be a good practice to give a different format to some kinds of terms.
 
 ```md
 In a Markdown file, Github will be detected as a mispelling, but `Github` won't.
@@ -172,7 +172,7 @@ And this is how our repository will finally like after adding all the needed con
 
 ## Conclusion
 
-Adding an automatic checkspelling step to your continuous integration pipeline will prevent your docs containing ugly typos, and it will save you lots of hours of code reviews. It won't prevent other types of orthographic errors, like semantic or style related ones, so I you'll still have to reread carefully your docs before publishing them, but it will be  a great help.
+Adding an automatic spellchecking step to your continuous integration pipeline will prevent your docs containing ugly typos, and it will save you lots of hours of code reviews. It won't prevent other types of orthographic errors, like semantic or style related ones, so I you'll still have to reread carefully your docs before publishing them, but it will be  a great help.
 
 > This blog is being checked with the examples provided in this post, because it is generated from Markdown files, so you can get the code of the examples directly in [`https://github.com/javierbrea/personal-website`](https://github.com/javierbrea/personal-website).
 

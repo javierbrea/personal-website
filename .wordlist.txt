@@ -1,5 +1,4 @@
 binded
-checkspelling
 Github
 jpg
 NPM
