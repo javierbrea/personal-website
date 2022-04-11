@@ -174,7 +174,7 @@ And this is how our repository will finally like after adding all the needed con
 
 Adding an automatic spellchecking step to your continuous integration pipeline will prevent your docs containing ugly typos, and it will save you lots of hours of code reviews. It won't prevent other types of orthographic errors, like semantic or style related ones, so I you'll still have to reread carefully your docs before publishing them, but it will be  a great help.
 
-> This blog is being checked with the examples provided in this post, because it is generated from Markdown files, so you can get the code of the examples directly in [`https://github.com/javierbrea/personal-website`](https://github.com/javierbrea/personal-website).
+> This blog is being checked with the examples provided in this post, because it is generated from Markdown files, so you can get the code of the examples directly from [`https://github.com/javierbrea/personal-website`](https://github.com/javierbrea/personal-website).
 
 ## Resources and references
 
