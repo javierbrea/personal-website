@@ -10,10 +10,6 @@ export default class Blog extends Page {
     };
   }
 
-  get container() {
-    return new Element(cy.findByTestId(this.SELECTORS.CONTAINER));
-  }
-
   get posts() {
     return new BlogLatestPosts();
   }

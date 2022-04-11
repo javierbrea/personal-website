@@ -1,5 +1,7 @@
 import Element from "../common/Element";
 
+import BlogLatestPostsItem from "./BlogLatestPostsItem";
+
 export default class BlogLatestPosts {
   constructor() {
     this.SELECTORS = {
@@ -14,5 +16,9 @@ export default class BlogLatestPosts {
 
   get emptyMessage() {
     return new Element(cy.findByTestId(this.SELECTORS.EMPTY_MESSAGE));
+  }
+
+  at(index) {
+    return new BlogLatestPostsItem(index, this.SELECTORS.CONTAINER);
   }
 }

@@ -1,0 +1,140 @@
+/*
+Copyright 2022 Javier Brea
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+*/
+
+@import 'styles/base/variables';
+
+.content {
+  font-size: 18px;
+
+  @include media('l') {
+    font-size: 17px;
+  }
+
+  @include media('s') {
+    font-size: 16px;
+  }
+
+  ol code,
+  ul code,
+  p code {
+    @include roboto-font;
+    color: $textColor;
+    font-size: 18px;
+
+    @include media('l') {
+      font-size: 17px;
+    }
+
+    @include media('s') {
+      font-size: 16px;
+    }
+  }
+
+  // stylelint-disable-next-line
+  ol a code,
+  ul a code,
+  p a code {
+    color: $textColorThemeDark;
+  }
+
+  img {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 1rem;
+  }
+
+  ul,
+  ol {
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    
+    @include media('l') {
+      font-size: 1.7rem;
+      margin-bottom: 0.8rem;
+      margin-top: 2.8rem;
+    }
+
+    @include media('s') {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    
+    @include media('l') {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+      margin-top: 2.8rem;
+    }
+
+    @include media('s') {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // stylelint-disable-next-line
+  pre,
+  p span a {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    @include media('l') {
+      margin-bottom: 2.8rem;
+      margin-top: 1.8rem;
+    }
+
+    @include media('s') {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  pre {
+    font-size: 1rem;
+  }
+
+  blockquote {
+    background-color: #fbfaf9;
+    border-left: 5px solid $white;
+    box-shadow: -5px 0 0 0 $textColor;
+    color: $textColor;
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
