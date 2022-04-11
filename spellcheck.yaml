@@ -13,7 +13,7 @@ matrix:
       markdown_extensions:
       - markdown.extensions.extra:
   - pyspelling.filters.html:
-      comments: true
+      comments: false
       attributes:
       - alt
       ignores:
