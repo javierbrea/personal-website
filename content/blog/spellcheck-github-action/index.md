@@ -15,12 +15,12 @@ tags:
     - spellchecking
     - how to
     - example
-featured: { image: ./check-four-spel-miskates_thumbnail.jpg }
+featured: { image: ./check-for-spell-mistakes_thumbnail.jpg }
 ---
 
 ## How to spell check your docs in a continuous integration pipeline
 
-![Spell mistake in a typewriter document](./check-four-spel-miskates.jpg)
+![Spell mistake in a typewriter document](./check-for-spell-mistakes.jpg)
 
 As software engineers, we write a lot of documentation (or we should, at least). It is usual to __write these docs in Markdown format in the code repository__ for many reasons, but mainly:
 
