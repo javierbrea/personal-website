@@ -5,8 +5,8 @@ description: "How to spell check your docs in a continuous integration pipeline"
 tags:
     - spell
     - check
-    - markdown
-    - github
+    - Markdown
+    - Github
     - action
     - CI/CD
     - continuous integration
