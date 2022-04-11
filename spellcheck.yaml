@@ -21,6 +21,7 @@ matrix:
       - ':matches(code, pre)'
       - 'code'
       - 'pre'
+      - 'blockquote'
   sources:
   - '*.md'
   - 'content/blog/**/*.md'

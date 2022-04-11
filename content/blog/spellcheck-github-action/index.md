@@ -9,7 +9,7 @@ tags:
     - github
     - action
     - CI/CD
-    - continuos integration
+    - continuous integration
     - pipeline
     - automatic
     - spellchecking
@@ -127,8 +127,9 @@ Now, whenever a new pull request is opened, the Github action will be executed a
 
 ```txt
 Misspelled words:
-
-...
+<htmlcontent> README.md (1)
+--------------------------------------------------------------------------------
+Github
 
 !!!Spelling check failed!!!
 ```
@@ -144,7 +145,7 @@ Github
 Markdown
 ```
 
-Note also that the configuration includes some filters to ignore some patterns. So, if the word is surrounded by a `code` tag in an Html file it will be ignored, for example. Then, maybe you can format your text in a more convenient way instead of adding the word to your custom dictionary. It would depend on the case, but sometimes it may be a good practice to give a different format to some kinds of terms.
+Note also that the configuration includes some filters to ignore some patterns. So, if the word is surrounded by a `code` tag in a HTML file it will be ignored, for example. Then, maybe you can format your text in a more convenient way instead of adding the word to your custom dictionary. It would depend on the case, but sometimes it may be a good practice to give a different format to some kinds of terms.
 
 ```md
 In a Markdown file, Github will be detected as a mispelling, but `Github` won't.
@@ -162,6 +163,6 @@ This is how our repository will like after adding all the needed configuration f
 
 ## Conclusion
 
-Adding an automatic checkspelling step to your continuous integration pipeline will prevent your docs containing ugly typos, and it will save you lots of hours of code reviews. It won't prevent other types of ortographical errors, like semmantic or style related ones, so I you'll still have to reread carefully your docs before publishing them, but it will be  a great help.
+Adding an automatic checkspelling step to your continuous integration pipeline will prevent your docs containing ugly typos, and it will save you lots of hours of code reviews. It won't prevent other types of orthographic errors, like semantic or style related ones, so I you'll still have to reread carefully your docs before publishing them, but it will be  a great help.
 
-> This blog is being checked with the examples provided in this post, because it is generated from Markdown files, so you can get the code of the examples directly in [https://github.com/javierbrea/personal-website](https://github.com/javierbrea/personal-website).
+> This blog is being checked with the examples provided in this post, because it is generated from Markdown files, so you can get the code of the examples directly in [`https://github.com/javierbrea/personal-website`](https://github.com/javierbrea/personal-website).

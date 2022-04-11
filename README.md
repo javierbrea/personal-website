@@ -10,14 +10,14 @@ Personal website built with Gatsby
 
 * `start` - Starts application in development mode, listening at port 3000.
 * `build-and-serve` - Builds application as in production environment and serve it at port 3000.
-* `lint` - Run javascript linter.
+* `lint` - Run JavaScript linter.
 * `stylelint` - Run Sass linter.
 * `test:e2e` - Serve built application and run Cypress e2e tests (read E2E tests for further info).
 * `test:e2e:ci` - Build application, serve it and run Cypress e2e tests (read E2E tests for further info).
 
 ### Running development commands using docker
 
-A docker-compose file is provided in order to allow running npm commands without worrying about your current OS. Run any npm command using `docker-compose run command npm run [command]`. The port 3000 is automatically binded to the host.
+A docker-compose file is provided in order to allow running NPM commands without worrying about your current OS. Run any NPM command using `docker-compose run command npm run [command]`. The port 3000 is automatically binded to the host.
 
 Example:
 
@@ -34,11 +34,11 @@ docker-compose run command npm run test:e2e
 
 Using the `npm run test:e2e:ci` command the application is built, served and Cypress tests are ran.
 
-> Caveat: `test:e2e:ci` command should be executed only on same Linux OS than used in the Travis.ci pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use a docker command as described in previous chapter for running e2e tests or disable visual tests.
+> Caveat: `test:e2e:ci` command should be executed only on same Linux OS than used in the pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use a docker command as described in previous chapter for running e2e tests or disable visual tests.
 
 #### Visual regression tests
 
-The `npm run test:e2e` command should be executed only on same Linux OS than used in the Travis.ci pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use the `docker-compose run npm-command npm run test:e2e` command in order to avoid possible conflicts with the CI/CD tool, or disable visual regression tests locally setting the environment variable `CYPRESS_VISUAL_TESTS` to `false`.
+The `npm run test:e2e` command should be executed only on same Linux OS than used in the pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use the `docker-compose run npm-command npm run test:e2e` command in order to avoid possible conflicts with the CI/CD tool, or disable visual regression tests locally setting the environment variable `CYPRESS_VISUAL_TESTS` to `false`.
 
 ```bash
 docker-compose run command npm install
