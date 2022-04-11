@@ -78,6 +78,8 @@ const folderHasContents = (folder) => {
   return fs.readdirSync(folder).length > 1;
 };
 
+const thereArePosts = folderHasContents(path.resolve(__dirname, "content", "blog"));
+
 const createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
@@ -135,7 +137,7 @@ const doNotCreateSchemaCustomization = () => {
 module.exports = {
   createPages,
   onCreateNode,
-  createSchemaCustomization: !folderHasContents()
+  createSchemaCustomization: !thereArePosts
     ? createSchemaCustomization
     : doNotCreateSchemaCustomization,
 };

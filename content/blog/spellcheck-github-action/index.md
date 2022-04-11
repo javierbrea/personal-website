@@ -157,8 +157,8 @@ This is how our repository will like after adding all the needed configuration f
 ├── .github/
 │   └── workflows/
 │       └── spellcheck.yml
-├── spellcheck.yaml
-└── .wordlist.txt
+├── .wordlist.txt
+└── spellcheck.yaml
 ```
 
 ## Conclusion
