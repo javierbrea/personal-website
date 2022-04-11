@@ -78,16 +78,19 @@ jobs:
   check-spelling:
     runs-on: ubuntu-latest
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Check Spelling
-        uses: UnicornGlobal/spellcheck-github-actions@master
+        uses: rojopolis/spellcheck-github-actions@0.23.0
+        with:
+          config_path: config/.spellcheck.yml
+          task_name: Markdown
 ```
 
 ## Configuration
 
 Now we have to to add a configuration for the spelling checker. It uses [`PySpelling`](https://facelessuser.github.io/pyspelling/) under the hood. When checking Markdown files, it first converts a Markdown text file's buffer using [`Python Markdown`](https://python-markdown.github.io/) and returns a single `SourceText` object containing the text as HTML. Then it captures the HTML content, comments, and even attributes and performs the check. It has a lot of configuration options, but here we are going to see only an example with some basics. For further info you can read the docs of the [`UnicornGlobal/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions).
 
-* Create a file named: `spellcheck.yaml` in the root folder of the repository, and paste the contents of the example below.
+* Create a file named: `.spellcheck.yml` in the root folder of the repository, and paste the contents of the example below.
 * Change the `sources` property depending on your repository structure. Provide patterns for every folder containing the files that you want to automatically check.
 
 ```yaml
@@ -165,8 +168,8 @@ And this is how our repository will finally like after adding all the needed con
 ├── .github/
 │   └── workflows/
 │       └── spellcheck.yml
-├── .wordlist.txt
-└── spellcheck.yaml
+├── .spellcheck.yml
+└── .wordlist.txt
 ```
 
 ## Conclusion
