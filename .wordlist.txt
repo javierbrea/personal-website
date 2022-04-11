@@ -1,5 +1,6 @@
 binded
 checkspelling
 Github
+jpg
 NPM
 Netlify

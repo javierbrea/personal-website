@@ -153,7 +153,7 @@ In a Markdown file, Github will be detected as a mispelling, but `Github` won't.
 
 ## Finally
 
-Then, after fixing all errors or adding the neccesary custom words, at some point we get:
+Then, after fixing all errors or adding the necessary custom words, at some point we get:
 
 ```txt
 Spelling check passed :)
