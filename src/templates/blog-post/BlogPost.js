@@ -53,6 +53,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout
+      data-testid="blog-post-page"
       description={post.frontmatter.description || post.excerpt}
       invertedHeader
       keywords={keywords}
@@ -61,13 +62,13 @@ const BlogPost = ({ data }) => {
       title={post.frontmatter.title}
     >
       <PageTitle title={post.frontmatter.title} />
-      <Section odd ultraCompact>
+      <Section data-testid="blog-post-header" odd ultraCompact>
         <BlogPostHeader date={post.frontmatter.date} />
       </Section>
-      <Section compact>
-        <BlogPostContent html={post.html} />
+      <Section compact data-testid="blog-post-content">
+        <BlogPostContent html={post.html} subtitle={post.frontmatter.description} />
       </Section>
-      <Section compact odd>
+      <Section compact data-testid="blog-post-footer" odd>
         <BlogPostFooter next={nextData} previous={previousData} />
       </Section>
     </Layout>

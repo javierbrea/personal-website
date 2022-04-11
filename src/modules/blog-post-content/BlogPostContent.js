@@ -9,12 +9,12 @@ import PropTypes from "prop-types";
 
 import * as classes from "./blogPostContent.module.scss";
 
-const BlogPostContent = ({ html }) => {
+const BlogPostContent = ({ html, subtitle }) => {
   return (
     <article itemScope itemType="http://schema.org/Article">
       <section
         className={classes.content}
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: `<h1>${subtitle}</h1>${html}` }}
         itemProp="articleBody"
       />
       <footer></footer>
@@ -23,7 +23,8 @@ const BlogPostContent = ({ html }) => {
 };
 
 BlogPostContent.propTypes = {
-  html: PropTypes.string,
+  html: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
 };
 
 export default BlogPostContent;
