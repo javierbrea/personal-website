@@ -21,6 +21,7 @@ matrix:
       - 'code'
       - 'pre'
       - 'blockquote'
+      - 'img'
   sources:
   - '*.md'
   - 'content/blog/**/*.md'
