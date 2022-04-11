@@ -18,6 +18,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
     font-size: 16px;
   }
 
+  ol code,
+  ul code,
   p code {
     @include roboto-font;
     color: $textColor;
@@ -30,6 +32,13 @@ Unless required by applicable law or agreed to in writing, software distributed 
     @include media('s') {
       font-size: 16px;
     }
+  }
+
+  // stylelint-disable-next-line
+  ol a code,
+  ul a code,
+  p a code {
+    color: $textColorThemeDark;
   }
 
   img {
@@ -47,6 +56,28 @@ Unless required by applicable law or agreed to in writing, software distributed 
   ol {
     list-style-type: disc;
     padding-left: 2rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    
+    @include media('l') {
+      font-size: 1.7rem;
+      margin-bottom: 0.8rem;
+      margin-top: 2.8rem;
+    }
+
+    @include media('s') {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   h2 {

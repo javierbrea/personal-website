@@ -18,7 +18,7 @@ tags:
 featured: { image: ./check-for-spell-mistakes_thumbnail.jpg }
 ---
 
-## How to spell check your docs in a continuous integration pipeline
+# How to spell check your docs in a continuous integration pipeline
 
 ![Spell mistake in a typewriter document](./check-for-spell-mistakes.jpg)
 
@@ -85,7 +85,7 @@ jobs:
 
 ## Configuration
 
-Now we have to to add a configuration for the spelling checker. It uses [`PySpelling`](https://facelessuser.github.io/pyspelling/) under the hood. It has a lot of configuration options, but here we are going to see only an example with some basics. For further info you can read the docs of the [`UnicornGlobal/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions).
+Now we have to to add a configuration for the spelling checker. It uses [`PySpelling`](https://facelessuser.github.io/pyspelling/) under the hood. When checking Markdown files, it first converts a Markdown text file's buffer using [`Python Markdown`](https://python-markdown.github.io/) and returns a single `SourceText` object containing the text as HTML. Then it captures the HTML content, comments, and even attributes and performs the check. It has a lot of configuration options, but here we are going to see only an example with some basics. For further info you can read the docs of the [`UnicornGlobal/spellcheck-github-actions` Github action](https://github.com/rojopolis/spellcheck-github-actions).
 
 * Create a file named: `spellcheck.yaml` in the root folder of the repository, and paste the contents of the example below.
 * Change the `sources` property depending on your repository structure. Provide patterns for every folder containing the files that you want to automatically check.
@@ -106,14 +106,14 @@ matrix:
       markdown_extensions:
       - markdown.extensions.extra:
   - pyspelling.filters.html:
-      comments: true
+      comments: false
       attributes:
-      - title
       - alt
       ignores:
       - ':matches(code, pre)'
       - 'code'
       - 'pre'
+      - 'blockquote'
   sources:
   - '*.md'
   - 'content/blog/**/*.md'
@@ -145,13 +145,21 @@ Github
 Markdown
 ```
 
-Note also that the configuration includes some filters to ignore some patterns. So, if the word is surrounded by a `code` tag in a HTML file it will be ignored, for example. Then, maybe you can format your text in a more convenient way instead of adding the word to your custom dictionary. It would depend on the case, but sometimes it may be a good practice to give a different format to some kinds of terms.
+Note also that the configuration includes some filters to ignore some patterns. So, if the word is surrounded by a `code` tag in a HTML file it will be ignored, for example. Then, you could format your text in a more convenient way instead of adding the word to your custom dictionary. It would depend on the case, but sometimes it may be a good practice to give a different format to some kinds of terms.
 
 ```md
 In a Markdown file, Github will be detected as a mispelling, but `Github` won't.
 ```
 
-This is how our repository will like after adding all the needed configuration files:
+## Finally
+
+Then, after fixing all errors or adding the neccesary custom words, at some point we get:
+
+```txt
+Spelling check passed :)
+```
+
+And this is how our repository will finally like after adding all the needed configuration files:
 
 ```txt
 ├── .github/
@@ -166,3 +174,11 @@ This is how our repository will like after adding all the needed configuration f
 Adding an automatic checkspelling step to your continuous integration pipeline will prevent your docs containing ugly typos, and it will save you lots of hours of code reviews. It won't prevent other types of orthographic errors, like semantic or style related ones, so I you'll still have to reread carefully your docs before publishing them, but it will be  a great help.
 
 > This blog is being checked with the examples provided in this post, because it is generated from Markdown files, so you can get the code of the examples directly in [`https://github.com/javierbrea/personal-website`](https://github.com/javierbrea/personal-website).
+
+## Resources and references
+
+* [Github actions](https://github.com/features/actions)
+* [`spellcheck-github-actions`](https://github.com/rojopolis/spellcheck-github-actions)
+* [`PySpelling`](https://facelessuser.github.io/pyspelling/)
+* [`Python Markdown`](https://python-markdown.github.io/)
+* [`GNU Aspell`](http://aspell.net/)
