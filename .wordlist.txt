@@ -1,1 +1,5 @@
 binded
+checkspelling
+Github
+NPM
+Netlify
