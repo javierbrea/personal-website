@@ -7,10 +7,16 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import PropTypes from "prop-types";
 
+import * as classes from "./blogPostContent.module.scss";
+
 const BlogPostContent = ({ html }) => {
   return (
     <article itemScope itemType="http://schema.org/Article">
-      <section dangerouslySetInnerHTML={{ __html: html }} itemProp="articleBody" />
+      <section
+        className={classes.content}
+        dangerouslySetInnerHTML={{ __html: html }}
+        itemProp="articleBody"
+      />
       <footer></footer>
     </article>
   );

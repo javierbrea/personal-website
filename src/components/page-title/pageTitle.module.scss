@@ -60,6 +60,7 @@ $bannerHeightXs: 260px;
     h1,
     h2 {
       margin: auto;
+      margin-top: 0.8rem;
       max-width: 1320px;
       @include media('xl') {
         max-width: 1140px;

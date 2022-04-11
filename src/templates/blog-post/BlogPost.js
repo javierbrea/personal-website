@@ -43,9 +43,13 @@ const BlogPost = ({ data }) => {
   }, [next]);
 
   const keywords = useMemo(() => {
-    const postKeyWords = post.frontmatter.tags || [];
+    const postKeyWords = post?.frontmatter?.tags || [];
     return postKeyWords.concat(BLOG_KEYWORDS);
   }, [post]);
+
+  if (!post) {
+    return <div>No post</div>;
+  }
 
   return (
     <Layout
@@ -56,7 +60,7 @@ const BlogPost = ({ data }) => {
       socialImage={post.frontmatter.featured.image.publicURL}
       title={post.frontmatter.title}
     >
-      <PageTitle subtitle={post.frontmatter.description} title={post.frontmatter.title} />
+      <PageTitle title={post.frontmatter.title} />
       <Section odd ultraCompact>
         <BlogPostHeader date={post.frontmatter.date} />
       </Section>

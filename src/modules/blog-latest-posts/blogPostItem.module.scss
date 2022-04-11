@@ -7,6 +7,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 @import 'styles/base/variables';
 
+.container {
+  padding-bottom: 10px;
+}
+
 .postListItem {
   height: 350px;
 
