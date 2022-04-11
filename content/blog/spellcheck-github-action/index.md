@@ -82,7 +82,7 @@ jobs:
       - name: Check Spelling
         uses: rojopolis/spellcheck-github-actions@0.23.0
         with:
-          config_path: config/.spellcheck.yml
+          config_path: .spellcheck.yml
           task_name: Markdown
 ```
 
