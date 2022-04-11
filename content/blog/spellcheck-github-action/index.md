@@ -75,6 +75,7 @@ on:
 jobs:
   check-spelling:
     runs-on: ubuntu-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check Spelling
