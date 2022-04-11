@@ -78,6 +78,8 @@ const folderHasContents = (folder) => {
   return fs.readdirSync(folder).length > 1;
 };
 
+const thereArePosts = folderHasContents(path.resolve(__dirname, "content", "blog"));
+
 const createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
@@ -87,23 +89,6 @@ const createSchemaCustomization = ({ actions }) => {
   // Also explicitly define the Markdown frontmatter
   // This way the "MarkdownRemark" queries will return `null` even when no
   // blog posts are stored inside "content/blog" instead of returning an error
-
-  const thereArePosts = folderHasContents(path.resolve(__dirname, "content", "blog"));
-
-  // Add featured type to Frontmatter only when there are no posts to avoid query failing in that case. If added when there are posts, the publicURL is not being received
-  const featuredProperty = !thereArePosts
-    ? `
-      featured: FrontmatterFeatured
-  `
-    : "";
-  const featuredType = !thereArePosts
-    ? `
-
-    type FrontmatterFeatured {
-      image: File
-    }
-  `
-    : "";
 
   createTypes(`
     type SiteSiteMetadata {
@@ -131,17 +116,28 @@ const createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       tags: [String]
-      date: Date @dateformat${featuredProperty}
+      date: Date @dateformat
+      featured: FrontmatterFeatured
     }
 
     type Fields {
       slug: String
-    }${featuredType}
+    }
+
+    type FrontmatterFeatured {
+      image: File
+    }
   `);
+};
+
+const doNotCreateSchemaCustomization = () => {
+  // do nothing
 };
 
 module.exports = {
   createPages,
   onCreateNode,
-  createSchemaCustomization,
+  createSchemaCustomization: !thereArePosts
+    ? createSchemaCustomization
+    : doNotCreateSchemaCustomization,
 };

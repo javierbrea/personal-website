@@ -27,6 +27,10 @@ export default class Element {
     this._element.should("have.text", text);
   }
 
+  shouldContainText(text) {
+    this._element.should("contain.text", text);
+  }
+
   shouldMatchSnapshot(snapshotName, options) {
     cy.shouldMatchSnapshot(snapshotName, { element: this._element, ...options });
   }

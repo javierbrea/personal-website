@@ -1,0 +1,5 @@
+binded
+Github
+jpg
+NPM
+Netlify

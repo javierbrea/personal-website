@@ -14,7 +14,10 @@ import * as classes from "./blogPostItem.module.scss";
 const BlogPostItem = ({ post }) => {
   const title = post.frontmatter.title || post.fields.slug;
   return (
-    <li className="col-lg-4 col-md-6 col-sm-12" key={post.fields.slug}>
+    <li
+      className={clsx("col-lg-4", "col-md-6", "col-sm-12", classes.container)}
+      key={post.fields.slug}
+    >
       <article itemScope itemType="http://schema.org/Article">
         <Link className={classes.postListItemLink} itemProp="url" to={`/blog${post.fields.slug}`}>
           <div className={clsx("card", classes.postListItem)}>
