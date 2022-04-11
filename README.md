@@ -10,8 +10,8 @@ Personal website built with Gatsby
 
 * `start` - Starts application in development mode, listening at port 3000.
 * `build-and-serve` - Builds application as in production environment and serve it at port 3000.
-* `lint` - Run JavaScript linter.
-* `stylelint` - Run Sass linter.
+* `lint` - Run JavaScript `linter`.
+* `stylelint` - Run Sass `linter`.
 * `test:e2e` - Serve built application and run Cypress e2e tests (read E2E tests for further info).
 * `test:e2e:ci` - Build application, serve it and run Cypress e2e tests (read E2E tests for further info).
 
