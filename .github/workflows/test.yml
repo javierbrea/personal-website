@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Check Spelling
+        uses: rojopolis/spellcheck-github-actions@0.23.0
+        with:
+          config_path: .spellcheck.yml
+          task_name: Markdown
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
@@ -27,11 +32,6 @@ jobs:
             ${{ runner.os }}-test-${{ env.cache-name }}-
             ${{ runner.os }}-test-
             ${{ runner.os }}-
-      - name: Check Spelling
-        uses: rojopolis/spellcheck-github-actions@0.23.0
-        with:
-          config_path: .spellcheck.yml
-          task_name: Markdown
       - name: Install dependencies
         run: npm ci
       - name: Lint
