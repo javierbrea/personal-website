@@ -10,6 +10,10 @@ export default class BlogLatestPosts {
     };
   }
 
+  get _list() {
+    return cy.get(`[data-testid="${this.SELECTORS.CONTAINER}"] li`);
+  }
+
   get container() {
     return new Element(cy.findByTestId(this.SELECTORS.CONTAINER));
   }
@@ -20,5 +24,9 @@ export default class BlogLatestPosts {
 
   at(index) {
     return new BlogLatestPostsItem(index, this.SELECTORS.CONTAINER);
+  }
+
+  shouldHaveLength(length) {
+    return this._list.should("have.length", length);
   }
 }

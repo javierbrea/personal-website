@@ -47,7 +47,7 @@ docker-compose run command npm run test:e2e:ci
 ```
 
 ```bash
-CYPRESS_VISUAL_TESTS=false npm run test:ci
+CYPRESS_VISUAL_TESTS=false npm run test:e2e
 # Visual regression tests are not executed
 ```
 
