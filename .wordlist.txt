@@ -1,6 +1,7 @@
 binded
 boilerplates
 colocation
+deployable
 distributable
 Github
 jpg
