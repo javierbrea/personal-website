@@ -18,7 +18,7 @@ featured: { image: ./pnpm-nx-monorepo-01_thumbnail.jpg }
 
 <div class="photoAuthor">Photo by Kaique Rocha</div>
 
-## Why a monorepo?
+## Why a Node.js monorepo?
 
 Those who have worked maintaining __many dependent packages in different repositories__ would answer to this question with lots of reasons very quickly. I've been dealing with this scenario for many years, and I can tell you that I have suffered it in my own skin. In fact, in the past I have suffered it even when trying to maintain many packages in in the same repository.
 
