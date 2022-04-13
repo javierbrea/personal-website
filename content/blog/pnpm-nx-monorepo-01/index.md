@@ -98,7 +98,7 @@ Using [Pnpm](https://pnpm.io/) we will meet the first one criteria: _"Configurat
 
 ## Conclusion
 
-In this post we have seen some problems that were common in the past when working with many dependent packages and some "hacks" that tried to mitigate them. We have also seen how using a monorepo with the appropriate tools might solve those problems. After choosing the tools based on the requirements, in the next chapters I will provide __examples about how to configure them to create a complete continuous integration workflow__ that will make our life as developers easier (at least it did in my case 🙂).
+In this post we have seen some problems that were common in the past when working with many dependent packages and some methods or "hacks" that tried to mitigate them. We also have seen how using a monorepo with the appropriate tools might solve those problems. After choosing the tools based on the requirements, in the next chapters I will provide __examples about how to configure them to create a complete continuous integration workflow__ using Github Actions that will make our life as developers easier (at least it did in my case 🙂).
 
 ## Next chapters
 
