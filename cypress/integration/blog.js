@@ -4,6 +4,10 @@ import BlogPost from "../support/page-objects/pages/BlogPost";
 describe("About", () => {
   let page, blogPost;
 
+  function getPost(index = 1) {
+    return page.posts.at(index);
+  }
+
   before(() => {
     page = new Blog();
     blogPost = new BlogPost();
@@ -18,24 +22,29 @@ describe("About", () => {
   });
 
   describe("Latest posts", () => {
-    it("should display one post", () => {
-      page.posts.at(0).container.shouldBeVisible();
-      page.posts
-        .at(0)
-        .title.shouldHaveText("Spell checking Markdown documents using a Github action");
-      page.posts.at(0).date.shouldHaveText("April 11, 2022");
-      page.posts
-        .at(0)
-        .subtitle.shouldContainText(
-          "How to spell check your docs in a continuous integration pipeline"
-        );
-      page.posts
-        .at(0)
-        .excerpt.shouldContainText("As software engineers, we write a lot of documentation");
+    it("should display two posts", () => {
+      page.posts.shouldHaveLength(2);
+    });
+
+    it("should display first pnpm post", () => {
+      getPost(0).title.shouldHaveText("Pnpm and Nx monorepo. Part 1");
+      getPost(0).date.shouldHaveText("April 13, 2022");
+    });
+
+    it("should display spell checking post", () => {
+      getPost().container.shouldBeVisible();
+      getPost().title.shouldHaveText("Spell checking Markdown documents using a Github action");
+      getPost().date.shouldHaveText("April 11, 2022");
+      getPost().subtitle.shouldContainText(
+        "How to spell check your docs in a continuous integration pipeline"
+      );
+      getPost().excerpt.shouldContainText(
+        "As software engineers, we write a lot of documentation"
+      );
     });
 
     it("should navigate to post page when clicks on post", () => {
-      page.posts.at(0).container.click();
+      getPost().container.click();
       blogPost.title.title.shouldHaveText(
         "Spell checking Markdown documents using a Github action"
       );
