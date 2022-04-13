@@ -26,7 +26,7 @@ As software engineers, we write a lot of documentation (or we should, at least).
 * Docs are under version control.
 * Docs modifications can be reviewed in the same pull request than the code modifications.
 
-While it should not be necessary to mention the importance of avoiding spelling mistakes in our docs, it is very common to see __comments in code reviews about typos__ in them. If the errors are not detected on time, they would impact on our perceived trustworthiness. __Tolerance for typos is low__. It makes the producer look careless.
+While it should not be necessary to mention the importance of avoiding spelling mistakes in our docs, it is very common to see __comments in code reviews about typos__ in them. If the errors are not detected on time, they would impact on our perceived trustworthiness. __Tolerance for typos is low__. It makes the writer look careless.
 
 You can avoid typos by checking your spelling locally, using a plugin for the IDE, for example, but it would depend only on you. I personally prefer to add automatic check mechanisms to the continuous integration pipeline that don't depend on recommendations for local environments.
 
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 ```
 
 ## Adding the spell check step
@@ -75,6 +75,7 @@ on:
 jobs:
   check-spelling:
     runs-on: ubuntu-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check Spelling
@@ -149,7 +150,7 @@ Markdown
 Note also that the configuration includes some filters to ignore some patterns. So, if the word is surrounded by a `code` tag in an HTML file it will be ignored, for example. Then, you could format your text in a more convenient way instead of adding the word to your custom dictionary. It would depend on the case, but sometimes it may be a good practice to give a different format to some kinds of terms.
 
 ```md
-In a Markdown file, Github will be detected as a mispelling, but `Github` won't.
+In a Markdown file, Github will be detected as a misspelling, but `Github` won't.
 ```
 
 ## Finally

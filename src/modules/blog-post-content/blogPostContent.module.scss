@@ -52,6 +52,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
     margin-bottom: 1rem;
   }
 
+  li {
+    margin-bottom: 0.2rem;
+  }
+
   ul,
   ol {
     list-style-type: disc;
@@ -102,6 +106,28 @@ Unless required by applicable law or agreed to in writing, software distributed 
     }
   }
 
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    margin-top: 1.8rem;
+    
+    @include media('l') {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      margin-top: 1.6rem;
+    }
+
+    @include media('s') {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      margin-top: 0.8rem;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
   // stylelint-disable-next-line
   pre,
   p span a {
@@ -125,14 +151,15 @@ Unless required by applicable law or agreed to in writing, software distributed 
   blockquote {
     background-color: #fbfaf9;
     border-left: 5px solid $white;
-    box-shadow: -5px 0 0 0 $textColor;
-    color: $textColor;
-    display: inline-block;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    box-shadow: -5px 0 0 0 #ccc;
+    color: rgb(34, 33, 33);
+    display: block;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     padding: 1rem;
-    width: 100%;
-
+    width: 90%;
+    
     p {
       margin-bottom: 0;
     }

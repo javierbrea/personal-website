@@ -17,7 +17,7 @@ matrix:
       attributes:
       - alt
       ignores:
-      - ':matches(code, pre)'
+      - ':matches(code, pre, .photoAuthor)'
       - 'code'
       - 'pre'
       - 'blockquote'

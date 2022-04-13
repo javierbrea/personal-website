@@ -7,6 +7,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import PropTypes from "prop-types";
 
+import "./blogPostContent.scss";
+
 import * as classes from "./blogPostContent.module.scss";
 
 const BlogPostContent = ({ html, subtitle }) => {
