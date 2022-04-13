@@ -86,7 +86,7 @@ Using [Pnpm](https://pnpm.io/) we will meet the first one criteria: _"Configurat
 
 ### Nx
 
-[Nx](https://nx.dev/) provides to us the other needed features. It is a monorepo tool that is able to make a dependencies analysis, detect affected projects, and orchestrate tasks. As an extra, it is plugabble, and it provides boilerplates to create monorepos for some specific libraries or frameworks, such as React, Angular, etc. But I personally prefer to use only the core features in order to avoid coupling my monorepo too much to a specific technology or plugin. Among other things, it provides:
+[Nx](https://nx.dev/) provides to us the other needed features. It is a monorepo tool that is able to make a dependencies analysis, detect affected projects, and orchestrate tasks. As an extra, it is plugabble, and it provides boilerplates to create monorepos for some specific libraries or frameworks, such as React, Angular, etc. But I personally prefer to use only the core features in order to avoid coupling my projects too much to a specific technology or plugin. Among other things, it provides:
 
 * __Dependencies analysis__
 * __Detection of affected projects__
