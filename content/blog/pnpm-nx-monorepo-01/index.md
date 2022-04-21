@@ -11,6 +11,8 @@ tags:
     - package
     - Node
     - repository
+    - requirements
+    - analysis
 featured: { image: ./pnpm-nx-monorepo-01_thumbnail.jpg }
 ---
 
@@ -28,7 +30,7 @@ __I don't want to have a monorepo just because it is a trend__, I want to make a
 
 In theory, it is perfectly possible to work in one package independently, then publish it, and then we can go to the other package, upgrade the dependency and continue working on the integration until it is ready, then publish it, and so on... __They are different packages because they are independently testable and deployable/distributable, and that's how they must be__. But, in the real world, unfortunately, this workflow is not so easy. __In the real world we make mistakes__, we don't define the details of the implementation needed in one package at the sufficient low level, and when we are integrating the next package we realize that we have to make a step back and make a change in the package that we have just published, and then return to the next package again. Suppose that you are maintaining a project consisting on about ten packages, you are running the E2E tests of the last package, and then you realize that you have to modify again the first one... well, I can say that it's very frustrating, to say the least. __Even if everything goes well, the process of release becomes slow and tedious.__
 
-![Polyrepo workflow](./polyrepo-workflow.png)
+![Polyrepo workflow](./polyrepo-workflow.jpg)
 
 And this is only one of the main problems that I have found working with different repositories. Let's see some more:
 
@@ -102,7 +104,7 @@ In this post we have seen some problems that were common in the past when workin
 
 ## Next chapters
 
-- Building a Node.js monorepo using Pnpm and Nx
+- [Building a Node.js monorepo using Pnpm and Nx](/blog/pnpm-nx-monorepo-02/)
 - Continuous integration in a Pnpm monorepo using Github actions
 - Github action to create a comment in a PR about affected packages
 - Github action to check if versions of affected packages are upgraded properly

@@ -1,11 +1,23 @@
 import Blog from "../support/page-objects/pages/Blog";
 import BlogPost from "../support/page-objects/pages/BlogPost";
 
+const TOTAL_POSTS = 3;
+const SPELL_CHECK_POST_INDEX = 2;
+const FIRST_MONOREPO_POST_INDEX = 1;
+
 describe("About", () => {
   let page, blogPost;
 
-  function getPost(index = 1) {
+  function getPost(index = 0) {
     return page.posts.at(index);
+  }
+
+  function getSpellCheckPost() {
+    return getPost(SPELL_CHECK_POST_INDEX);
+  }
+
+  function getFirstMonorepoPost() {
+    return getPost(FIRST_MONOREPO_POST_INDEX);
   }
 
   before(() => {
@@ -22,29 +34,31 @@ describe("About", () => {
   });
 
   describe("Latest posts", () => {
-    it("should display two posts", () => {
-      page.posts.shouldHaveLength(2);
+    it("should display three posts", () => {
+      page.posts.shouldHaveLength(TOTAL_POSTS);
     });
 
     it("should display first pnpm post", () => {
-      getPost(0).title.shouldHaveText("Pnpm and Nx monorepo. Part 1");
-      getPost(0).date.shouldHaveText("April 13, 2022");
+      getFirstMonorepoPost().title.shouldHaveText("Pnpm and Nx monorepo. Part 1");
+      getFirstMonorepoPost().date.shouldHaveText("April 13, 2022");
     });
 
     it("should display spell checking post", () => {
-      getPost().container.shouldBeVisible();
-      getPost().title.shouldHaveText("Spell checking Markdown documents using a Github action");
-      getPost().date.shouldHaveText("April 11, 2022");
-      getPost().subtitle.shouldContainText(
+      getSpellCheckPost().container.shouldBeVisible();
+      getSpellCheckPost().title.shouldHaveText(
+        "Spell checking Markdown documents using a Github action"
+      );
+      getSpellCheckPost().date.shouldHaveText("April 11, 2022");
+      getSpellCheckPost().subtitle.shouldContainText(
         "How to spell check your docs in a continuous integration pipeline"
       );
-      getPost().excerpt.shouldContainText(
+      getSpellCheckPost().excerpt.shouldContainText(
         "As software engineers, we write a lot of documentation"
       );
     });
 
     it("should navigate to post page when clicks on post", () => {
-      getPost().container.click();
+      getSpellCheckPost().container.click();
       blogPost.title.title.shouldHaveText(
         "Spell checking Markdown documents using a Github action"
       );
