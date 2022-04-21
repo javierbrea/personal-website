@@ -1,8 +1,10 @@
 binded
 boilerplates
+CLI
 colocation
 deployable
 distributable
+executables
 Github
 jpg
 js
@@ -23,6 +25,7 @@ pnpm
 POCs
 Polyrepo
 Sinopia
+subfolders
 symlinks
 TypeScript
 unlink
