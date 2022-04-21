@@ -73,7 +73,7 @@ packages:
   - 'test/**'
 ```
 
-You can read [Pnpm workspace docs](https://pnpm.io/pnpm-workspace_yaml) for further info about how to include/exclude subdirectories.
+You can read [Pnpm workspace docs](https://pnpm.io/pnpm-workspace_yaml) for further info about how to include/exclude subfolders.
 
 ## Creating a project
 
@@ -521,7 +521,7 @@ Based on the previous dependencies graph, and in the mentioned "affected" Nx fea
 
 ## Conclusion
 
-In this post we have seen how to create a monorepo using [Pnpm](https://pnpm.io/) and [Nx](https://nx.dev/). Let's see the __list of requirements__ that we set in in the [previous chapter of this series of posts](/blog/pnpm-nx-monorepo-01/) in order to check wheter it meets all of them or not:
+In this post we have seen how to create a monorepo using [Pnpm](https://pnpm.io/) and [Nx](https://nx.dev/). Let's see the __list of requirements__ that we set in in the [previous chapter of this series of posts](/blog/pnpm-nx-monorepo-01/) in order to check whether it meets all of them or not:
 
 * __Configuration for linking dependencies locally__ - ✅  _It host many packages linked locally. The local references between packages are changed automatically to pinned versions when they are published._
 * __Dependencies analysis__ - ✅ _It is able to detect dependencies between projects, and even provides a graph._
