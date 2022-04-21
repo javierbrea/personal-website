@@ -25,6 +25,7 @@ pnpm
 POCs
 Polyrepo
 Sinopia
+subfolders
 symlinks
 TypeScript
 unlink
