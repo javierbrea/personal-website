@@ -40,6 +40,8 @@ In this tutorial, we will store the packages being published to NPM into a `pack
 
 ## Installing Pnpm
 
+As seen in the [previous post](/blog/pnpm-nx-monorepo-01/), we are going to use [Pnpm](https://pnpm.io) mainly to be able to __link packages locally__ using its [workspace feature](https://pnpm.io/workspaces).
+
 First of all you have to install `Pnpm` globally in order to use it as Npm client and to run the `package.json` scripts that we will create in next steps. There are many methods for installing it, you can check them all in the [Pnpm installation docs](https://pnpm.io/installation). Here we are going to use `npm` to install it:
 
 ```sh
@@ -232,7 +234,13 @@ cd packages/sum-two && pnpm test:unit
 
 ## Installing Nx
 
-At this point, we have two dependent packages in the same repository, linked locally using the [Pnpm Workspace feature](https://pnpm.io/workspaces). Both packages have unit tests and they share the `jest` dependency, but we can run them only from each different package folder. So, let's install Nx and __we will see how it will improve our development workflow__.
+As a fast recap, at this point we have two dependent packages in the same repository, linked locally using the [Pnpm Workspace feature](https://pnpm.io/workspaces). Both packages have unit tests and they share the `jest` dependency, but we can run them only from each different package folder.
+
+Now we are going to install Nx because it provides the other requirements that we saw in the [previous post](/blog/pnpm-nx-monorepo-01/):
+
+* __Dependencies analysis__
+* __Detection of affected projects__
+* __Tasks orchestration__
 
 `Nx` can also be installed globally, but I prefer to install it as a project dependency in order to define a specific version, so the same version is always used in all different local and remote environments. Afterwards we will expose some of the `Nx` commands that we need for our development workflow using our own `package.json` scripts.
 
