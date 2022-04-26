@@ -1,9 +1,9 @@
 import Blog from "../support/page-objects/pages/Blog";
 import BlogPost from "../support/page-objects/pages/BlogPost";
 
-const TOTAL_POSTS = 3;
-const SPELL_CHECK_POST_INDEX = 2;
-const FIRST_MONOREPO_POST_INDEX = 1;
+const TOTAL_POSTS = 4;
+const SPELL_CHECK_POST_INDEX = 3;
+const FIRST_MONOREPO_POST_INDEX = 2;
 
 describe("About", () => {
   let page, blogPost;
