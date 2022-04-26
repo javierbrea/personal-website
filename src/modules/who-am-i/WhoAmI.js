@@ -22,9 +22,9 @@ const WhoAmI = () => {
           2010, and as a front-end architect since 2015.
         </p>
         <p>
-          My main skills are: building web apps in JavaScript & Node.js, CI/CD, E2E testing and
-          data modeling. I am known for being a high quality code advocate, modular solutions
-          oriented, detail oriented and opensource author.
+          My main skills are: building web apps in JavaScript & Node.js, CI/CD, development tools,
+          E2E testing and data modeling. I am known for being a high quality code advocate, modular
+          solutions oriented, detail oriented and opensource author.
         </p>
       </div>
     </div>
