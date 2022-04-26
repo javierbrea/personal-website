@@ -119,7 +119,7 @@ jobs:
               echo "::set-output name=branch::main"
             fi
     outputs:
-      # Export the branch name as output to be able to use it in other jobs
+      # Export the branch names as output to be able to use it in other jobs
       base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
       branch-name: ${{ steps.branch-name.outputs.current_branch }}
 ```
