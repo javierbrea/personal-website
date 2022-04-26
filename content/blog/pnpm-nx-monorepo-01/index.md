@@ -13,7 +13,7 @@ tags:
     - repository
     - requirements
     - analysis
-featured: { image: ./pnpm-nx-monorepo-01_thumbnail.jpg }
+featured: {image: ./pnpm-nx-monorepo-01.jpg, thumbnail: ./pnpm-nx-monorepo-01_thumbnail.jpg }
 ---
 
 ![Ship container](./pnpm-nx-monorepo-01.jpg)
@@ -105,6 +105,4 @@ In this post we have seen some problems that were common in the past when workin
 ## Next chapters
 
 - [Building a Node.js monorepo using Pnpm and Nx](/blog/pnpm-nx-monorepo-02/)
-- Continuous integration in a Pnpm monorepo using Github actions
-- Github action to create a comment in a PR about affected packages
-- Github action to check if versions of affected packages are upgraded properly
+- [CI/CD for Pnpm and Nx monorepo using Github actions](/blog/pnpm-nx-monorepo-03/)

@@ -1,7 +1,9 @@
 binded
 boilerplates
+Codecov
 CLI
 colocation
+continous
 deployable
 distributable
 executables
@@ -9,6 +11,7 @@ Github
 jpg
 js
 linter
+matrixes
 monorepo
 monorepos
 NPM
@@ -24,10 +27,16 @@ Pnpm
 pnpm
 POCs
 Polyrepo
+Scalable
+scalable
 Sinopia
+stringified
 subfolders
 symlinks
 TypeScript
 unlink
 unpublish
+url
 Verdaccio
+verifications
+workspace's

@@ -15,7 +15,7 @@ tags:
     - spellchecking
     - how to
     - example
-featured: { image: ./check-for-spell-mistakes_thumbnail.jpg }
+featured: { image: ./check-for-spell-mistakes.jpg, thumbnail: ./check-for-spell-mistakes_thumbnail.jpg }
 ---
 
 ![Spell mistake in a typewriter document](./check-for-spell-mistakes.jpg)

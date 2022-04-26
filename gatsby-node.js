@@ -126,6 +126,7 @@ const createSchemaCustomization = ({ actions }) => {
 
     type FrontmatterFeatured {
       image: File
+      thumbnail: File
     }
   `);
 };

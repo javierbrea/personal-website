@@ -40,9 +40,12 @@ Using the `npm run test:e2e:ci` command the application is built, served and Cyp
 
 The `npm run test:e2e` command should be executed only on same Linux OS than used in the pipeline, as it compares image snapshots that could defer depending of the OS in which they were generated. Use the `docker-compose run npm-command npm run test:e2e` command in order to avoid possible conflicts with the CI/CD tool, or disable visual regression tests locally setting the environment variable `CYPRESS_VISUAL_TESTS` to `false`.
 
+> NOTE: Change the `type` env var to `base` in the `cypress.json` file to generate base snapshots. Restore it to `actual` again after generating base snapshots in order to run comparison in tests.
+
 ```bash
+npm run build
 docker-compose run command npm install
-docker-compose run command npm run test:e2e:ci
+docker-compose run command npm run test:e2e
 # Then add to git new snapshots in the cypress/snapshots folder
 ```
 
@@ -50,5 +53,3 @@ docker-compose run command npm run test:e2e:ci
 CYPRESS_VISUAL_TESTS=false npm run test:e2e
 # Visual regression tests are not executed
 ```
-
-> NOTE: Change the `type` env var to `base` in the `cypress.json` file to generate base snapshots. Restore it to `actual` again after generating base snapshots in order to run comparison in tests.
