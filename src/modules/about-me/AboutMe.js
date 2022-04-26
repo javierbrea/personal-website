@@ -102,7 +102,8 @@ const AboutMe = () => {
             <div className={classes.text}>
               <Title>Professionally</Title>
               <p>
-                Always passionate about technology, I guided my professional career by a motto:{" "}
+                Always passionate about technology, I have guided my professional career by a
+                motto:{" "}
                 <b>
                   &quot;Choose a job you love, and you will never have to work a day in your
                   life&quot;
@@ -115,19 +116,19 @@ const AboutMe = () => {
               </p>
               <p>
                 I like to be on the bleeding edge about the technologies I use, but always
-                maintaining focus over solving the problem. It´s necessary to make coexist the
-                creativity and the practicality, and that´s the key for me. I consider myself
-                methodic, meticulous and even perfectionist, but this does not make distract me
-                about &quot;getting things done&quot;. I consider that my job is to solve problems
-                in which many variables come into play: Scalability, modularity, performance,
-                readability, maintainability, delivery times... and so on. For me this is really
-                exciting, I love to find the correct balance between all these concepts for the
-                problem, and then solve it in the most optimal way possible.
+                maintaining focus over solving the problem. It&rsquo;s necessary to make coexist
+                the creativity and the practicality, and that&rsquo;s the key for me. I consider
+                myself methodical, meticulous and even perfectionist, but this does not make
+                distract me about &quot;getting things done&quot;. I consider that my job is to
+                solve problems in which many variables come into play: Scalability, modularity,
+                performance, readability, maintainability, delivery times... and so on. For me this
+                is really exciting, I love to find the correct balance between all these concepts
+                for the problem, and then solve it in the most optimal way possible.
               </p>
               <p>
                 Leaving aside the technical part, the front end development allows me to be in
                 touch with the most visible part of an application, what users ultimately get to
-                touch and feel. So It makes possible not to leave completely my designer role, and
+                touch and feel. This makes possible not to leave completely my designer role, and
                 allows me to get involved in the user experience. Both of these are areas that
                 always have given me great satisfactions too.
               </p>
@@ -158,8 +159,8 @@ const AboutMe = () => {
                 going fishing, etc. A lot of time has passed since those days, things change, and
                 nowadays I spend the most part of my time in front of a computer screen, but I
                 still love animals, adventures and nature. That&apos;s why I love to travel,
-                specially to countries and places where it is still possible to enjoy the nature or
-                learning about different cultures.
+                especially to countries and places where it is still possible to enjoy the nature
+                or learning about different cultures.
               </p>
               <p>
                 I recently reached an old dream, and moved to a village at the border of the city,
@@ -173,8 +174,8 @@ const AboutMe = () => {
                 because I love it.
               </p>
               <p>
-                I also love to read. Apart of reading a lot of technical books I read about many
-                different themes and genres, and but I specially like books about history,
+                I also love to read. Apart from reading a lot of technical books I read about many
+                different themes and genres, and but I especially like books about history,
                 historical novels, comics and travel books. And, that&apos;s my other passion:
                 travelling. This avocation made me get another hobby: the photography, and
                 honestly, this is something in which I&apos;d like to improve, because I usually
