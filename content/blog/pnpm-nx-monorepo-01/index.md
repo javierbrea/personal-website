@@ -13,7 +13,7 @@ tags:
     - repository
     - requirements
     - analysis
-featured: { image: ./pnpm-nx-monorepo-01_thumbnail.jpg }
+featured: {image: ./pnpm-nx-monorepo-01.jpg, thumbnail: ./pnpm-nx-monorepo-01_thumbnail.jpg }
 ---
 
 ![Ship container](./pnpm-nx-monorepo-01.jpg)

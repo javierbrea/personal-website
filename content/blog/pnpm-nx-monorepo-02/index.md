@@ -12,7 +12,7 @@ tags:
     - Node
     - repository
     - tutorial
-featured: { image: ./pnpm-nx-monorepo-02_thumbnail.jpg }
+featured: { image: ./pnpm-nx-monorepo-02.jpg, thumbnail: ./pnpm-nx-monorepo-02_thumbnail.jpg }
 ---
 
 ![Ship container](./pnpm-nx-monorepo-02.jpg)

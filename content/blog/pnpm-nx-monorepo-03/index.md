@@ -12,7 +12,7 @@ tags:
     - continuous integration
     - pipeline
     - tutorial
-featured: { image: ./pnpm-nx-monorepo-03_thumbnail.jpg }
+featured: { image: ./pnpm-nx-monorepo-03.jpg, thumbnail: ./pnpm-nx-monorepo-03_thumbnail.jpg }
 ---
 
 ![Ship container](./pnpm-nx-monorepo-03.jpg)

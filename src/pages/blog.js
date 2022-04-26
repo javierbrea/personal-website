@@ -58,7 +58,7 @@ export const pageQuery = graphql`
           title
           description
           featured {
-            image {
+            thumbnail {
               publicURL
             }
           }
