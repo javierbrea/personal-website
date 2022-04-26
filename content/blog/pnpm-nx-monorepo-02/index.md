@@ -540,12 +540,10 @@ Effectively, our monorepo __meets all of the requirements that we defined in the
 
 In the next chapter, __we will use this example to create a continuous integration workflow for the monorepo using a Github action__.
 
-> Note: Remember that the examples of this post are available at [this Github repository](https://github.com/javierbrea/pnpm-nx-monorepo-example).
+> Note: The examples of this post are available at [this Github repository](https://github.com/javierbrea/pnpm-nx-monorepo-example).
 
 ## Other post in this series
 
 - [Why a monorepo? Requirements for a good workflow](/blog/pnpm-nx-monorepo-01/)
-- Building a Node.js monorepo using Pnpm and Nx
-- Continuous integration in a Pnpm monorepo using Github actions
-- Github action to create a comment in a PR about affected packages
-- Github action to check if versions of affected packages are upgraded properly
+- [Building a Node.js monorepo using Pnpm and Nx](#)
+- [CI/CD for Pnpm and Nx monorepo using Github actions](/blog/pnpm-nx-monorepo-03/)
