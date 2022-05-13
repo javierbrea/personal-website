@@ -155,7 +155,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       # Install Node.js
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -186,7 +186,7 @@ This can be achieved using a bash script in the workflow itself, or using any ot
 pnpm add -wD cross-spawn
 ```
 
-* Copy [this file](https://github.com/javierbrea/pnpm-nx-monorepo-example/tree/main/scripts/print-affected-array.js) into `scripts/print-affected-array.js`. Modify it according to the comments in the file if you are using a Pnpm version lower than 7.0.
+* Copy [this file](https://github.com/javierbrea/pnpm-nx-monorepo-example/tree/main/scripts/print-affected-array.js) into `scripts/print-affected-array.js`.
 * Add the next step to the `get-affected` job:
 
 ```yaml
@@ -247,7 +247,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -311,7 +311,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -351,7 +351,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
@@ -421,7 +421,7 @@ jobs:
     - name: Install pnpm
       uses: pnpm/action-setup@v2.2.1
       with:
-        version: "6.x"
+        version: "7.x"
     - uses: actions/setup-node@v3
       with:
         node-version: '16.x'
