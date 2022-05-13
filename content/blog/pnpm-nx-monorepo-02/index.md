@@ -55,7 +55,7 @@ Now we can fill the `package.json` file with some basic info, and we can use `Pn
   "private": true,
   "description": "Pnpm and Nx monorepo example",
   "scripts": {
-    "prepare": "echo \"installed!\" && exit 0"
+    "prepare": "echo \"installed!\""
   }
 }
 ```
@@ -380,7 +380,7 @@ So, let's add a fake `build` script to the `packages/sum-two/package.json` file:
 ```json
 { 
   "scripts": {
-    "build": "echo \"Built!\" && exit 0",
+    "build": "echo \"Built!\"",
     "test:unit": "jest"
   }
 }
