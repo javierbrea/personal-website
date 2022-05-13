@@ -275,7 +275,7 @@ As we are already creating our unit testing jobs from a dynamic matrix, so now i
 ```yaml
       # One job for each different project and node version
       matrix:
-        node: ["14.17.0", "16.14.2", "17.2.0", "18.0.0"]
+        node: ["14.19.0", "16.14.2", "17.2.0", "18.0.0"]
 ```
 
 As we can see in the next screenshot, now eight jobs are created, one for each different combination of project and Node.js version:
