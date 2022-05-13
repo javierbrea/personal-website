@@ -155,7 +155,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       # Install Node.js
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -172,9 +172,11 @@ Nx provides a [command for listing the affected projects](https://nx.dev/cli/pri
 
 So, __the things that we have to do to get the list of tasks to be executed for each affected project in an optimal format is__:
 
-* Call Nx command to get the list of affected projects for each specific task. For example: `pnpm nx print-affected -- --target=[task] --base [base branch] --select=tasks.target.project`.
-* When we want to test all projects, passing as modified the `package.json` file will do the trick. Modifying that file affects all projects in the workspace. For example: `pnpm nx print-affected -- --target=[task] --files package.json --select=tasks.target.project`. 
+* Call Nx command to get the list of affected projects for each specific task. For example: `pnpm nx print-affected --target=[task] --base [base branch] --select=tasks.target.project`.
+* When we want to test all projects, passing as modified the `package.json` file will do the trick. Modifying that file affects all projects in the workspace. For example: `pnpm nx print-affected --target=[task] --files package.json --select=tasks.target.project`. 
 * Get the output, clean the traces from it, and convert it from something like `sum-one, sum-two` into something like `["sum-one", "sum-two"]`.
+
+> NOTE: If you are using a Pnpm version lower than 7.0, you should add an extra `--` to the Pnpm commands before the Nx arguments: `pnpm nx print-affected -- --target=[task] --files package.json --select=tasks.target.project`
 
 This can be achieved using a bash script in the workflow itself, or using any other type of script at your convenience, so for brevity I will omit the code in this post. I have created a `scripts/print-affected-array.js` script in the sample repository that gets the needed output, and that's what we are going to call from the pipeline, passing two arguments to it: the task to be executed and the base branch. If you want to use my script to get the affected projects, follow the next steps:
 
@@ -245,7 +247,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -273,7 +275,7 @@ As we are already creating our unit testing jobs from a dynamic matrix, so now i
 ```yaml
       # One job for each different project and node version
       matrix:
-        node: ["14.17.0", "16.14.2", "17.2.0", "18.0.0"]
+        node: ["14.19.0", "16.14.2", "17.2.0", "18.0.0"]
 ```
 
 As we can see in the next screenshot, now eight jobs are created, one for each different combination of project and Node.js version:
@@ -309,7 +311,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -349,7 +351,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
-          version: "6.x"
+          version: "7.x"
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
@@ -419,7 +421,7 @@ jobs:
     - name: Install pnpm
       uses: pnpm/action-setup@v2.2.1
       with:
-        version: "6.x"
+        version: "7.x"
     - uses: actions/setup-node@v3
       with:
         node-version: '16.x'
