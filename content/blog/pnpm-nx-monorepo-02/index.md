@@ -523,7 +523,9 @@ pnpm nx graph
 
 ## Incremental testing
 
-Based on the previous dependencies graph, and in the mentioned "affected" Nx feature, note this: If we execute `pnpm nx affected -- --target=test:e2e`, our E2E tests project would be always executed because it is always affected by any modification, but the unit tests of each project (`pnpm nx affected -- --target=test:unit`) would be executed only when it has sense depending on the modification made.
+Based on the previous dependencies graph, and in the mentioned "affected" Nx feature, note this: If we execute `pnpm nx affected --target=test:e2e`, our E2E tests project would be always executed because it is always affected by any modification, but the unit tests of each project (`pnpm nx affected --target=test:unit`) would be executed only when it has sense depending on the modification made.
+
+> NOTE: If you are using a Pnpm version lower than 7.0, you should add an extra `--` to the Pnpm commands before the Nx arguments: `pnpm nx affected -- --target=test:unit`
 
 ![Affected projects schema 03](./monorepo-affected-03.jpg)
 
