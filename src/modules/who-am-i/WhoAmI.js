@@ -6,6 +6,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 */
 
 import Title from "components/title";
+import Link from "components/link";
 
 import * as classes from "./whoAmI.module.scss";
 
@@ -18,16 +19,20 @@ const WhoAmI = () => {
           I&rsquo;m currently working as head of front-end software development at Telefonica Tech.
         </p>
         <p>
-          I&rsquo;m writting code professionally since 2003, working as a front-end specialist
-          since 2010, and as a front-end architect since 2015.
+          I&rsquo;m writing code professionally since 2002, working as a front-end specialist since
+          2009, and as a front-end architect since 2014.
         </p>
         <p>
           My main skills are: building web apps in JavaScript & Node.js, CI/CD, development tools,
-          E2E testing and data modeling.
+          and E2E testing. Framework agnostic, currently using mainly React and Node.js.
         </p>
         <p>
           I am known for being methodical and detail oriented, a high quality code advocate,
-          oriented to modular solutions, and opensource author.
+          oriented to modular solutions, and open source author.
+        </p>
+        <p>
+          You can read my CV and more about me in{" "}
+          <Link to="https://www.getmanfred.com/profile/javierbrea">my Manfred profile.</Link>
         </p>
       </div>
     </div>

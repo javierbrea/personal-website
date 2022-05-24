@@ -25,7 +25,7 @@ const Footer = ({ className }) => {
                 <h3>About Me</h3>
               </div>
               <p>Web developer. Front-end architect</p>
-              <p>Designing and developing software from 2003</p>
+              <p>Designing and developing software since 2002</p>
               <p>Copyright &copy;2022 Javier Brea</p>
             </aside>
           </div>
