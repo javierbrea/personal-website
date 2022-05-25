@@ -22,3 +22,19 @@ Unless required by applicable law or agreed to in writing, software distributed 
     margin-top: -1.8rem;
   }
 }
+
+.imageNote {
+  color: $textColor;
+  margin-bottom: 3rem;
+  margin-top: -2.8rem;
+  text-align: center;
+  width: 100%;
+
+  @include media('l') {
+    margin-top: -2.6rem;
+  }
+
+  @include media('s') {
+    margin-top: -1.8rem;
+  }
+}
