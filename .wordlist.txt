@@ -24,6 +24,7 @@ namespace
 namespaces
 Namespaces
 Modularity
+modularity
 NPM
 Npm
 Netlify
