@@ -81,7 +81,7 @@ config.load().then(() => {
 });
 ```
 
-At this point, supossing that our file was named `app.js`, we can define the value for our option simply defining an environment variable named `MY_APP_MY_OPTION` (Environment variables must be prexifed with the value of the `moduleName` option, and they must be defined using "screaming snake case"):
+At this point, supposing that our file was named `app.js`, we can define the value for our option simply defining an environment variable named `MY_APP_MY_OPTION` (Environment variables must be prefixed with the value of the `moduleName` option, and they must be defined using "screaming snake case"):
 
 ```sh
 MY_APP_MY_OPTION=anotherValue node app.js
@@ -190,7 +190,7 @@ Well, we are going to suppose that __we have an app that is very well designed__
 
 <div class="imageNote">"Global" configuration provider. It contains the logic for reading config for all components</div>
 
-__If that is the case, then it may become a problem, because everytime we need to modify or to add an option to any of the internal components, we must modify also our "global" configuration provider__. And, in an ideal world, we should modify only the involved component, am I right?
+__If that is the case, then it may become a problem, because every time we need to modify or to add an option to any of the internal components, we must modify also our "global" configuration provider__. And, in an ideal world, we should modify only the involved component, am I right?
 
 ![Impacts in global config when changing configuration of components](./global-config-02.png)
 
@@ -295,7 +295,7 @@ node app.js --first.second.third.foo=3
 
 ### Breaking the modularity rules
 
-Even when the library was designed to provide modularity, it is flexible enough to allow breaking the rules whenever it is needed. For example, in a previous example I talked about an API changing the configuration. Supossing it is able to change the configuration of any component, then that API is breaking the modularity rules.
+Even when the library was designed to provide modularity, it is flexible enough to allow breaking the rules whenever it is needed. For example, in a previous example I talked about an API changing the configuration. Supposing it is able to change the configuration of any component, then that API is breaking the modularity rules.
 
 If this is needed, you can use some library methods to access to any namespace configuration options, or even provide a whole configuration object that will set every namespaces at a time. For example:
 
