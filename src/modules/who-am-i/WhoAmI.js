@@ -24,7 +24,8 @@ const WhoAmI = () => {
         </p>
         <p>
           My main skills are: building web apps in JavaScript & Node.js, CI/CD, development tools,
-          and E2E testing. Framework agnostic, currently using mainly React and Node.js.
+          and E2E testing. Framework agnostic, currently using mainly React, Node.js, TypeScript,
+          Github actions and Cypress.
         </p>
         <p>
           I am known for being methodical and detail oriented, a high quality code advocate,
