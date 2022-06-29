@@ -45,6 +45,8 @@ It also provides:
 
 ![Modular config provider operating scheme](./config-provider-schema-01.png)
 
+> Note: [`Nconf`](https://www.npmjs.com/package/nconf) is another popular library reading configuration from different sources, you can read about the differences with `@mocks-server/config` in the [alternatives section of this post](#alternatives).
+
 ## Quick start
 
 In this example we are going to create a simple option of type `string`, and we are going to see how to read its value:
@@ -312,6 +314,18 @@ config.set({
 ```
 
 This would set options for all provided namespaces in the object. It is not desirable to do things like this when we are talking about modular solutions, but it can be used if there is no other better alternative. You can [read the library API docs to know more about config available methods](https://github.com/mocks-server/main/tree/master/packages/config#api).
+
+## Alternatives
+
+Another library able to read configuration from files, arguments and environment is [`Nconf`](https://www.npmjs.com/package/nconf). It is a great and very popular library. The main difference with `@mocks-server/config` is that it is more focused on the options to be loaded and its types in order to execute validations and parse the data, while `Nconf` leaves the door more opened to get any value unless you explicitly configure restrictions separately for each different source.
+
+More in detail, the main differences between both libraries are:
+
+* `mocks-server/config` uses `Cosmiconfig` under the hood, so it supports more file formats out of the box, such as `yaml`, `cjs`, etc.
+* `Nconf` allows to get any key from the sources, unless you use each source options separately to set restrictions. On the contrary, `mocks-server/config` requires to specifically define the details of each option to be loaded, as its type, etc. Then, it parses the data and executes validations for all sources automatically.
+* `Nconf` requires to initiate separately each different source, while `mocks-server/config` initiates all sources using only the `load` method, unless the user specifies another behavior using the config options. On the other hand, `mocks-server/config` uses exactly the same hierarchy described in the `Nconf` docs as a good practice.
+* `mocks-server/config` always executes validations and parses data based on the option types using [`Ajv`](https://github.com/ajv-validator/ajv) under the hood. This is something that seems to be defined separately for each different source in `Nconf`.
+* `mocks-server/config` supports nested namespaces, so keys like `foo.var.foo2.var2=x` are supported.
 
 ## Further information
 
