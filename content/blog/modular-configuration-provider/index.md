@@ -45,7 +45,7 @@ It also provides:
 
 ![Modular config provider operating scheme](./config-provider-schema-01.png)
 
-> Note: [`Nconf`](https://www.npmjs.com/package/nconf) is another popular library reading configuration from different sources, you can read about the differences with `@mocks-server/config` in the alternatives section of this post.
+> Note: [`Nconf`](https://www.npmjs.com/package/nconf) is another popular library reading configuration from different sources, you can read about the differences with `@mocks-server/config` in the [alternatives section of this post](#alternatives).
 
 ## Quick start
 
