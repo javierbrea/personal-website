@@ -6,7 +6,7 @@ tags:
     - mock
     - Cypress
     - testing
-    - api
+    - API
     - fake
     - simulate
     - control
@@ -24,7 +24,7 @@ When testing front-end applications using Cypress, we usually need to __mock API
 
 Cypress provides itself some mechanisms allowing to mock API responses in the website under its control, as the [`cy.intercept` command](https://docs.cypress.io/api/commands/intercept). It is a great Cypress feature that, apart from stubbing the API responses, it also allows to spy the requests and write assertions related to them.
 
-So, if Cypress already provides a mechanism to simulate API responses, why should we need a mock server? Well, the Cypress features are limited to its usage on Cypress, and, __using a separated mock server allows us to reuse the same API mock for other purposes, such as simulating the API while we are developing the application__, execute contract tests between the API mock and the openapi definition to ensure that we are accomplishing the API contract, etc.
+So, if Cypress already provides a mechanism to simulate API responses, why should we need a mock server? Well, the Cypress features are limited to its usage on Cypress, and, __using a separated mock server allows us to reuse the same API mock for other purposes, such as simulating the API while we are developing the application__, execute contract tests between the API mock and the OpenApi definition to ensure that we are accomplishing the API contract, etc.
 
 We could even use a combination of both techniques, and write assertions about the API requests that our app is performing using the `cy.intercept` command while the responses are sent by our mock server.
 
@@ -108,7 +108,7 @@ project-root/
 
 Now we already have our mock server installed and we can start it using a command. This allows to start the mock server manually when starting the application and opening Cypress in headed mode by simply running three separated processes in three terminals.
 
-Supossing that we have next commands in the `package.json` file:
+Supposing that we have next commands in the `package.json` file:
 
 ```json
 {
@@ -224,7 +224,7 @@ The instructions for starting the processes described in a previous section are 
 
 In this case, we can use [`start-server-and-test`](https://github.com/bahmutov/start-server-and-test) to start all processes in a single command.
 
-Supossing that our web application is started in the port 3000, and the mock server is started in the port 3100, we could add the next scripts to the `package.json` file:
+Supposing that our web application is started in the port 3000, and the mock server is started in the port 3100, we could add the next scripts to the `package.json` file:
 
 * `cypress:run`: It will run Cypress in headless mode.
 * `mocks:no-cli`: It will start the mock server without the interactive CLI. Logs will be printed instead, which is ideal for a CI pipeline.
