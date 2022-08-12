@@ -35,7 +35,7 @@ So, we can start the development by making an agreement about the API contract b
 > * Controlling the responses of the API will improve the development workflow, avoiding early dependencies with the team developing the API. It also improves the testing of error cases or another cases that are commonly hard to reproduce with a real API.
 > * Defining the API responses during the earliest phases of development will improve the communication among team members and align their expectations.
 
-TODO -> insert schema of workflow. Get it from Mocks Server page
+![Workflow with API contract, Cypress and mock server](./api-mock-cypress-workflow.jpg)
 
 ## Mock server
 
