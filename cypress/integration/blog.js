@@ -1,7 +1,7 @@
 import Blog from "../support/page-objects/pages/Blog";
 import BlogPost from "../support/page-objects/pages/BlogPost";
 
-const TOTAL_POSTS = 5;
+const TOTAL_POSTS = 6;
 const SPELL_CHECK_POST_INDEX = TOTAL_POSTS - 1;
 const FIRST_MONOREPO_POST_INDEX = TOTAL_POSTS - 2;
 
@@ -34,7 +34,7 @@ describe("About", () => {
   });
 
   describe("Latest posts", () => {
-    it("should display three posts", () => {
+    it(`should display ${TOTAL_POSTS} posts`, () => {
       page.posts.shouldHaveLength(TOTAL_POSTS);
     });
 

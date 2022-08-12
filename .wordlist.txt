@@ -1,9 +1,11 @@
+APIs
 async
 binded
 boilerplates
 boolean
 Codecov
 CLI
+catalogue
 colocation
 config
 continous
@@ -30,6 +32,7 @@ Npm
 Netlify
 Nx
 nx
+OpenApi
 Parallelization
 parallelization
 Pluggable
