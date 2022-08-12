@@ -28,7 +28,7 @@ const LatestJobs = () => {
             description="Front-end architect"
             image={telefonicaImage}
             imageAlt="Telefónica"
-            title="Telefónica I+D"
+            title="Telefónica Tech"
             to="https://telefonicatech.com/"
           />
         </Column>
