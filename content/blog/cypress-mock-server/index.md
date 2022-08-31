@@ -51,7 +51,7 @@ And, more interesting even (given that we are talking about Cypress), __it provi
 
 Mocks Server is essentially a set of NPM packages. For using it with Cypress, we should install `@mocks-server/main` and `@mocks-server/cypress-commands`:
 
-```sh
+```shell
 npm i -D @mocks-server/main @mocks-server/cypress-commands
 ```
 
@@ -67,7 +67,7 @@ Then, you can add a NPM script that will allows to start the mock server using t
 
 This enables to start the mock server by simply running a command in the project folder:
 
-```sh
+```shell
 npm run mocks
 ```
 
@@ -123,17 +123,17 @@ Supposing that we have next commands in the `package.json` file:
 We could start the processes separately and control each one on its own terminal.
 
 _Start the web application:_
-```sh
+```shell
 npm run start:app
 ```
 
 _Start the mock server:_
-```sh
+```shell
 npm run mocks
 ```
 
 _Open Cypress in headed mode:_
-```sh
+```shell
 npm run cypress:open
 ```
 
@@ -247,7 +247,7 @@ Supposing that our web application is started in the port 3000, and the mock ser
 
 Now, when we run the next command, all processes will be started waiting for the others, and then the Cypress tests will be executed in headless mode:
 
-```sh
+```shell
 npm run test
 ```
 

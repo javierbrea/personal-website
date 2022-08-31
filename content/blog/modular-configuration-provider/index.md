@@ -53,7 +53,7 @@ In this example we are going to create a simple option of type `string`, and we 
 
 Add the library `@mocks-server/config` to your package dependencies:
 
-```sh
+```shell
 npm i --save @mocks-server/config
 ```
 
@@ -85,13 +85,13 @@ config.load().then(() => {
 
 At this point, supposing that our file was named `app.js`, we can define the value for our option simply defining an environment variable named `MY_APP_MY_OPTION` (Environment variables must be prefixed with the value of the `moduleName` option, and they must be defined using "screaming snake case"):
 
-```sh
+```shell
 MY_APP_MY_OPTION=anotherValue node app.js
 ```
 
 Or we can define it using a command line argument:
 
-```sh
+```shell
 node app.js --myOption=anotherValue
 ```
 
@@ -222,13 +222,13 @@ myNamespace.addOption({
 
 Then, when defining environment variables, we must add the namespace name as a prefix to the option name:
 
-```sh
+```shell
 MY_APP_MY_NAMESPACE_MY_OPTION=anotherValue node app.js
 ```
 
 When using command line arguments, we must add the prefix separated by a dot:
 
-```sh
+```shell
 node app.js --myNamespace.myOption=anotherValue
 ```
 
@@ -291,7 +291,7 @@ first:
 
 Or in an argument like this:
 
-```sh
+```shell
 node app.js --first.second.third.foo=3
 ```
 
