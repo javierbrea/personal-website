@@ -35,7 +35,7 @@ So, the application should take this into account and it should handle these pos
 
 ## Error handling should be tested
 
-In this article, we are going to suposse that our web application handles the Web Storage exceptions properly, and it displays a notification when the localStorage is disabled or full. That's great, but, __as this could be considered as another feature of our application, we should also test it__, right?
+In this article, we are going to suppose that our web application handles the Web Storage exceptions properly, and it displays a notification when the localStorage is disabled or full. That's great, but, __as this could be considered as another feature of our application, we should also test it__, right?
 
 No problem, in this post we are going to figure out __how to use the [cypress-localstorage-commands plugin](https://github.com/javierbrea/cypress-localstorage-commands#readme) to simulate that the localStorage is disabled__, and then write a test checking that our notification is displayed properly.
 
@@ -49,7 +49,7 @@ The [cypress-localstorage-commands plugin](https://github.com/javierbrea/cypress
 
 ## Installation
 
-The plugin is distributed via npm and should be installed as one of your project's devDependencies:
+The plugin is distributed via NPM and should be installed as one of your project's devDependencies:
 
 ```shell
 npm i --save-dev cypress-localstorage-commands
