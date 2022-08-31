@@ -12,6 +12,7 @@ continous
 cosmiconfig
 customizable
 deployable
+devDependencies
 distributable
 executables
 Github
@@ -19,14 +20,17 @@ jpg
 js
 lifecycle
 linter
+localStorage
+localstorage
 matrixes
+MDN
+Modularity
+modularity
 monorepo
 monorepos
 namespace
 namespaces
 Namespaces
-Modularity
-modularity
 NPM
 Npm
 Netlify

@@ -1,7 +1,7 @@
 import Blog from "../support/page-objects/pages/Blog";
 import BlogPost from "../support/page-objects/pages/BlogPost";
 
-const TOTAL_POSTS = 6;
+const TOTAL_POSTS = 7;
 const SPELL_CHECK_POST_INDEX = TOTAL_POSTS - 1;
 const FIRST_MONOREPO_POST_INDEX = TOTAL_POSTS - 2;
 

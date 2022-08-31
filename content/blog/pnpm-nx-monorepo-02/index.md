@@ -44,7 +44,7 @@ As seen in the [previous post](/blog/pnpm-nx-monorepo-01/), we are going to use 
 
 First of all you have to install `Pnpm` globally in order to use it as Npm client and to run the `package.json` scripts that we will create in next steps. There are many methods for installing it, you can check them all in the [Pnpm installation docs](https://pnpm.io/installation). Here we are going to use `npm` to install it:
 
-```sh
+```shell
 npm install -g pnpm@next-7
 ```
 
@@ -60,7 +60,7 @@ Now we can fill the `package.json` file with some basic info, and we can use `Pn
 }
 ```
 
-```sh
+```shell
 pnpm i
 ```
 
@@ -124,7 +124,7 @@ The __scripts of each project can be executed independently from each package fo
 
 We will install [Jest](https://jestjs.io/) in the workspace (as mentioned above, it is a `devDependency`, so we don't have to install it on every single package):
 
-```sh
+```shell
 pnpm add -wD jest
 ```
 
@@ -157,7 +157,7 @@ And then add the script for running the test:
 
 Now, you can run the package unit tests script from the package folder:
 
-```sh
+```shell
 cd packages/sum-one && pnpm test:unit
 ```
 
@@ -227,7 +227,7 @@ describe("sumTwo", () => {
 
 Now we have to reinstall the workspace dependencies, and then we can run the unit tests of the `sum-two` package, which proves that our local reference works properly:
 
-```sh
+```shell
 pnpm i
 cd packages/sum-two && pnpm test:unit
 ```
@@ -246,7 +246,7 @@ Now we are going to install Nx because it provides the other requirements that w
 
 Install as `devDependencies` the required `nx` packages and `typescript`, which is a peer dependency:
 
-```sh
+```shell
 pnpm add -wD nx @nrwl/workspace typescript
 ```
 
@@ -294,7 +294,7 @@ As we have not installed Nx globally, we need to define a script in our workspac
 
 Now we can use `nx` to run any script of any project in the workspace from the root folder. For example, we can run the unit tests of `sum-one`:
 
-```sh
+```shell
 pnpm nx test:unit sum-one
 ```
 
@@ -302,7 +302,7 @@ pnpm nx test:unit sum-one
 
 So, for running the `unit:test` script of the `sum-two` package we can do:
 
-```sh
+```shell
 pnpm nx test:unit sum-two
 ```
 
@@ -321,7 +321,7 @@ Now we are able to run any package script from the root folder of our workspace 
 
 Now, we can run the unit tests of every package in our workspace with a single command, and it will be done in parallel! 🥳
 
-```sh
+```shell
 pnpm test:unit:all
 ```
 
@@ -359,7 +359,7 @@ Let's add one script to the root `package.json` file in order to provide an easy
 
 Note that this script has to be executed in a Git repository to be able to compare changes. The default base branch to compare with is defined in the `nx.json` file that we created previously, which in this case is `main`. So, supposing that you have a repository and you have all previous changes promoted to the `main` branch, if you modify the `packages/sum-two/index.js` file, running the next command would execute only the unit tests of the `sum-two` package, because no other package depends on it.
 
-```sh
+```shell
 pnpm test:unit:affected
 ```
 
@@ -388,7 +388,7 @@ So, let's add a fake `build` script to the `packages/sum-two/package.json` file:
 
 You can check that the new script works properly by running:
 
-```sh
+```shell
 pnpm nx build sum-two
 ```
 
@@ -417,7 +417,7 @@ Now that we have a `build` command that theoretically should be executed before 
 
 With this configuration, we are saying to Nx: _"Before running the `test:unit` script of any package, run the `build` script of the package itself, and before running the `build` script of any package, run the `build` script of its dependencies."_. So, in our case, when we run:
 
-```sh
+```shell
 pnpm nx test:unit sum-two
 ```
 
@@ -505,7 +505,7 @@ Let's add also a new task dependency, so before running E2E tests it will also r
 
 Now, we are ready to install the dependencies of the new project, reset the nx cache (this is recommended when adding a new project) and run the E2E tests:
 
-```sh
+```shell
 pnpm i
 pnpm nx reset
 pnpm nx test:e2e sum-e2e
@@ -513,7 +513,7 @@ pnpm nx test:e2e sum-e2e
 
 We can also run the Nx `graph` command to see how our dependencies graph has changed after adding this new project:
 
-```sh
+```shell
 pnpm nx graph
 ```
 
