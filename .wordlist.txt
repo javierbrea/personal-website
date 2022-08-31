@@ -21,6 +21,7 @@ js
 lifecycle
 linter
 localStorage
+localstorage
 matrixes
 MDN
 Modularity
