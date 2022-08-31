@@ -182,7 +182,7 @@ This can be achieved using a bash script in the workflow itself, or using any ot
 
 * Install the `cross-spawn` development dependency:
 
-```sh
+```shell
 pnpm add -wD cross-spawn
 ```
 
