@@ -17,7 +17,7 @@ jobs:
           config_path: .spellcheck.yml
           task_name: Markdown
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16.13.1'
       - name: Cache npm
@@ -43,7 +43,7 @@ jobs:
         id: test-e2e
       - name: Upload E2E tests screenshots
         if: ${{ always() && steps.test-e2e.outcome == 'failure' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: e2e-screenshots
           path: cypress/screenshots
